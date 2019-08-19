@@ -87,7 +87,7 @@
                     // $hashed = hash_pbkdf2("sha1",$p, $key,1000,24,true);
                 
                 //if($row['hashedpassword'] == strToHex($hashed)){
-                    if( ($row['phone'] == $p) ||(($hashed)==$row['hashedpassword']) ){
+                    if( ($row['phone'] == $p) || (($hashed)==$row['hashedpassword']) ){
                         //Let's create a SESSION variable so we can remember the user.
                         $_SESSION['user']=$row['name'];
                         $_SESSION['userId']=$row['id'];
