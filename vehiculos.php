@@ -127,7 +127,7 @@ require 'php/auth.php';
                         <div class="col-9"> 
                             <div class='container conten my-2'>
 
-                                <h5 class='mt-1'>Vehículos registrados:</h5>
+                                <h5 class='mt-1'>Vehículos registrados SOLO EN UN BRANCH ALTERNATIVO:</h5>
                                 <table class='table table-sm mt-2'>
                                     <thead class='tablaNormal'>
                                         <tr>
