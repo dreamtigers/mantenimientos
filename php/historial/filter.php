@@ -32,7 +32,8 @@
                 'id' => $myrow['deviceId'],
                 'nombre' => $myrow['equipo'],
                 'tiempoMotor' => $myrow['hrsMotor'],
-                //these 4 from equipo_mantenimiento
+                //these 4 USED TO BE from equipo_mantenimiento
+                // NOT ANYMORE, THO
                 'rutina1' => $myrow['rutina1'],
                 'rutina2' => $myrow['rutina2'],
                 'rutina3' => $myrow['rutina3'],
