@@ -29,7 +29,7 @@
         // tiempo 4
         $hrsTranscurridas4 = $row['hrsMotor'] - $row['hrsMant4'];
     
-        //Tiempos faltantes por rutina
+        //Tiempos faltantes para cada rutina rutina
         if($rut1 > $hrsTranscurridas){
             $hrsRut1 = $rut1 - $hrsTranscurridas;
         } else {
@@ -51,9 +51,9 @@
             $hrsRut4 = 0;
         }
         //Almacenemos los datos de las horas restantes en nuestra base de datos.
-        //Table EQUIPO_MANTENIMIENTO; shall we?
+        //Table equipos; shall we?
         //SQL order
-        $sql = sprintf("INSERT INTO equipo_mantenimiento (rutina1, rutina2, rutina3, rutina4,deviceId) VALUES ('%s', '%s', '%s','%s','%s') 
+        $sql = sprintf("INSERT INTO equipos (rutina1, rutina2, rutina3, rutina4,deviceId) VALUES ('%s', '%s', '%s','%s','%s') 
                 ON DUPLICATE KEY UPDATE rutina1='%s', rutina2='%s', rutina3='%s', rutina4='%s'
         ",  mysqli_real_escape_string($db, $hrsRut1),
        

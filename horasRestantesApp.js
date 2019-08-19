@@ -25,20 +25,7 @@ $(function () {
 
 
 
-    // Tratemos de pasar los datos que tenemos de momento (sólo 4 de muchos)
-    // FROM equipos TO equipo_mantenimiento
-    function copySome(){
-        $.ajax({
-            type: "GET",
-            url: "php/horasRestantes/copySome.php",
-            data: "data",
-            
-            success: function (response) {
-                //console.log(response);
-            }
-        });
-    }
-    copySome();
+ 
 
     /** Just to log out */
     $(document).on('click', '.logOut', function(){

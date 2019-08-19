@@ -7,8 +7,8 @@
     $deviceId = $_SESSION['hoursId'];
 
     //Creamos un query para conectar a la tabla con todos los valores
-    //table 'equipo_mantenimiento'
-    $obey = "SELECT * FROM equipo_mantenimiento WHERE deviceId LIKE $deviceId";
+    //table equipos
+    $obey = "SELECT * FROM equipos WHERE deviceId LIKE $deviceId";
     $res = mysqli_query($db, $obey);
     //Horas restantes para el próximo mantenimiento
     $hrsMantenimientos = array();
