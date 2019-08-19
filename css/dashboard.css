@@ -1,0 +1,29 @@
+.btnn{
+    height: 50px;
+    
+}
+.col2{
+    background-color: #5FA2DD;
+    position: relative;
+}
+.abajo{
+    position:absolute;
+    left:90px;
+    bottom:30px;
+}
+.maini{
+    
+    height:100%;
+}
+.options{
+    height:170px;
+    
+}
+.op{
+    background-color: #76C2AF;
+    cursor:pointer;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.adminBtn{
+    display:none;
+}

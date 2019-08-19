@@ -1,0 +1,294 @@
+.loginDiv{
+    border:2.4px solid #5fa2dd;
+
+    width:300px;
+    height: 337px;
+    /*stackO's bestto answer to it*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.container-fluid{ 
+    /* Set width to your desired site width */ 
+    min-width: 800px; 
+    overflow-y: hidden;
+}
+
+.carTracLogo{
+     margin-top: 20px;
+}
+.formR {
+    margin-top:30px;
+}
+/*Labels*/
+.lan{
+    margin-left:10px;
+}
+.mail{
+    position: absolute;
+    top:7px;
+    left:40px;
+}
+/*cyaLabels*/
+select{
+    width: 170px;
+    height: 30px;
+
+}
+.sel{
+    margin-top:-2px;
+    margin-left:6px;
+}
+input{
+    width:170px;
+
+}
+
+.check{
+    margin-top:15px;
+    margin-left: -72px;
+}
+.foot{
+    margin-top: 14px;
+    width:296.2px;
+    height: 46px;
+    background-color: #ececec;
+}
+
+.white{
+    color:#ffffff;
+    font-size: 12px;
+}
+.smoli{
+    font-size: 13.4px;
+}
+
+.unsol{
+    font-size: 13.4px;
+    width:90%;
+}
+input[type=submit]{
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    /*text-align: center;*/
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 8px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 4.2px 10px;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #76c2af;
+    /*ADDED OF MINE*/
+    width:50%;
+    margin-top:9px;
+
+  }
+  input[type=submit]:hover{
+    background-color: #7ae4c9;
+  }
+  .myAnchor{
+    position: relative;
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    /*text-align: center;*/
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 8px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 4.2px 10px;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #76c2af;
+    /*ADDED OF MINE*/
+    width:50%;
+    margin-top:9px;
+  }
+.ingresar{
+    margin-left:30%;
+
+}
+.btnn{
+    /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 0px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 2px 2px;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+/*background-color: #5fa2dd;
+    /*ADDED OF MINE*/
+    width:65px;
+    margin-bottom:-10px;
+
+  }
+  /* old-school "down" effect on clic + color tweak */
+
+
+.btnn:hover {
+    cursor: pointer;
+    background-color: rgb(117, 231, 206);
+}
+/*new button*/
+.myAnchor:hover {
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    background-color: rgb(117, 231, 206);
+}
+.btnn:active {
+    transform: translateY(1px);
+    background-color: #5c80a0;
+}
+/*Custom XXXX icon*/
+.icon {
+    background: url('img/32178.svg');
+    height: 20px;
+    width: 20px;
+    
+    /* Other styles here */
+}
+/**Heavy changes down below*/
+.relative{
+    position:relative;
+}
+.gray{
+    padding: 0px;
+    border:0px;
+    background-color: transparent;
+    top:37%;
+    left:26%;
+    position:absolute;
+    
+}
+/*Form*/
+#myform{
+    width:100%;
+    
+}
+.fullP{
+    background-color: #3b8ed6;
+}
+.in{
+ 
+  width:300px;
+  text-indent: 30px;
+  border-radius: 13px;
+  padding:4px;
+  border:1px solid #cccccc
+}
+.backG{
+    background-color: rgba(118, 194, 175,0.60);
+    padding:0px;
+    margin:0px;
+}
+
+.col7{
+    background-image: url('css/img/perfectParkingLot2.jpg');
+    padding:0px;
+    margin:0px;
+}
+.welcome{
+    position:relative;
+    padding-top:40%;
+    /*padding-left:25%;*/
+    color:black;
+}
+
+.welcome2{
+    font-weight: 600;
+}
+.welcomeC{
+    width:400px;
+}
+
+
+/** Media queries go down below **/ 
+/** Small devices (landscape phones, less than 768px) **/
+@media (max-width: 767.98px) { 
+    .welcome{
+        padding-left: 10%;   
+        padding-top:288px; 
+    }
+    .welcomeC{
+        width:380px;
+    }
+    .welcome1{
+        font-size:20px;
+    }
+    .welcome2{
+        font-size: 16px;
+    }
+ }
+
+
+/** Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .welcome{
+        padding-left: 10%;   
+        padding-top:288px; 
+    }
+    .welcomeC{
+        width:380px;
+    }
+    .welcome1{
+        font-size:20px;
+    }
+    .welcome2{
+        font-size: 16px;
+    }
+ }
+ /** Large devices (tablets, 768px and up) */
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .welcome{
+        padding-left:25%; 
+        padding-top:286px; 
+    }
+    .welcome1{
+        font-size:24px;
+    }
+    .welcome2{
+        font-size: 19px;
+    }
+    .welcomeC{
+        width:370px;
+    }
+  }
+@media (min-width:1200px){
+    .welcome{
+        padding-left:25%; 
+        padding-top:286px; 
+    }
+}
+
+
