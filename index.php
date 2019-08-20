@@ -33,11 +33,28 @@
 
     <?php
         session_start();
+
+        /** Thanks to Ivalenzuela for these 2 functions */
+        function strToHex($string){
+            $hex='';
+            for ($i=0; $i < strlen($string); $i++){
+                $hex .= dechex(ord($string[$i]));
+            }
+            return strtoupper($hex);
+        }
     
+    
+        function hexToStr($hex){
+            $string='';
+            for ($i=0; $i < strlen($hex)-1; $i+=2){
+                $string .= chr(hexdec($hex[$i].$hex[$i+1]));
+            }
+            return $string;
+        }
 
 
         $email = '';
-        $errorMsg = '';
+        $errorMsg = $storedHash = $hashed = '';
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
@@ -76,17 +93,11 @@
                     // HEASDASDASDASDÑASDLASDLASÑDASLDÑASLDÑASDLASÑ Heavy changes down below
                     
                     $p = $_POST['pass'] ;
-                    $s = hex2bin($row['salt']);
-                    $hashed = hash_pbkdf2("sha1",$p, $s,1000,24,true);
-            
+                    $s = hexToStr($row['salt']);
+                    $hashed = hash_pbkdf2("sha1",$p, $s,1000,48);
                 
-                    //echo  bin2hex($hashed)."---".$row['hashedpassword']."---".$row['salt'];
-                    //echo '<br>';
-                    //var_dump(strtoupper(bin2hex($hashed))==$row['hashedpassword']);
-                    //echo '<br>';
-                    // $hashed = hash_pbkdf2("sha1",$p, $key,1000,24,true);
+                    $storedHash = $row['hashedpassword'];
                 
-                //if($row['hashedpassword'] == strToHex($hashed)){
                     if( ($row['phone'] == $p) || (($hashed)==$row['hashedpassword']) ){
                         //Let's create a SESSION variable so we can remember the user.
                         $_SESSION['user']=$row['name'];
@@ -172,7 +183,7 @@
             <div class="col-5 col5">
 
                
-
+                   
 
 
                       
@@ -216,6 +227,8 @@
                              
                                 <a href='#' onclick="document.getElementById('myform').submit()" class='in myAnchor'><span class='ingresar'>Ingresar</span></a>
                                 <div style='position:absolute; top:50px; left:20px;'><?php echo $errorMsg ?></div>
+                             
+                               
                                
                             </div>
                     
