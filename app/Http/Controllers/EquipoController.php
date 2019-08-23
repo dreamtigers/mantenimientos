@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\equipo;
+use App\Equipo;
 use Illuminate\Http\Request;
 
 class EquipoController extends Controller
@@ -41,10 +41,10 @@ class EquipoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\equipo  $equipo
+     * @param  \App\Equipo  $equipo
      * @return \Illuminate\Http\Response
      */
-    public function show(equipo $equipo)
+    public function show(Equipo $equipo)
     {
         //
     }
@@ -52,10 +52,10 @@ class EquipoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\equipo  $equipo
+     * @param  \App\Equipo  $equipo
      * @return \Illuminate\Http\Response
      */
-    public function edit(equipo $equipo)
+    public function edit(Equipo $equipo)
     {
         //
     }
@@ -64,10 +64,10 @@ class EquipoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\equipo  $equipo
+     * @param  \App\Equipo  $equipo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, equipo $equipo)
+    public function update(Request $request, Equipo $equipo)
     {
         //
     }
@@ -75,10 +75,10 @@ class EquipoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\equipo  $equipo
+     * @param  \App\Equipo  $equipo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(equipo $equipo)
+    public function destroy(Equipo $equipo)
     {
         //
     }
