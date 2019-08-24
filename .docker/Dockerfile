@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends git unzip \
 WORKDIR /srv
 RUN curl --silent --show-error https://getcomposer.org/installer | php
 
-# RUN docker-php-ext-install mbstring intl simplexml pdo pdo_mysql
 RUN docker-php-ext-install bcmath ctype json mbstring pdo tokenizer xml \
     pdo_mysql
 
@@ -16,5 +15,4 @@ RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/ && docker-php-ext-
 COPY . /srv/app
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
-# RUN chown -R www-data:www-data /srv/app && a2enmod rewrite
 RUN a2enmod rewrite
