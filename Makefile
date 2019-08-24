@@ -16,3 +16,6 @@ restart:
 
 clean:
 	docker system prune --volumes --force
+
+mysql:
+	docker-compose exec mysql mysql -p
