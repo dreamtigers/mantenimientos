@@ -22,9 +22,6 @@ $(function () {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
-
-
-
  
 
     /** Just to log out */

@@ -133,7 +133,7 @@ $(function(){
                             success: function (response) {
                                 console.log(response);
                                 let mainRow = JSON.parse(response);
-                                let template = '';
+                                let template = ''; let templating = '';
                                 mainRow.forEach(element => {
                                     template += 
                                             `
@@ -144,10 +144,21 @@ $(function(){
                                                     <td>${element.arreglo}</td>
                                                     <td>${element.placa}</td>
                                                 </tr>                        
+                                            `;
+
+                                    templating += 
+                                            `
+                                                <tr>
+                                                    <td>${element.rutina1}</td>
+                                                    <td>${element.rutina2}</td>
+                                                    <td>${element.rutina3}</td>
+                                                    <td>${element.rutina4}</td>
+                                                </tr>
                                             `
                                 });
                                 $('#registros').html(template);
-
+                                $('#registrosHoras').html(templating);
+                             
                             }
                         });
                         // Some console checking

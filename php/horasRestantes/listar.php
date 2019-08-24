@@ -19,7 +19,7 @@
         //Calculos de las horas para las rutinas y esas pajas.
         //Tiempo para cada rutina.
         $rut1 = 250; $rut2 = 500; $rut3 = 1000; $rut4 = 2000;
-        //Tiempo transcurrido pero, recordando que Traccar da las horas en MILIsegundos. 
+    
         // tiempo 1
         $hrsTranscurridas = $row['hrsMotor'] - $row['hrsMantenimiento'];
         // tiempo 2

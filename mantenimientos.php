@@ -121,7 +121,6 @@ require 'php/auth.php';
 
                             <div class='conten mt-3'>       
 
-                                <div class='col-10'>    
                                 
 
                                         <h5 class='mt-3'>Mantenimientos registrados para: &nbsp;&nbsp; <span id='equipo'></span> </h5>
@@ -129,7 +128,7 @@ require 'php/auth.php';
 
                                
                         
-                                </div>   
+                              
 
                               
                                 <table class='table table-sm mt-4'>
@@ -168,6 +167,48 @@ require 'php/auth.php';
                                     <!-- Id registros, time to shine
                                     -- In here we will load all of our data got from listingEquipos.php through app.js     -->
                                     <tbody id='registros'>
+                                        
+                                    </tbody>
+                                </table>
+
+                             
+                                <span>Horas restantes:</span>
+                                <table class='table table-sm mt-1'>
+                                    <thead class='tabledark'>
+                                    
+
+                                            <div class='col-10'>
+
+                                                <tr>
+
+                                                    
+
+
+                                                    <td><b>Rutina 1</b></td>
+                                                    <td><b>Rutina 2</b></td>
+                                                    <td><b>Rutina 3</b></td>
+                                                    <td><b>Rutina 4</b></td>
+                                                  
+
+
+                                                        
+
+                                                </tr>
+
+                                            </div>
+
+
+                                            
+
+
+
+                                        
+                                        
+                                    </thead>
+                                    
+                                    <!-- Id registros, time to shine
+                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
+                                    <tbody id='registrosHoras'>
                                         
                                     </tbody>
                                 </table>
