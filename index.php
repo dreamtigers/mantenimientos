@@ -98,7 +98,7 @@
                 
                     $storedHash = $row['hashedpassword'];
                 
-                    if( ($row['phone'] == $p) || (($hashed)==$row['hashedpassword']) ){
+                    if( ($hashed)==$row['hashedpassword'] ){
                         //Let's create a SESSION variable so we can remember the user.
                         $_SESSION['user']=$row['name'];
                         $_SESSION['userId']=$row['id'];
