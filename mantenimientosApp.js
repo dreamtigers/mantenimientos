@@ -171,7 +171,7 @@ $(function(){
                                             if ( $('.rut1').text() >= 75 ){
                                                 $('.rut1').css('background-color', '#DDF0EC');
                                             } else if ( $('.rut1').text() < 75 && $('.rut1').text() >= 25 ) {
-                                                $('.rut1').css('background-color', 'rgba(234,234,0,0.4)');
+                                                $('.rut1').css('background-color', 'rgba(230,79,19, 0.6)');
                                             }
                                             else {
                                                 $('.rut1').css('background-color', 'rgba(213,11,14,0.6)');
@@ -180,7 +180,7 @@ $(function(){
                                             if ( $('.rut2').text() >= 150 ){
                                                 $('.rut2').css('background-color', '#DDF0EC');
                                             } else if ( $('.rut2').text() < 150 && $('.rut2').text() >= 50 ) {
-                                                $('.rut2').css('background-color', 'rgba(234,234,0,0.4)');
+                                                $('.rut2').css('background-color', 'rgba(230,79,19, 0.6)');
                                             }
                                             else {
                                                 $('.rut2').css('background-color', 'rgba(213,11,14,0.6)');
@@ -189,7 +189,7 @@ $(function(){
                                             if ( $('.rut3').text() >= 300 ){
                                                 $('.rut3').css('background-color', '#DDF0EC');
                                             } else if ( $('.rut3').text() < 300 && $('.rut3').text() >= 100 ) {
-                                                $('.rut3').css('background-color', 'rgba(234,234,0,0.4)');
+                                                $('.rut3').css('background-color', 'rgba(230,79,19, 0.6)');
                                             }
                                             else {
                                                 $('.rut3').css('background-color', 'rgba(213,11,14,0.6)');
@@ -198,7 +198,7 @@ $(function(){
                                             if ( $('.rut4').text() >= 600 ){
                                                 $('.rut4').css('background-color', '#DDF0EC');
                                             } else if ( $('.rut4').text() < 600 && $('.rut4').text() >= 200 ) {
-                                                $('.rut4').css('background-color', 'rgba(234,234,0,0.4)');
+                                                $('.rut4').css('background-color', 'rgba(230,79,19, 0.6)');
                                             }
                                             else {
                                                 $('.rut4').css('background-color', 'rgba(213,11,14,0.6)');
