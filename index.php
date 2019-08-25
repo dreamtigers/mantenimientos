@@ -253,6 +253,6 @@
     </div>
 
 
-
+    <script src='indexApp.js'></script>
 </body>
 </html>

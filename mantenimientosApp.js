@@ -128,7 +128,7 @@ $(function(){
                          /** Lets create another AJAX call, so we can solve the FIRST problem */
                         $.ajax({
                             type: "GET",
-                            url: "php/mantenimientos/getMainRow.php",
+                            url: "php/mantenimientos/getMainRow.php", // Note como getMainRow ahora también calcula y actualiza el cálculo de horas
                             data: "data",
                             success: function (response) {
                                 console.log(response);
@@ -149,16 +149,63 @@ $(function(){
                                     templating += 
                                             `
                                                 <tr>
-                                                    <td>${element.rutina1}</td>
-                                                    <td>${element.rutina2}</td>
-                                                    <td>${element.rutina3}</td>
-                                                    <td>${element.rutina4}</td>
+                                                    <td class='rut1'>${element.rutina1}</td>
+                                                    <td class='rut2'>${element.rutina2}</td>
+                                                    <td class='rut3'>${element.rutina3}</td>
+                                                    <td class='rut4'>${element.rutina4}</td>
                                                 </tr>
                                             `
                                 });
                                 $('#registros').html(template);
                                 $('#registrosHoras').html(templating);
-                             
+                                
+                                /** We will now do another Ajax request */
+                                $.ajax({
+                                    type: "GET",
+                                    url: "php/mantenimientos/colorful.php",
+                                    data: "data",
+                                    success: function (response) {
+                                        console.log(response);
+                                        /** Coloring */
+                                         // ------------ Rutina 1 -----------------------------------------------------//
+                                            if ( $('.rut1').text() >= 75 ){
+                                                $('.rut1').css('background-color', '#DDF0EC');
+                                            } else if ( $('.rut1').text() < 75 && $('.rut1') >= 25 ) {
+                                                $('.rut1').css('background-color', 'rgba(234,234,0,0.4)');
+                                            }
+                                            else {
+                                                $('.rut1').css('background-color', 'rgba(213,11,14,0.6)');
+                                            }
+                                        // ------------ Rutina 2 -----------------------------------------------------//
+                                            if ( $('.rut2').text() >= 150 ){
+                                                $('.rut2').css('background-color', '#DDF0EC');
+                                            } else if ( $('.rut2').text() < 150 && $('.rut2') >= 50 ) {
+                                                $('.rut2').css('background-color', 'rgba(234,234,0,0.4)');
+                                            }
+                                            else {
+                                                $('.rut2').css('background-color', 'rgba(213,11,14,0.6)');
+                                            }
+                                        // ------------ Rutina 3 -----------------------------------------------------//
+                                            if ( $('.rut3').text() >= 300 ){
+                                                $('.rut3').css('background-color', '#DDF0EC');
+                                            } else if ( $('.rut3').text() < 300 && $('.rut3') >= 100 ) {
+                                                $('.rut3').css('background-color', 'rgba(234,234,0,0.4)');
+                                            }
+                                            else {
+                                                $('.rut3').css('background-color', 'rgba(213,11,14,0.6)');
+                                            }
+                                        // ------------ Rutina 4 -----------------------------------------------------//
+                                            if ( $('.rut4').text() >= 600 ){
+                                                $('.rut4').css('background-color', '#DDF0EC');
+                                            } else if ( $('.rut4').text() < 600 && $('.rut4') >= 200 ) {
+                                                $('.rut4').css('background-color', 'rgba(234,234,0,0.4)');
+                                            }
+                                            else {
+                                                $('.rut4').css('background-color', 'rgba(213,11,14,0.6)');
+                                            }
+
+                                    }
+                                });
                             }
                         });
                         // Some console checking
