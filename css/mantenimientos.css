@@ -94,3 +94,11 @@ input#lookIt{
     -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
     box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
 }
+/* Making tooltips wider */
+.tooltip-inner {
+    max-width: 100% !important;
+}
+/* Aligning <li> inside wrapper to the left */
+li{
+    text-align:left;
+} 

@@ -184,10 +184,91 @@ require 'php/auth.php';
                                                     
 
 
-                                                    <td><b>Rutina 1</b></td>
-                                                    <td><b>Rutina 2</b></td>
-                                                    <td><b>Rutina 3</b></td>
-                                                    <td><b>Rutina 4</b></td>
+                                                    <td>
+                                                        <b>Rutina 1</b>
+                                                        <img title="<ul id='wrapper'>
+                                                                <li>Revisión del nivel de aceite del eje trasero y delantero (TDM).</li>
+                                                                <li>Revisión del nivel de aceite de mandos finales.</li>
+                                                                <li>Inspeccionar y limpiar filtros de aire primario y válvula de descarga de polvo.</li>
+                                                                <li>Revisar y limpiar filtro separador de agua de sistema combustible.</li>
+                                                                <li>Revisión del nivel de electrolito y de los bornes de la batería.</li>
+                                                                <li>Revisión de niveles de aceite del sistema hidráulico y transmisión.</li>
+                                                                <li>Revisión del nivel de refrigerante. Estado del radiador y mangueras.</li>
+                                                                <li>Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</li>
+                                                                <li>Cambio de aceite y del filtro del motor.</li>
+                                                                <li>Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</li>
+                                                                <li>Lubricar crucetas de cardanes.</li>
+                                                                <li>Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</li>
+                                                                <li>Chequear lineas hidráulicas por fugas, desgastes, soportes flojos, etc.</li>
+                                                                <li>Chequeo del funcionamiento del sistema eléctrico y luces.</li>
+                                                                <li>Limpieza general.</li>
+                                                            </ul>" container="body"  class='absImg' src='css/img/information.png' width=16 data-toggle="tooltip" data-placement="right" data-html="true" >    <br>
+                                      
+                                                    </td>
+                                                    <td>
+                                                        <b>Rutina 2</b>
+                                                        <img title="<ul>
+                                                                <li>Revisión de la manguera de admisión de aire.</li>
+                                                                <li>Cambio del filtro de aceite del sistema hidráulico.</li>
+                                                                <li>Revisión del par de apriete del pasador entre el aguijón y el brazo.</li>
+                                                                <li>Revisar funcionamiento de frenos de servicio y estacionamiento.</li>
+                                                                <li>Cambio del filtro del combustible y separador de agua.</li>
+                                                                <li>Cambio del filtro de la transmisión.</li>
+                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>    <br>
+                                            
+                                                
+                                                    </td>
+                                                    <td>
+                                                        <b>Rutina 3</b>
+                                                        <img title="<ul>
+                                                                <li>Cambio de aceite del eje delantero y trasero.</li>
+                                                                <li>Revisón y ajuste del varillaje de control de velocidad del motor.</li>
+                                                                <li>Cambios de aceite y filtros del sistema hidráulico.</li>
+                                                                <li>Limpieza del tubo del respiradero del carter del motor.</li>
+                                                                <li>Cambio del aceite y filtro de la transmisión y convertidor de par.</li>
+                                                                <li>Cambio de aceite de mandos finales.</li>
+                                                                <li>Sustitución de los elementos de filtro de aire.</li>
+                                                            </ul>" container="body" data-toggle="tooltip" data-placement="left" data-html="true" class='absImg' src='css/img/information.png' width=16>    <br>
+                                            
+                                                
+                                                    </td>
+                                                    <td>
+                                                        <b>Rutina 4</b>
+                                                        <img title="<ul>
+                                                                <li>Revisión del nivel de aceite del eje trasero y delantero (TDM).</li>
+                                                                <li>Revisión del nivel de aceite de mandos finales.</li>
+                                                                <li>Inspeccionar y limpiar filtros de aire primario y válvula de descarga de polvo.</li>
+                                                                <li>Revisar y limpiar filtro separador de agua de sistema combustible.</li>
+                                                                <li>Revisión del nivel de electrolito y de los bornes de la batería.</li>
+                                                                <li>Revisión de niveles de aceite del sistema hidráulico y transmisión.</li>
+                                                                <li>Revisión del nivel de refrigerante. Estado del radiador y mangueras.</li>
+                                                                <li>Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</li>
+                                                                <li>Cambio de aceite y del filtro del motor.</li>
+                                                                <li>Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</li>
+                                                                <li>Lubricar crucetas de cardanes.</li>
+                                                                <li>Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</li>
+                                                                <li>Chequear lineas hidráulicas por fugas, desgastes, soportes flojos, etc.</li>
+                                                                <li>Chequeo del funcionamiento del sistema eléctrico y luces.</li>
+                                                                <li>Limpieza general.</li>
+                                                                <li>Revisión de la manguera de admisión de aire.</li>
+                                                                <li>Cambio del filtro de aceite del sistema hidráulico.</li>
+                                                                <li>Revisión del par de apriete del pasador entre el aguijón y el brazo.</li>
+                                                                <li>Revisar funcionamiento de frenos de servicio y estacionamiento.</li>
+                                                                <li>Cambio del filtro del combustible y separador de agua.</li>
+                                                                <li>Cambio del filtro de la transmisión.</li>
+                                                                <li>Cambio de aceite del eje delantero y trasero.</li>
+                                                                <li>Revisón y ajuste del varillaje de control de velocidad del motor.</li>
+                                                                <li>Cambios de aceite y filtros del sistema hidráulico.</li>
+                                                                <li>Limpieza del tubo del respiradero del carter del motor.</li>
+                                                                <li>Cambio del aceite y filtro de la transmisión y convertidor de par.</li>
+                                                                <li>Cambio de aceite de mandos finales.</li>
+                                                                <li>Sustitución de los elementos de filtro de aire.</li>
+                                                                <li>Drenaje y reemplazo de refrigerante motor.</li>
+                                                                <li>Ajuste del juego de válvulas del motor.</li>
+                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>    <br>
+                                            
+                                             
+                                                    </td>
                                                   
 
 
