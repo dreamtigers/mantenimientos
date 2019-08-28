@@ -368,9 +368,9 @@ $(function(){
 
                                             <td>
                                                
-                                                Actividades: ${y.actividades}<br>
+                                                <b>Actividades:</b><br> ${y.actividades}<br>
                                                 <hr>
-                                                Observaciones: ${y.comentariosActividades}
+                                                <b>Observaciones:</b><br> ${y.comentariosActividades}
                                             </td>
                                     
                                         </tr>
