@@ -109,37 +109,49 @@ $(function () {
                 //console.log($('.rut1').text());
             // ------------ Rutina 1 -----------------------------------------------------//
                 if ( $('.rut1').text() >= 75 ){
+                    /** Color rojo */
                     $('.rut1').css('background-color', '#DDF0EC');
                 } else if ( $('.rut1').text() < 75 && $('.rut1').text() >= 25 ) {
+                    /** Color naranja */
                     $('.rut1').css('background-color', 'rgba(230,79,19, 0.6)');
-                }
+                }   
+                    /** Color Ok */
                 else {
                     $('.rut1').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 2 -----------------------------------------------------//
                 if ( $('.rut2').text() >= 150 ){
+                    /** Color rojo */
                     $('.rut2').css('background-color', '#DDF0EC');
                 } else if ( $('.rut2').text() < 150 && $('.rut2').text() >= 50 ) {
+                    /** Color naranja */
                     $('.rut2').css('background-color', 'rgba(230,79,19, 0.6)');
-                }
+                }   
+                    /** Color Ok */
                 else {
                     $('.rut2').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 3 -----------------------------------------------------//
                 if ( $('.rut3').text() >= 300 ){
+                    /** Color rojo */
                     $('.rut3').css('background-color', '#DDF0EC');
                 } else if ( $('.rut3').text() < 300 && $('.rut3').text() >= 100 ) {
+                    /** Color naranja */
                     $('.rut3').css('background-color', 'rgba(230,79,19, 0.6)');
-                }
+                }   
+                    /** Color Ok */
                 else {
                     $('.rut3').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 4 -----------------------------------------------------//
                 if ( $('.rut4').text() >= 600 ){
+                    /** Color rojo */
                     $('.rut4').css('background-color', '#DDF0EC');
                 } else if ( $('.rut4').text() < 600 && $('.rut4').text() >= 200 ) {
+                    /** Color naranja */
                     $('.rut4').css('background-color', 'rgba(230,79,19, 0.6)');
-                }
+                }   
+                    /** Color Ok */
                 else {
                     $('.rut4').css('background-color', 'rgba(213,11,14,0.6)');
                 }

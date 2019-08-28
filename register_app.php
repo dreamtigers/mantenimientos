@@ -159,169 +159,208 @@
                                     Primeros 15 -->
                                 <div class='rut1 rut4'>
                                     <div class='row'>
-                                        <div class='col-8'>
-                                            <label for='a_1'><span class='actividadesClass'>-)Revisión de aceite de eje trasero y delantero(TDM)</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_1'><span class='actividadesClass'>1)Revisión de aceite de eje trasero y delantero(TDM)</span></label>
                                         </div>
-                                        <div class='col-2'> <input id='a_1' type='checkbox'></div>
-                                        <div class='col-2'> </div>
+                                        <div class='col-2'> 
+                                            <input id='a_1' type='checkbox'>
+                                        </div>
+
+                                        <div class='col-3' >
+                                          
+                                                <textarea id='act1' type='text' class='ocultar inputAct' ></textarea>
+                                           
+                                        </div>
+                                    
+                                 
                                     </div>
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                    <div class='col-8'>
-                                        <label for='a_2'><span class='actividadesClass'>-)Revisión del nivel de aceite de mandos finales</span></label>
+                                    <div class='col-7'>
+                                        <label for='a_2'><span class='actividadesClass'>2)Revisión del nivel de aceite de mandos finales</span></label>
                                     </div>
                                     <div class='col-2'>  <input id='a_2' type='checkbox'></div>
-                                    <div class='col-1'></div>
-                                    <div class='col-1'></div>
+                                    <div class='col-3'>
+
+                                        <textarea id='act2' type='text' class='ocultar inputAct' ></textarea>
+
+                                    </div>
+                                    
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_3'><span class='actividadesClass'>-)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_3'><span class='actividadesClass'>3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_3' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act3' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_4'><span class='actividadesClass'>-)Revisar y limpiar filtro separador de agua del sistema combustible.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_4'><span class='actividadesClass'>4)Revisar y limpiar filtro separador de agua del sistema combustible.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_4' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act4' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
         
-                                        <div class='col-8'>
-                                            <label for='a_5'><span class='actividadesClass'>-)Revisión de niveles de electrolito y bornes de batería.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_5'><span class='actividadesClass'>5)Revisión de niveles de electrolito y bornes de batería.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_5' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act5' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
         
                                     </div>
                                 
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_6'><span class='actividadesClass'>-)Revisión de niveles de aceite del sistema hidráulico y transmisión</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_6'><span class='actividadesClass'>6)Revisión de niveles de aceite del sistema hidráulico y transmisión</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_6' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act6' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                             
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_7'><span class='actividadesClass'>-)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_7'><span class='actividadesClass'>7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_7' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act7' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_8'><span class='actividadesClass'>-)Revisión del estado de la correa de motor y comprobar tensión.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_8'><span class='actividadesClass'>8)Revisión del estado de la correa de motor y comprobar tensión.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_8' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act8' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
         
-                                        <div class='col-8'>
-                                            <label for='a_9'><span class='actividadesClass'>-)Cambio de aceite y filtro del motor.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_9'><span class='actividadesClass'>9)Cambio de aceite y filtro del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_9' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act9' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
         
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_10'><span class='actividadesClass'>-)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_10'><span class='actividadesClass'>10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_10' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                      <textarea id='act10' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                         
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_11'><span class='actividadesClass'>-)Lubricar crucetes de cardanes</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_11'><span class='actividadesClass'>11)Lubricar crucetes de cardanes</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_11' type='checkbox'></div>
-                                        <div class='col-2'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                          <textarea id='act11' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_12'><span class='actividadesClass'>-)Revisión de estado y presión de neumáticos. Chequeo del apriete de tuercas.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_12'><span class='actividadesClass'>12)Revisión de estado y presión de neumáticos. Chequeo del apriete de tuercas.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_12' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act12' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
         
-                                        <div class='col-8'>
-                                            <label for='a_13'><span class='actividadesClass'>-)Chequear lineas hidráulicas por fugas.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_13'><span class='actividadesClass'>13)Chequear lineas hidráulicas por fugas.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_13' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                    <textarea id='act13' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
         
                                     </div>
                                     
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_14'><span class='actividadesClass'>-)Chequeo del funcionamiento del sistema eléctrico y luces.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_14'><span class='actividadesClass'>14)Chequeo del funcionamiento del sistema eléctrico y luces.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_14' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act14' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                 
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_15'><span class='actividadesClass'>-)Limpieza general.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_15'><span class='actividadesClass'>15)Limpieza general.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_15' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act15' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                 
                                 </div>
@@ -330,147 +369,173 @@
                                 <!-- From now on, rutina 2 -->
                                 <div class='rut2 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_16'><span class='actividadesClass'>-)Revisión de la manguera de admisión de aire.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_16'><span class='actividadesClass'>16)Revisión de la manguera de admisión de aire.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_16' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act16' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut2 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_17'><span class='actividadesClass'>-)Cambios del filtro de aceite del sistema hidráulico.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_17'><span class='actividadesClass'>17)Cambios del filtro de aceite del sistema hidráulico.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_17' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                             <textarea id='act17' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                 
                                 </div>
                                 <div class='rut2 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                        <label for='a_18'><span class='actividadesClass'>-)Revisión del par de apriete del pasador entre el aguilón y el brazo.</span></label>
+                                        <div class='col-7'>
+                                        <label for='a_18'><span class='actividadesClass'>18)Revisión del par de apriete del pasador entre el aguilón y el brazo.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_18' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                             <textarea id='act18' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut2 rut4'>
                                     <div class="row">
         
-                                        <div class='col-8'>
-                                            <label for='a_19'><span class='actividadesClass'>-)Revisar funcionamiento de frenos de servicio y estacionamiento.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_19'><span class='actividadesClass'>19)Revisar funcionamiento de frenos de servicio y estacionamiento.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_19' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                          <textarea id='act19' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
         
                                     </div>
                                     
                                 </div>
                                 <div class='rut2 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_20'><span class='actividadesClass'>-)Cambios del filtro del combustible y separador de agua.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_20'><span class='actividadesClass'>20)Cambios del filtro del combustible y separador de agua.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_20' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                          <textarea id='act20' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut2 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
-                                            <label for='a_21'><span class='actividadesClass'>-)Cambios del filtro de la transmisión.</span></label>
+                                        <div class='col-7'>
+                                            <label for='a_21'><span class='actividadesClass'>21)Cambios del filtro de la transmisión.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_21' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                      <textarea id='act21' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <!-- From now on, rutine 3-->
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_22'><span class='actividadesClass'>-)Cambio de aceite de eje delantero y trasero.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_22' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                        <textarea id='act22' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_23'><span class='actividadesClass'>-)Revisión y ajuste del vanillaje de control de velocidad del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_23' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                       <textarea id='act23' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_24'><span class='actividadesClass'>-)Cambios de aceite y filtro del sistema hidráulico.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_24' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act24' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_25'><span class='actividadesClass'>-)Limpieza de tubo del respiradero de carter del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_25' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                         <textarea id='act25' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_26'><span class='actividadesClass'>-)Cambio de aceite y filtro de la transmisión y convertidor en par</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_26' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act26' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_27'><span class='actividadesClass'>-)Cambio de aceite de mandos finales</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_27' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                     <textarea id='act27' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
                                 <div class='rut3 rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_28'><span class='actividadesClass'>-)Sustitución de los elementos de filtro de aire</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_28' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                          <textarea id='act28' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
@@ -478,23 +543,27 @@
                                 <!-- From now on, rutine 4-->
                                 <div class='rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_29'><span class='actividadesClass'>-)Drenaje y reemplazo de refrigerador motor</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_29' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                           <textarea id='act29' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                       
                                     </div>
                                     
                                 </div>
                                 <div class='rut4'>
                                     <div class="row">
-                                        <div class='col-8'>
+                                        <div class='col-7'>
                                             <label for='a_30'><span class='actividadesClass'>-)Ajuste de juego de válvulas del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_30' type='checkbox'></div>
-                                        <div class='col-1'></div>
-                                        <div class='col-1'></div>
+                                        <div class='col-3'>
+                                            <textarea id='act30' type='text' class='ocultar inputAct' ></textarea>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
@@ -662,14 +731,14 @@
                                         </div>
                                     </div>
 
-                                    <div class='mb-1' style=''>
+                                    <div class='mb-1 ocultar' style=''>
                                             <span>Observaciones:</span>
                                     </div>
                                     <div class="form-group">
                                         <div class="row rowRelative">
                                             <div class="col-12">
 
-                                                <textarea id='observaciones' class='textarea'></textarea>
+                                                <textarea id='observaciones' class='textarea ocultar'></textarea>
 
                                             </div>
                                         </div>

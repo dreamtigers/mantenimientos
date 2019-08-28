@@ -223,6 +223,7 @@ $(function(){
                                         <a idHoras=${y.idHoras} href='#' class='gooHoras'>${y.nombre}</a>
                                      `;
                             
+
                             template2 += `
 
                         <div class='contenApp my-4'>
@@ -344,11 +345,16 @@ $(function(){
                                     </tbody>
                                 </table>
 
+                             
+
+
+
+                                
                                 <table class='table table-bordered table-sm' style='margin-top:-20px'>
                                     <thead class='tabledark' id='tableWeird'>
                                         <tr>
                                                             
-                                            <td>Observaciones: </span></td>    
+                                            <td> Rutina de mantenimiento Nº: ${y.rutina}</td>    
                                 
                                         </tr>
                             
@@ -361,37 +367,10 @@ $(function(){
                                         <tr>
 
                                             <td>
-                                                 ${y.observaciones}
-                                            </td>
-                                    
-                                        </tr>
-                                            
-                                           
-
-                                    </tbody>
-                                </table>
-
-
-
-                                
-                                <table class='table table-bordered table-sm' style='margin-top:-20px'>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                            <td>Actividades realizadas: </span></td>    
-                                
-                                        </tr>
-                            
-                                    </thead>
-                                    
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                        <tr>
-
-                                            <td>
-                                               Rutina de mantenimiento Nº: ${y.rutina}<br> Actividades realizadas: ${y.actividades}
+                                               
+                                                Actividades: ${y.actividades}<br>
+                                                <hr>
+                                                Observaciones: ${y.comentariosActividades}
                                             </td>
                                     
                                         </tr>

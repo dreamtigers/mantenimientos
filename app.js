@@ -17,6 +17,8 @@ $(function () {
            }
        });
     }
+
+    $('.ocultar').hide();
     /** Just checking out */
     console.log('Jquery is working');  
     /**Variable that let's us now when we are editing */
@@ -382,104 +384,137 @@ $(function () {
      */
     $('#registerForm').submit(function (e) { 
         e.preventDefault();
-        
+        /** let actividades */
         let actividades = '';
+        /** Y comentarios de estas */
+        let comentariosActividades = ''; 
         /** Hold on for the 30 activities down here */
         /** First 5 */
         if ($('#a_1').is(":checked")){
-            actividades += ' Revisión del nivel de aceite del eje trasero y delantero.';
+            actividades += ' 1)Revisión del nivel de aceite del eje trasero y delantero.';
+            comentariosActividades += '1)' + $('#act1').val() + '  ';
         }
         if ($('#a_2').is(":checked")){
-            actividades += ' Revisión del nivel de aceite de mandos finales.';
+            actividades += ' 2)Revisión del nivel de aceite de mandos finales.';
+            comentariosActividades += '2)' + $('#act2').val() + '  ';
+            
         }
         if ($('#a_3').is(":checked")){
-            actividades += ' Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.';
+            actividades += ' 3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.';
+            comentariosActividades += '3)' + $('#act3').val() + '  ';
         }
         if ($('#a_4').is(":checked")){
-            actividades += ' Revisar y limpiar filtro separador de agua de sistemas combustible.';
+            actividades += ' 4)Revisar y limpiar filtro separador de agua de sistemas combustible.';
+            comentariosActividades += '4)' + $('#act4').val() + '  ';
         }
         if ($('#a_5').is(":checked")){
-            actividades += ' Revisión del nivel de electrolito y de los bornes de la batería.';
+            actividades += ' 5)Revisión del nivel de electrolito y de los bornes de la batería.';
+            comentariosActividades += '5)' + $('#act5').val() + '  ';
         }
         /** Five more (5-10) */
         if ($('#a_6').is(":checked")){
-            actividades += ' Revisión de niveles de aceite del sistemas hidráulico y transmisión.';
+            actividades += ' 6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.';
+            comentariosActividades += '6)' + $('#act6').val() + '  ';
         }
         if ($('#a_7').is(":checked")){
-            actividades += ' Revisión del nivel de refrigerante. Estado del radiador y mangueras.';
+            actividades += ' 7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.';
+            comentariosActividades += '7)' + $('#act7').val() + '  ';
         }
         if ($('#a_8').is(":checked")){
-            actividades += ' Revisión del estado de la(s) correa(s) del motor y comprobar tensión.';
+            actividades += ' 8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.';
+              comentariosActividades += '8)' + $('#act8').val() + '  ';
         }
         if ($('#a_9').is(":checked")){
-            actividades += ' Cambio de aceite y del filtro del motor.';
+            actividades += ' 9)Cambio de aceite y del filtro del motor.';
+            comentariosActividades += '9)' + $('#act9').val() + '  ';
         }
         if ($('#a_10').is(":checked")){
-            actividades += ' Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.';
+            actividades += ' 10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.';
+            comentariosActividades += '10)' + $('#act10').val() + '  ';
         }
         /** Five more (10-15)*/
         if ($('#a_11').is(":checked")){
-            actividades += ' Lubricar crucetas de cardanes.';
+            actividades += ' 11)Lubricar crucetas de cardanes.';
+            comentariosActividades += '11)' + $('#act11').val() + '  ';
         }
         if ($('#a_12').is(":checked")){
-            actividades += ' Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.';
+            actividades += ' 12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.';
+            comentariosActividades += '12)' + $('#act12').val() + '  ';
         }
         if ($('#a_13').is(":checked")){
-            actividades += ' Chequeo de lineas hidráulicas por fugas, desgastes, etc.';
+            actividades += ' 13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.';
+            comentariosActividades += '13)' + $('#act13').val() + '  ';
         }
         if ($('#a_14').is(":checked")){
-            actividades += ' Chequeo del sistema eléctrico y luces.';
+            actividades += ' 14)Chequeo del sistema eléctrico y luces.';
+            comentariosActividades += '14)' + $('#act14').val() + '  ';
         }
         if ($('#a_15').is(":checked")){
-            actividades += ' Limpieza general.';
+            actividades += ' 15)Limpieza general.';
+            comentariosActividades += '15)' + $('#act15').val() + '  ';
         }
         /** Five more (15-20)*/
         if ($('#a_16').is(":checked")){
-            actividades += ' Revisión de la manguera de admisión de aire.';
+            actividades += ' 16)Revisión de la manguera de admisión de aire.';
+            comentariosActividades += '16)' + $('#act16').val() + '  ';
         }
         if ($('#a_17').is(":checked")){
-            actividades += ' Cambio del filtro de aceite del sistema hidráulico.';
+            actividades += ' 17)Cambio del filtro de aceite del sistema hidráulico.';
+            comentariosActividades += '17)' + $('#act17').val() + '  ';
         }
         if ($('#a_18').is(":checked")){
-            actividades += ' Revisión del par de apriete del pasador entre el aguijón y el brazo.';
+            actividades += ' 18)Revisión del par de apriete del pasador entre el aguijón y el brazo.';
+            comentariosActividades += '18)' + $('#act18').val() + '  ';
         }
         if ($('#a_19').is(":checked")){
-            actividades += ' Revisar funcionamiento de frenos de servicio y estacionamiento.';
+            actividades += ' 19)Revisar funcionamiento de frenos de servicio y estacionamiento.';
+            comentariosActividades += '19)' + $('#act19').val() + '  ';
         }
         if ($('#a_20').is(":checked")){
-            actividades += ' Cambio del filtro del combustible y separador de agua.';
+            actividades += ' 20)Cambio del filtro del combustible y separador de agua.';
+            comentariosActividades += '20)' + $('#act20').val() + '  ';
         }
         /** Five more (20-25) */
         if ($('#a_21').is(":checked")){
-            actividades += ' Cambio del filtro de transmisión.';
+            actividades += ' 21)Cambio del filtro de transmisión.';
+            comentariosActividades += '21)' + $('#act21').val() + '  ';
         }
         if ($('#a_22').is(":checked")){
-            actividades += ' Cambio de aceite del eje delantero y trasero.';
+            actividades += ' 22)Cambio de aceite del eje delantero y trasero.';
+            comentariosActividades += '22)' + $('#act22').val() + '  ';
         }
         if ($('#a_23').is(":checked")){
-            actividades += ' Revisión y ajuste del varillaje de control de velocidad del motor.';
+            actividades += ' 23)Revisión y ajuste del varillaje de control de velocidad del motor.';
+            comentariosActividades += '23)' + $('#act23').val() + '  ';
         }
         if ($('#a_24').is(":checked")){
-            actividades += ' Cambio de aceite y filtro del sistema hidráulico.';
+            actividades += ' 24)Cambio de aceite y filtro del sistema hidráulico.';
+            comentariosActividades += '24)' + $('#act24').val() + '  ';
         }
         if ($('#a_25').is(":checked")){
-            actividades += ' Limpieza del tubo del respiradero del carter del motor.';
+            actividades += ' 25)Limpieza del tubo del respiradero del carter del motor.';
+            comentariosActividades += '25)' + $('#act25').val() + '  ';
         }
         /** Last five up to 30 */
         if ($('#a_26').is(":checked")){
-            actividades += ' Cambio de aceite y filtro de la transmisión y convertidor de par.';
+            actividades += ' 26)Cambio de aceite y filtro de la transmisión y convertidor de par.';
+            comentariosActividades += '26)' + $('#act26').val() + '  ';
         }
         if ($('#a_27').is(":checked")){
-            actividades += ' Cambio de aceite de mandos finales.';
+            actividades += ' 27)Cambio de aceite de mandos finales.';
+            comentariosActividades += '27)' + $('#act27').val() + '  ';
         }
         if ($('#a_28').is(":checked")){
-            actividades += ' Sustitución de los elementos del filtro del aire.';
+            actividades += '28)Sustitución de los elementos del filtro del aire.';
+            comentariosActividades += '28)' + $('#act28').val() + '  ';
         }
         if ($('#a_29').is(":checked")){
-            actividades += ' Drenaje y reemplazo de refrigerante motor.';
+            actividades += ' 29)Drenaje y reemplazo de refrigerante motor.';
+            comentariosActividades += '29)' + $('#act29').val() + '  ';
         }
         if ($('#a_30').is(":checked")){
-            actividades += ' Ajuste del juego de válvulas del motor.';
+            actividades += ' 30)Ajuste del juego de válvulas del motor.';
+            comentariosActividades += '30)' + $('#act30').val() + '  ';
         }
         /** Creamos el objeto a enviar */
         const pack = {
@@ -516,6 +551,7 @@ $(function () {
             capacidadTanqueTransmision: $('#capacidadTanqueTransmision').val(),
             capacidadTanqueHidraulico: $('#capacidadTanqueHidraulico').val(),
             actividades : actividades,
+            comentariosActividades :comentariosActividades ,
             observaciones: $('#observaciones').val()
         }
         
@@ -539,7 +575,8 @@ $(function () {
                 $('#registerForm').trigger("reset");
                 $('#actividades').trigger("reset");
                 $('html, body').animate({scrollTop: '0px'}, 420);
-                $('.rut4').hide();
+
+                $('.rut4,.ocultar').hide();/** Acá también ocultamos los comentarios por actividades. */
                 //and back to normal size
                 $('.g').height ($(document).height() + $('.navbar').outerHeight() );
                 listThem();
@@ -885,6 +922,251 @@ $(function () {
     });
 
 
+
+
+    /** From doen this point I'll try to make some commentary logic */
+    // Let me begin by detecting checkboxes changes
+    /** Actividad 1 */
+    $('#a_1').change(function(){
+        if($(this).is(':checked')){
+            $("#act1").fadeIn();
+        }else{
+            $("#act1").hide();
+        }
+    });
+    /** Actividad 2 */
+    $('#a_2').change(function(){
+        if($(this).is(':checked')){
+            $("#act2").fadeIn();
+        }else{
+            $("#act2").hide();
+        }
+    });
+    /** Actividad 3 */
+    $('#a_3').change(function(){
+        if($(this).is(':checked')){
+            $("#act3").fadeIn();
+        }else{
+            $("#act3").hide();
+        }
+    });
+    /** Actividad 4 */
+    $('#a_4').change(function(){
+        if($(this).is(':checked')){
+            $("#act4").fadeIn();
+        }else{
+            $("#act4").hide();
+        }
+    });
+    /** Actividad 5 */
+    $('#a_5').change(function(){
+        if($(this).is(':checked')){
+            $("#act5").fadeIn();
+        }else{
+            $("#act5").hide();
+        }
+    });
+    /** Actividad 6 */
+    $('#a_6').change(function(){
+        if($(this).is(':checked')){
+            $("#act6").fadeIn();
+        }else{
+            $("#act6").hide();
+        }
+    });
+    /** Actividad 7 */
+    $('#a_7').change(function(){
+        if($(this).is(':checked')){
+            $("#act7").fadeIn();
+        }else{
+            $("#act7").hide();
+        }
+    });
+    /** Actividad 8 */
+    $('#a_8').change(function(){
+        if($(this).is(':checked')){
+            $("#act8").fadeIn();
+        }else{
+            $("#act8").hide();
+        }
+    });
+    /** Actividad 9 */
+    $('#a_9').change(function(){
+        if($(this).is(':checked')){
+            $("#act9").fadeIn();
+        }else{
+            $("#act9").hide();
+        }
+    });
+    /** Actividad 10 */
+    $('#a_10').change(function(){
+        if($(this).is(':checked')){
+            $("#act10").fadeIn();
+        }else{
+            $("#act10").hide();
+        }
+    });
+    /** Actividad 11 */
+    $('#a_11').change(function(){
+        if($(this).is(':checked')){
+            $("#act11").fadeIn();
+        }else{
+            $("#act11").hide();
+        }
+    });
+    /** Actividad 12 */
+    $('#a_12').change(function(){
+        if($(this).is(':checked')){
+            $("#act12").fadeIn();
+        }else{
+            $("#act12").hide();
+        }
+    });
+    /** Actividad 13 */
+    $('#a_13').change(function(){
+        if($(this).is(':checked')){
+            $("#act13").fadeIn();
+        }else{
+            $("#act13").hide();
+        }
+    });
+    /** Actividad 14 */
+    $('#a_14').change(function(){
+        if($(this).is(':checked')){
+            $("#act14").fadeIn();
+        }else{
+            $("#act14").hide();
+        }
+    });
+    /** Actividad 15 */
+    $('#a_15').change(function(){
+        if($(this).is(':checked')){
+            $("#act15").fadeIn();
+        }else{
+            $("#act15").hide();
+        }
+    });
+    /** Actividad 16 */
+    $('#a_16').change(function(){
+        if($(this).is(':checked')){
+            $("#act16").fadeIn();
+        }else{
+            $("#act16").hide();
+        }
+    });
+    /** Actividad 17 */
+    $('#a_17').change(function(){
+        if($(this).is(':checked')){
+            $("#act17").fadeIn();
+        }else{
+            $("#act17").hide();
+        }
+    });
+    /** Actividad 18 */
+    $('#a_18').change(function(){
+        if($(this).is(':checked')){
+            $("#act18").fadeIn();
+        }else{
+            $("#act18").hide();
+        }
+    });
+    /** Actividad 19 */
+    $('#a_19').change(function(){
+        if($(this).is(':checked')){
+            $("#act19").fadeIn();
+        }else{
+            $("#act19").hide();
+        }
+    });
+    /** Actividad 20 */
+    $('#a_20').change(function(){
+        if($(this).is(':checked')){
+            $("#act20").fadeIn();
+        }else{
+            $("#act20").hide();
+        }
+    });
+    /** Actividad 21 */
+    $('#a_21').change(function(){
+        if($(this).is(':checked')){
+            $("#act21").fadeIn();
+        }else{
+            $("#act21").hide();
+        }
+    });
+     /** Actividad 22 */
+     $('#a_22').change(function(){
+        if($(this).is(':checked')){
+            $("#act22").fadeIn();
+        }else{
+            $("#act22").hide();
+        }
+    });
+     /** Actividad 23 */
+     $('#a_23').change(function(){
+        if($(this).is(':checked')){
+            $("#act23").fadeIn();
+        }else{
+            $("#act23").hide();
+        }
+    });
+     /** Actividad 21 */
+     $('#a_24').change(function(){
+        if($(this).is(':checked')){
+            $("#act24").fadeIn();
+        }else{
+            $("#act24").hide();
+        }
+    });
+     /** Actividad 25 */
+     $('#a_25').change(function(){
+        if($(this).is(':checked')){
+            $("#act25").fadeIn();
+        }else{
+            $("#act25").hide();
+        }
+    });
+     /** Actividad 26 */
+     $('#a_26').change(function(){
+        if($(this).is(':checked')){
+            $("#act26").fadeIn();
+        }else{
+            $("#act26").hide();
+        }
+    });
+     /** Actividad 27 */
+     $('#a_27').change(function(){
+        if($(this).is(':checked')){
+            $("#act27").fadeIn();
+        }else{
+            $("#act27").hide();
+        }
+    });
+     /** Actividad 28 */
+     $('#a_28').change(function(){
+        if($(this).is(':checked')){
+            $("#act28").fadeIn();
+        }else{
+            $("#act28").hide();
+        }
+    });
+     /** Actividad 29 */
+     $('#a_29').change(function(){
+        if($(this).is(':checked')){
+            $("#act29").fadeIn();
+        }else{
+            $("#act29").hide();
+        }
+    });
+     /** Actividad 30 */
+     $('#a_30').change(function(){
+        if($(this).is(':checked')){
+            $("#act30").fadeIn();
+        }else{
+            $("#act30").hide();
+        }
+    });
+    
     /** Back to Dashboard */
     $(document).on('click', '.poin', function(){
         window.location.href='dashboard.php';

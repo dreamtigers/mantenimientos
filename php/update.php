@@ -249,17 +249,18 @@
 
         /** Actividades can't be free to access, tho. */
         $actividades = $_POST['actividades'];
+        $comentariosActividades = $_POST['comentariosActividades'];
         /** Observaciones can't be free to access either */
         $observaciones = $_POST['observaciones'];
         mysqli_real_escape_string($db,$observaciones);
         /** */
 
         if($ok){
-            //SQL order
+            //SQL order that actually adds them
             /** Session variable captured from getSimpleTask. */
             $id = $_SESSION['myId'];
-            $sql = sprintf ("UPDATE tarjetaEquipo SET observaciones='%s',  marca='%s', actividades='%s' ,modelo='%s',serial='%s',arreglo='%s',numeroPlaca='%s',tipoMantenimiento='%s',fechaIngreso='%s',kilometrajeEnFecha='%s',horasEnFecha='%s',anoFabricacion='%s',ubicacion='%s',filtroAceiteMotor='%s',filtroAceiteHidraulico='%s',filtroAirePrimario='%s',filtroAireSecundario='%s',filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s'/**Up here*/,filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s'/**To here*/,tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'  WHERE id='%s' ", 
-                mysqli_real_escape_string($db,$observaciones),
+            $sql = sprintf ("UPDATE tarjetaEquipo SET observaciones='%s', comentarios_actividades = '%s' , marca='%s', actividades='%s' ,modelo='%s',serial='%s',arreglo='%s',numeroPlaca='%s',tipoMantenimiento='%s',fechaIngreso='%s',kilometrajeEnFecha='%s',horasEnFecha='%s',anoFabricacion='%s',ubicacion='%s',filtroAceiteMotor='%s',filtroAceiteHidraulico='%s',filtroAirePrimario='%s',filtroAireSecundario='%s',filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s'/**Up here*/,filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s'/**To here*/,tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'  WHERE id='%s' ", 
+                mysqli_real_escape_string($db,$observaciones),   mysqli_real_escape_string($db,$comentariosActividades),
                 mysqli_real_escape_string($db, $marca),mysqli_real_escape_string($db,$actividades),
                 mysqli_real_escape_string($db, $modelo),mysqli_real_escape_string($db, $serial),
                 mysqli_real_escape_string($db, $arreglo),mysqli_real_escape_string($db, $placa),

@@ -49,7 +49,8 @@
             'filtroTanqueHidraulico' => $row['filtroTanqueHidraulico'],
             'actividades' => $row['actividades'],
             'observaciones' => $row['observaciones'],
-            'idHoras' => $deviceId
+            'idHoras' => $deviceId,
+            'comentariosActividades' => $row['comentarios_actividades']
 
         );
       

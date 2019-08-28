@@ -217,6 +217,7 @@
         }
         /** Actividades can't be free to access, tho. */
         $actividades = $_POST['actividades'];
+        $comentariosActividades = $_POST['comentariosActividades'];
         /** Observaciones can't be free to access either. */
         $observaciones = $_POST['observaciones'];
         mysqli_real_escape_string($db,$observaciones);
@@ -225,9 +226,9 @@
 
         if($ok){
             //SQL order
-            $sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,observaciones, marca, modelo, serial, arreglo, numeroPlaca, tipoMantenimiento, registradoPor, fechaIngreso,kilometrajeEnFecha, horasEnFecha, anoFabricacion, ubicacion, filtroAceiteMotor, filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision, filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico,deviceId,actividades) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s', '%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s', '%s','%s','%s','%s','%s','%s','%s','%s') 
+            $sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,observaciones,comentarios_actividades, marca, modelo, serial, arreglo, numeroPlaca, tipoMantenimiento, registradoPor, fechaIngreso,kilometrajeEnFecha, horasEnFecha, anoFabricacion, ubicacion, filtroAceiteMotor, filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision, filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico,deviceId,actividades) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s', '%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s', '%s','%s','%s','%s','%s','%s','%s','%s') 
             ",  mysqli_real_escape_string($db, $tipoEquipo),mysqli_real_escape_string($db,$observaciones),
-           
+                mysqli_real_escape_string($db,$comentariosActividades),
                 mysqli_real_escape_string($db, $marca), mysqli_real_escape_string($db, $modelo),
                 mysqli_real_escape_string($db, $serial), mysqli_real_escape_string($db, $arreglo),
                 mysqli_real_escape_string($db, $placa), mysqli_real_escape_string($db, $tipoMantenimiento),

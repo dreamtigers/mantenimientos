@@ -1,4 +1,7 @@
-
+.inputAct{
+    border-radius: 6px;
+    width: 96%;
+}
 input, select{
     width:100%;
     

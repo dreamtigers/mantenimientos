@@ -115,37 +115,49 @@ $(function(){
                 //console.log($('.rut1').text());
             // ------------ Rutina 1 -----------------------------------------------------//
                 if ( $('.rut1').text() >= 75 ){
+                    /** Color rojo */
                     $('.rut1').css('background-color', '#DDF0EC');
+                    /** Color naranja*/
                 } else if ( $('.rut1').text() < 75 && $('.rut1') >= 25 ) {
                     $('.rut1').css('background-color', 'rgba(230,79,19, 0.6)');
                 }
+                    /** Color ok */
                 else {
                     $('.rut1').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 2 -----------------------------------------------------//
                 if ( $('.rut2').text() >= 150 ){
+                    /** Color rojo */
                     $('.rut2').css('background-color', '#DDF0EC');
+                    /** Color naranja*/
                 } else if ( $('.rut2').text() < 150 && $('.rut2') >= 50 ) {
                     $('.rut2').css('background-color', 'rgba(230,79,19, 0.6)');
                 }
+                    /** Color ok */
                 else {
                     $('.rut2').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 3 -----------------------------------------------------//
                 if ( $('.rut3').text() >= 300 ){
+                    /** Color rojo */
                     $('.rut3').css('background-color', '#DDF0EC');
+                    /** Color naranja*/
                 } else if ( $('.rut3').text() < 300 && $('.rut3') >= 100 ) {
                     $('.rut3').css('background-color', 'rgba(230,79,19, 0.6)');
                 }
+                    /** Color ok */
                 else {
                     $('.rut3').css('background-color', 'rgba(213,11,14,0.6)');
                 }
             // ------------ Rutina 4 -----------------------------------------------------//
                 if ( $('.rut4').text() >= 600 ){
+                    /** Color rojo */
                     $('.rut4').css('background-color', '#DDF0EC');
+                    /** Color naranja*/
                 } else if ( $('.rut4').text() < 600 && $('.rut4') >= 200 ) {
                     $('.rut4').css('background-color', 'rgba(230,79,19, 0.6)');
                 }
+                    /** Color ok */
                 else {
                     $('.rut4').css('background-color', 'rgba(213,11,14,0.6)');
                 }
