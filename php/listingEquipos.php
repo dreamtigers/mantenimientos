@@ -3,8 +3,8 @@
     include('database.php');
     $user = $_SESSION['user'];
 
-    $query = "SELECT * FROM tarjetaEquipo  
-    ORDER BY id DESC
+    $query = "SELECT * FROM registrado_antes  
+    /*ORDER BY id DESC*/
     LIMIT 15 "; /** WHERE propietario LIKE '$user' */
     $res = mysqli_query($db, $query);
     /** REMEMBER TO EITHER CONFIRM OR KILL YOUR QUERIES */
@@ -18,14 +18,13 @@
     while($row = mysqli_fetch_array($res)){
         
         $json[] = array(
-            'name' => $row['tipoDeEquipo'],
+            'name' => $row['nombre'],
             'marca' => $row['marca'],
             'modelo' => $row['modelo'],
             'serial' => $row['serial'],
             'arreglo' => $row['arreglo'],
-            'placa' => $row['numeroPlaca'],
-            'tipo' => $row['tipoMantenimiento'],
-            'id' => $row['id'],
+            'placa' => $row['placa'],
+
             'deviceId' => $row['deviceId']
         );
      

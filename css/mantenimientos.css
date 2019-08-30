@@ -102,3 +102,6 @@ input#lookIt{
 li{
     text-align:left;
 } 
+label{
+    margin-bottom:0px;
+}

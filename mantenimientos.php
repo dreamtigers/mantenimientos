@@ -300,8 +300,27 @@ require 'php/auth.php';
 
                     </div>
 
+                  
 
+                    <div class="row">
 
+                       <div class="col-11 mx-auto mt-2">
+                            <div class="row">
+                                <div class="col-1 mx-auto mt-3" id='rutina'> 
+                                   
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mt-2" id='actividadesCercanas'> 
+                    
+                                </div>
+                            
+                            </div>
+
+                       </div>
+                        
+                    </div>
 
 
 

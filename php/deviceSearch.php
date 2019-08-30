@@ -11,7 +11,7 @@
     /** Sin existe un valor 
      * (el cual vendría del front-end) */
     if(!empty($search)){
-        $query = "SELECT * FROM tarjetaEquipo WHERE tipoDeEquipo LIKE '$search%' ORDER BY id DESC
+        $query = "SELECT * FROM registrado_antes WHERE nombre LIKE '$search%' /** ORDER BY id DESC */
         LIMIT 15  
         ";
         $result = mysqli_query($db, $query);
@@ -27,16 +27,15 @@
         while($row = mysqli_fetch_array($result)){
             /** La variable json será llenada en cada recorrido del bucle */
             $json[] = array(
-                'id' => $row['id'],
+               
                 'deviceId' => $row['deviceId'],
-                'name' => $row['tipoDeEquipo'],
+                'name' => $row['nombre'],
                 'marca' => $row['marca'],
                 'modelo' => $row['modelo'],
                 'serial' => $row['serial'],
                 'arreglo' => $row['arreglo'],
-                'placa' => $row['numeroPlaca'],
-                'tipo' => $row['tipoMantenimiento'],
-                'registradoPor' => $row['registradoPor']
+                'placa' => $row['placa'],
+               
             );
         }
         /** Lets try to actually create the JSON now then */

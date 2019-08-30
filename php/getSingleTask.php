@@ -2,12 +2,13 @@
     session_start();
     include('database.php');
 
-    $id = $_POST['id'];
+   
 
-    $_SESSION['myId'] = $id;
+   
     $_SESSION['devId']=$_POST['devId'];
+    $id = $_POST['devId'];
 
-    $sql = "SELECT * FROM tarjetaEquipo WHERE id LIKE '$id' ";
+    $sql = "SELECT * FROM registrado_antes WHERE deviceId LIKE '$id' ";
     $res = mysqli_query($db, $sql);
 
     if(!$res){
@@ -25,14 +26,13 @@
     while($row = mysqli_fetch_array($res)){
         /** La variable json será llenada en cada recorrido del bucle */
         $json[] = array(
-            'tipoEquipo' => $row['tipoDeEquipo'],
+            'nombre' => $row['nombre'],
             'marca' => $row['marca'],
             'modelo' => $row['modelo'],
             'serial' => $row['serial'],
             'arreglo' => $row['arreglo'],
-            'placa' => $row['numeroPlaca'],
-            'tipoMantenimiento' => $row['tipoMantenimiento'],
-            'fechaIngreso' => $row['fechaIngreso'],
+            'placa' => $row['placa'],
+            'fechaIngreso' => $row['fecha'],
             'kilometraje' => $row['kilometrajeEnFecha'],
             'horasUso' => $row['horasEnFecha'],
             'anoFabricacion' => $row['anoFabricacion'],
@@ -54,8 +54,7 @@
             'capacidadTanqueCaja' => $row['capacidadTanqueCaja'],
             'capacidadTanqueTransmision' => $row['capacidadTanqueTransmision'],
             'capacidadTanqueHidraulico' => $row['capacidadTanqueHidraulico'],
-            'devideId' => $row['deviceId'],
-            'observaciones' => $row['observaciones']
+            'devideId' => $row['deviceId']
             
         );
     }

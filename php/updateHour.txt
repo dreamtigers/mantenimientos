@@ -1,0 +1,41 @@
+//The update accorging to selected RUTINA goes down here
+            $query = "SELECT * FROM equipos WHERE deviceId LIKE '$deviceId' "; /** WHERE propietario LIKE '$user' */
+            $res = mysqli_query($db, $query);
+            /** REMEMBER TO EITHER CONFIRM OR KILL YOUR QUERIES */
+            if (!$res){
+                die('Querie failed: '. mysqli_error($db));
+            }
+            //Only one row in this case
+            while($row = mysqli_fetch_array($res)){
+                $updateHour = $row['hrsMotor'];
+            }
+            if($tipoMantenimiento == 1){
+                //Now replace 'hrsMotor' en 'hrsMantenimiento'
+                $order = sprintf("INSERT INTO equipos (hrsMantenimiento, deviceId) VALUE ('%s','%s')
+                ON DUPLICATE KEY UPDATE hrsMantenimiento='%s' ",
+                    $updateHour,
+                    $deviceId,
+                    $updateHour);
+                mysqli_query($db, $order);
+            } else if ($tipoMantenimiento == 2){
+                $order = sprintf("INSERT INTO equipos (hrsMant2, deviceId) VALUE ('%s','%s')
+                ON DUPLICATE KEY UPDATE hrsMant2='%s' ",
+                    $updateHour,
+                    $deviceId,
+                    $updateHour);
+                mysqli_query($db, $order);
+            } else if ($tipoMantenimiento == 3){
+                $order = sprintf("INSERT INTO equipos (hrsMant3, deviceId) VALUE ('%s','%s')
+                ON DUPLICATE KEY UPDATE hrsMant3='%s' ",
+                    $updateHour,
+                    $deviceId,
+                    $updateHour);
+                mysqli_query($db, $order);
+            }   else if ($tipoMantenimiento == 4){
+                $order = sprintf("INSERT INTO equipos (hrsMant4, deviceId) VALUE ('%s','%s')
+                ON DUPLICATE KEY UPDATE hrsMant4='%s' ",
+                    $updateHour,
+                    $deviceId,
+                    $updateHour);
+                mysqli_query($db, $order);
+            }

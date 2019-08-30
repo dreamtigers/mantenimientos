@@ -14,7 +14,7 @@
     /** Lets get the remaining hours for this row as well, shall we? */
     $sqlToo = "SELECT * FROM equipos WHERE deviceId LIKE '$deviceId' ";
     $result = mysqli_query($db, $sqlToo);
-    $result2 = mysqli_query($db, $sqlToo);
+    
     if (!$result){
         die('Querie failed: '. mysqli_error($db));
     }
@@ -34,27 +34,38 @@
         $hrsTranscurridas3 = $otherRow['hrsMotor'] - $otherRow['hrsMant3'];
         // tiempo 4
         $hrsTranscurridas4 = $otherRow['hrsMotor'] - $otherRow['hrsMant4'];
-    
+        
+
         //Tiempos faltantes para cada rutina rutina
+        
         if($rut1 > $hrsTranscurridas){
             $hrsRut1 = $rut1 - $hrsTranscurridas;
+            $hrsReales1 = $hrsRut1;
         } else {
             $hrsRut1 = 0;
+            $hrsReales1 = $rut1 - $hrsTranscurridas;
         }
         if($rut2 > $hrsTranscurridas2){
             $hrsRut2 = $rut2 - $hrsTranscurridas2;
+            $hrsReales2 = $hrsRut2;
         } else {
             $hrsRut2 = 0;
+            $hrsReales2 = $rut2 - $hrsTranscurridas2;
         }
         if($rut3 > $hrsTranscurridas3){
             $hrsRut3 = $rut3 - $hrsTranscurridas3;
+            $hrsReales3 = $hrsRut3;
         } else {
             $hrsRut3 = 0;
+            $hrsReales3 = $rut3 - $hrsTranscurridas3;
         }
         if($rut4 > $hrsTranscurridas4){
             $hrsRut4 = $rut4 - $hrsTranscurridas4;
+            $hrsReales4 = $hrsRut4;
+         
         } else {
             $hrsRut4 = 0;
+            $hrsReales4 = $rut4 - $hrsTranscurridas4;
         }
         //Almacenemos los datos de las horas restantes en nuestra base de datos.
         //Table equipos; shall we?
@@ -78,11 +89,16 @@
 
     /** Hechas las sumas y las restas */
 
-
+    $sqlToo2 = "SELECT * FROM equipos WHERE deviceId LIKE '$deviceId' ";
+    $result2 = mysqli_query($db, $sqlToo2);
     $row2 = mysqli_fetch_array($result2);
+
+
+
     /** Let's now send some data back to the front. */
     $sendMe = array();
     while($row=mysqli_fetch_array($res)){
+        
         $sendMe[] = array(
             'marca' => $row['marca'],
             'modelo' => $row['modelo'],
@@ -93,8 +109,11 @@
             'rutina1' => $row2['rutina1'],
             'rutina2' => $row2['rutina2'],
             'rutina3' => $row2['rutina3'],
-            'rutina4' => $row2['rutina4']
-            
+            'rutina4' => $row2['rutina4'],
+            'hrsReales1' => $hrsReales1,
+            'hrsReales2' => $hrsReales2,
+            'hrsReales3' => $hrsReales3,
+            'hrsReales4' => $hrsReales4
         );
           
         

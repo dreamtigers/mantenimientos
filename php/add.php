@@ -54,13 +54,7 @@
         } else {
             $placa = $_POST['placa'];
         }  
-        /** Validating tipo de mantenimiento */
-        if (!isset($_POST['tipoMantenimiento']) || ($_POST['tipoMantenimiento'] === '')){
-            $ok = false;
-            
-        } else {
-            $tipoMantenimiento = $_POST['tipoMantenimiento'];
-        }
+       
         /** Validating fecha de ingreso */
         if (!isset($_POST['fechaIngreso']) || ($_POST['fechaIngreso'] === '')){
             $ok = false;
@@ -218,42 +212,40 @@
         /** Actividades can't be free to access, tho. */
         $actividades = $_POST['actividades'];
         $comentariosActividades = $_POST['comentariosActividades'];
-        /** Observaciones can't be free to access either. */
-        $observaciones = $_POST['observaciones'];
-        mysqli_real_escape_string($db,$observaciones);
+       
         /** Mandando valor al front End */
         echo json_encode(array("ok"=>$ok));
 
         if($ok){
             //SQL order
-            $sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,observaciones,comentarios_actividades, marca, modelo, serial, arreglo, numeroPlaca, tipoMantenimiento, registradoPor, fechaIngreso,kilometrajeEnFecha, horasEnFecha, anoFabricacion, ubicacion, filtroAceiteMotor, filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision, filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico,deviceId,actividades) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s', '%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s', '%s','%s','%s','%s','%s','%s','%s','%s') 
-            ",  mysqli_real_escape_string($db, $tipoEquipo),mysqli_real_escape_string($db,$observaciones),
-                mysqli_real_escape_string($db,$comentariosActividades),
-                mysqli_real_escape_string($db, $marca), mysqli_real_escape_string($db, $modelo),
-                mysqli_real_escape_string($db, $serial), mysqli_real_escape_string($db, $arreglo),
-                mysqli_real_escape_string($db, $placa), mysqli_real_escape_string($db, $tipoMantenimiento),
-                mysqli_real_escape_string($db, $_SESSION['user']), mysqli_real_escape_string($db, $fechaIngreso),
-                mysqli_real_escape_string($db, $kilometraje), mysqli_real_escape_string($db, $horasUso),
-                mysqli_real_escape_string($db, $anoFabricacion), mysqli_real_escape_string($db, $ubicacion),
-                mysqli_real_escape_string($db, $filtroAceiteMotor), mysqli_real_escape_string($db, $filtroAceiteHidraulico),
-                mysqli_real_escape_string($db, $filtroAirePrimario),mysqli_real_escape_string($db, $filtroAireSecundario),
-                mysqli_real_escape_string($db,$filtroTransmision),mysqli_real_escape_string($db,$filtroTanqueHidraulico),
-                mysqli_real_escape_string($db,$filtroCombustiblePrimario),mysqli_real_escape_string($db,$filtroCombustibleSecundario),/**desde */
-                mysqli_real_escape_string($db,$filtroTanqueGasoil),mysqli_real_escape_string($db,$tipoAceiteHidraulico),
-                mysqli_real_escape_string($db,$tipoAceiteMotor), mysqli_real_escape_string($db,$tipoAceiteTransmision),/** hasta */
-                mysqli_real_escape_string($db,$tipoAceiteCaja),mysqli_real_escape_string($db,$capacidadCarterMotor),
-                mysqli_real_escape_string($db,$capacidadTanqueCaja),mysqli_real_escape_string($db,$capacidadTanqueTransmision),
-                mysqli_real_escape_string($db,$capacidadTanqueHidraulico),$_POST['deviceId'],mysqli_real_escape_string($db,$actividades));
-                /** They are all done now */         
-                //$marca = $modelo = $serial = $arreglo = $placa = $tipoMantenimiento = $tipoEquipo = '';
+            //$sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,comentarios_actividades, marca, modelo, serial, arreglo, numeroPlaca, registradoPor, fechaIngreso,kilometrajeEnFecha, horasEnFecha, anoFabricacion, ubicacion, filtroAceiteMotor, filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision, filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico,deviceId,actividades) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s', '%s', '%s','%s', '%s','%s', '%s', '%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s', '%s','%s','%s','%s','%s','%s','%s','%s') 
+            //",  mysqli_real_escape_string($db, $tipoEquipo),
+            //    mysqli_real_escape_string($db,$comentariosActividades),
+            //    mysqli_real_escape_string($db, $marca), mysqli_real_escape_string($db, $modelo),
+            //    mysqli_real_escape_string($db, $serial), mysqli_real_escape_string($db, $arreglo),
+            //    mysqli_real_escape_string($db, $placa),
+            //    mysqli_real_escape_string($db, $_SESSION['user']), mysqli_real_escape_string($db, $fechaIngreso),
+            //    mysqli_real_escape_string($db, $kilometraje), mysqli_real_escape_string($db, $horasUso),
+            //    mysqli_real_escape_string($db, $anoFabricacion), mysqli_real_escape_string($db, $ubicacion),
+            //    mysqli_real_escape_string($db, $filtroAceiteMotor), mysqli_real_escape_string($db, $filtroAceiteHidraulico),
+            //    mysqli_real_escape_string($db, $filtroAirePrimario),mysqli_real_escape_string($db, $filtroAireSecundario),
+            //    mysqli_real_escape_string($db,$filtroTransmision),mysqli_real_escape_string($db,$filtroTanqueHidraulico),
+            //    mysqli_real_escape_string($db,$filtroCombustiblePrimario),mysqli_real_escape_string($db,$filtroCombustibleSecundario),/**desde */
+            //    mysqli_real_escape_string($db,$filtroTanqueGasoil),mysqli_real_escape_string($db,$tipoAceiteHidraulico),
+            //    mysqli_real_escape_string($db,$tipoAceiteMotor), mysqli_real_escape_string($db,$tipoAceiteTransmision),/** hasta */
+            //    mysqli_real_escape_string($db,$tipoAceiteCaja),mysqli_real_escape_string($db,$capacidadCarterMotor),
+            //    mysqli_real_escape_string($db,$capacidadTanqueCaja),mysqli_real_escape_string($db,$capacidadTanqueTransmision),
+            //    mysqli_real_escape_string($db,$capacidadTanqueHidraulico),$_POST['deviceId'],mysqli_real_escape_string($db,$actividades));
+               
                 
-            mysqli_query($db, $sql);
+        //    mysqli_query($db, $sql);
 
             /** In between we are goin to get info back (marca,modelo,serial,arreglo) from previously registered users */
             /** So we will need to add it as well with the ON DUPLICATE KEY UPDATE mysql clause                       */
-            $newSql = sprintf("INSERT INTO registrado_antes (nombre, actividades, marca, modelo, serial, arreglo, placa,deviceId,fecha,anoFabricacion,ubicacion,filtroAceiteMotor,filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision,filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico) VALUES ('%s','%s', '%s' ,'%s', '%s', '%s', '%s','%s','%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s') 
-            ON DUPLICATE KEY UPDATE marca='%s',actividades='%s', modelo='%s', serial='%s', arreglo='%s', placa='%s', nombre='%s', fecha ='%s', anoFabricacion = '%s', ubicacion = '%s', filtroAceiteMotor ='%s', filtroAceiteHidraulico ='%s', filtroAirePrimario ='%s', filtroAireSecundario ='%s', filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s',filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s',tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'
-            ", mysqli_real_escape_string($db, $tipoEquipo), mysqli_real_escape_string($db,$actividades),mysqli_real_escape_string($db, $marca),
+            $newSql = sprintf("INSERT INTO registrado_antes (nombre, kilometrajeEnFecha,horasEnFecha, marca, modelo, serial, arreglo, placa,deviceId,fecha,anoFabricacion,ubicacion,filtroAceiteMotor,filtroAceiteHidraulico,filtroAirePrimario,filtroAireSecundario,filtroTransmision,filtroTanqueHidraulico,filtroCombustiblePrimario,filtroCombustibleSecundario,filtroTanqueGasoil,tipoAceiteHidraulico,tipoAceiteMotor,tipoAceiteTransmision,tipoAceiteCaja,capacidadCarterMotor, capacidadTanqueCaja,capacidadTanqueTransmision,capacidadTanqueHidraulico) VALUES ('%s','%s','%s', '%s' ,'%s', '%s', '%s', '%s','%s','%s', '%s', '%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s') 
+            ON DUPLICATE KEY UPDATE marca='%s',kilometrajeEnFecha='%s',horasEnFecha = '%s', modelo='%s', serial='%s', arreglo='%s', placa='%s', nombre='%s', fecha ='%s', anoFabricacion = '%s', ubicacion = '%s', filtroAceiteMotor ='%s', filtroAceiteHidraulico ='%s', filtroAirePrimario ='%s', filtroAireSecundario ='%s', filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s',filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s',tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'
+            ", mysqli_real_escape_string($db, $tipoEquipo), mysqli_real_escape_string($db,$kilometraje)
+                ,mysqli_real_escape_string($db, $horasUso),mysqli_real_escape_string($db, $marca),
                 mysqli_real_escape_string($db, $modelo), mysqli_real_escape_string($db, $serial),
                 mysqli_real_escape_string($db, $arreglo), mysqli_real_escape_string($db, $placa),$_POST['deviceId'],$fechaIngreso,
                 mysqli_real_escape_string($db, $anoFabricacion), mysqli_real_escape_string($db, $ubicacion),
@@ -271,7 +263,7 @@
                 mysqli_real_escape_string($db,$capacidadTanqueHidraulico),/** up to here */
                 mysqli_real_escape_string($db, $marca),
                 //Actividades on update
-                mysqli_real_escape_string($db,$actividades)
+                mysqli_real_escape_string($db,$kilometraje),mysqli_real_escape_string($db, $horasUso)
                  ,mysqli_real_escape_string($db, $modelo),
                 mysqli_real_escape_string($db, $serial), mysqli_real_escape_string($db, $arreglo),
                 mysqli_real_escape_string($db, $placa),mysqli_real_escape_string($db, $tipoEquipo),$fechaIngreso,
@@ -295,47 +287,7 @@
 
 
           
-            //The update accorging to selected RUTINA goes down here
-            $query = "SELECT * FROM equipos WHERE deviceId LIKE '$deviceId' "; /** WHERE propietario LIKE '$user' */
-            $res = mysqli_query($db, $query);
-            /** REMEMBER TO EITHER CONFIRM OR KILL YOUR QUERIES */
-            if (!$res){
-                die('Querie failed: '. mysqli_error($db));
-            }
-            //Only one row in this case
-            while($row = mysqli_fetch_array($res)){
-                $updateHour = $row['hrsMotor'];
-            }
-            if($tipoMantenimiento == 1){
-                //Now replace 'hrsMotor' en 'hrsMantenimiento'
-                $order = sprintf("INSERT INTO equipos (hrsMantenimiento, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMantenimiento='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            } else if ($tipoMantenimiento == 2){
-                $order = sprintf("INSERT INTO equipos (hrsMant2, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant2='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            } else if ($tipoMantenimiento == 3){
-                $order = sprintf("INSERT INTO equipos (hrsMant3, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant3='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            }   else if ($tipoMantenimiento == 4){
-                $order = sprintf("INSERT INTO equipos (hrsMant4, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant4='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            }
+            
 
             mysqli_close($db);
         }     

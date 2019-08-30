@@ -9,7 +9,7 @@
     
      /**Lets catch the id from the FRONT END */
      $i = $_POST['id'];  /** And use it in our query */
-     $sql = "DELETE FROM tarjetaEquipo WHERE id LIKE '$i' ";
+     $sql = "DELETE FROM registrado_antes WHERE deviceId LIKE '$i' ";
      $res = mysqli_query($db, $sql);
 
      if(!$res){

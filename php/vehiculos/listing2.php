@@ -89,8 +89,7 @@
                 $horas,
                 $myRow['deviceid'],
                 $horas );
-
-            mysqli_query($db, $equipoSql);
+                 mysqli_query($db, $equipoSql);
             // Si sí hay horas, crea un json con horasMotor
             $number += 1;
                 $jsonPosition[] = array(

@@ -451,7 +451,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_22'><span class='actividadesClass'>-)Cambio de aceite de eje delantero y trasero.</span></label>
+                                            <label for='a_22'><span class='actividadesClass'>22)Cambio de aceite de eje delantero y trasero.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_22' type='checkbox'></div>
                                         <div class='col-3'>
@@ -464,7 +464,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_23'><span class='actividadesClass'>-)Revisión y ajuste del vanillaje de control de velocidad del motor.</span></label>
+                                            <label for='a_23'><span class='actividadesClass'>23)Revisión y ajuste del vanillaje de control de velocidad del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_23' type='checkbox'></div>
                                         <div class='col-3'>
@@ -477,7 +477,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_24'><span class='actividadesClass'>-)Cambios de aceite y filtro del sistema hidráulico.</span></label>
+                                            <label for='a_24'><span class='actividadesClass'>24)Cambios de aceite y filtro del sistema hidráulico.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_24' type='checkbox'></div>
                                         <div class='col-3'>
@@ -490,7 +490,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_25'><span class='actividadesClass'>-)Limpieza de tubo del respiradero de carter del motor.</span></label>
+                                            <label for='a_25'><span class='actividadesClass'>25)Limpieza de tubo del respiradero de carter del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_25' type='checkbox'></div>
                                         <div class='col-3'>
@@ -503,7 +503,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_26'><span class='actividadesClass'>-)Cambio de aceite y filtro de la transmisión y convertidor en par</span></label>
+                                            <label for='a_26'><span class='actividadesClass'>26)Cambio de aceite y filtro de la transmisión y convertidor en par</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_26' type='checkbox'></div>
                                         <div class='col-3'>
@@ -516,7 +516,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_27'><span class='actividadesClass'>-)Cambio de aceite de mandos finales</span></label>
+                                            <label for='a_27'><span class='actividadesClass'>27)Cambio de aceite de mandos finales</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_27' type='checkbox'></div>
                                         <div class='col-3'>
@@ -529,7 +529,7 @@
                                 <div class='rut3 rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_28'><span class='actividadesClass'>-)Sustitución de los elementos de filtro de aire</span></label>
+                                            <label for='a_28'><span class='actividadesClass'>28)Sustitución de los elementos de filtro de aire</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_28' type='checkbox'></div>
                                         <div class='col-3'>
@@ -544,7 +544,7 @@
                                 <div class='rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_29'><span class='actividadesClass'>-)Drenaje y reemplazo de refrigerador motor</span></label>
+                                            <label for='a_29'><span class='actividadesClass'>29)Drenaje y reemplazo de refrigerador motor</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_29' type='checkbox'></div>
                                         <div class='col-3'>
@@ -557,7 +557,7 @@
                                 <div class='rut4'>
                                     <div class="row">
                                         <div class='col-7'>
-                                            <label for='a_30'><span class='actividadesClass'>-)Ajuste de juego de válvulas del motor.</span></label>
+                                            <label for='a_30'><span class='actividadesClass'>30)Ajuste de juego de válvulas del motor.</span></label>
                                         </div>
                                         <div class='col-2'>  <input id='a_30' type='checkbox'></div>
                                         <div class='col-3'>
@@ -621,13 +621,13 @@
                                     </div>
                                     <div class="form-group">
                                             <div class="row">
-                                                <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='ubicacion' placeholder="ubicación"></div>
+                                                <div class="col-4"><input class='inputs' autocomplete='off' type="text" id='ubicacion' placeholder="ubicación"></div>
                                                 <span id='ubicacionSugerida' class='sugerencia'></span>
                                                 
-                                                <div class="col-3"><input class='inputs' autocomplete='off' type="number" id='arreglo' placeholder="arreglo"></div>
+                                                <div class="col-4"><input class='inputs' autocomplete='off' type="number" id='arreglo' placeholder="arreglo"></div>
 
-                                                <div class="col-3">
-                                                    <!--input class='inputs' autocomplete='off' type="number" id='tipoMantenimiento' placeholder="tipo de mantenimiento"-->
+                                                <!--div class="col-3">
+                                                  
                                                     <select class='inputs' name='tipoMantenimiento' id='tipoMantenimiento'>
                                                         <option value='0'>Rutina</option>
                                                         <option value='1'>1</option>
@@ -635,9 +635,9 @@
                                                         <option value='3'>3</option>
                                                         <option value='4'>4</option>
                                                     </select>
-                                                </div>
+                                                </div-->
 
-                                                <div class="col-3"><input class='inputs' autocomplete='off' type="date" id='fechaIngreso'></div><br>
+                                                <div class="col-4"><input class='inputs' autocomplete='off' type="date" id='fechaIngreso'></div><br>
                                                 <span id='fechaSugerida' class='sugerencia'></span>
 
                                             </div>
@@ -734,15 +734,15 @@
                                     <div class='mb-1 ocultar' style=''>
                                             <span>Observaciones:</span>
                                     </div>
-                                    <div class="form-group">
+                                    <!--div class="form-group">
                                         <div class="row rowRelative">
                                             <div class="col-12">
 
-                                                <textarea id='observaciones' class='textarea ocultar'></textarea>
+                                                <textarea id='observaciones' class='textarea'></textarea>
 
                                             </div>
                                         </div>
-                                    </div>
+                                    </div-->
 
              
 

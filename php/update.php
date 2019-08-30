@@ -58,14 +58,7 @@
         } else {
             $placa = $_POST['placa'];
         }  
-        /** Validating tipo de mantenimiento */
-        if (!isset($_POST['tipoMantenimiento']) || ($_POST['tipoMantenimiento'] === '')){
-            $ok = false;
-            $error = '7';
-            //$tipoMantenimientoErr='Indique el número de placa.**';
-        } else {
-            $tipoMantenimiento = $_POST['tipoMantenimiento'];
-        }
+       
         /** Validating fecha de ingreso */
         if (!isset($_POST['fechaIngreso']) || ($_POST['fechaIngreso'] === '')){
             $ok = false;
@@ -251,36 +244,36 @@
         $actividades = $_POST['actividades'];
         $comentariosActividades = $_POST['comentariosActividades'];
         /** Observaciones can't be free to access either */
-        $observaciones = $_POST['observaciones'];
-        mysqli_real_escape_string($db,$observaciones);
+       
+       
         /** */
 
         if($ok){
             //SQL order that actually adds them
             /** Session variable captured from getSimpleTask. */
-            $id = $_SESSION['myId'];
-            $sql = sprintf ("UPDATE tarjetaEquipo SET observaciones='%s', comentarios_actividades = '%s' , marca='%s', actividades='%s' ,modelo='%s',serial='%s',arreglo='%s',numeroPlaca='%s',tipoMantenimiento='%s',fechaIngreso='%s',kilometrajeEnFecha='%s',horasEnFecha='%s',anoFabricacion='%s',ubicacion='%s',filtroAceiteMotor='%s',filtroAceiteHidraulico='%s',filtroAirePrimario='%s',filtroAireSecundario='%s',filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s'/**Up here*/,filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s'/**To here*/,tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'  WHERE id='%s' ", 
-                mysqli_real_escape_string($db,$observaciones),   mysqli_real_escape_string($db,$comentariosActividades),
-                mysqli_real_escape_string($db, $marca),mysqli_real_escape_string($db,$actividades),
-                mysqli_real_escape_string($db, $modelo),mysqli_real_escape_string($db, $serial),
-                mysqli_real_escape_string($db, $arreglo),mysqli_real_escape_string($db, $placa),
-                mysqli_real_escape_string($db, $tipoMantenimiento),mysqli_real_escape_string($db, $fechaIngreso),
-                mysqli_real_escape_string($db, $kilometraje),mysqli_real_escape_string($db,$horasUso),
-                mysqli_real_escape_string($db, $anoFabricacion),mysqli_real_escape_string($db,$ubicacion),
-                mysqli_real_escape_string($db, $filtroAceiteMotor),mysqli_real_escape_string($db,$filtroAceiteHidraulico),
-                mysqli_real_escape_string($db, $filtroAirePrimario),mysqli_real_escape_string($db,$filtroAireSecundario),/** From here */
-                mysqli_real_escape_string($db, $filtroTransmision),mysqli_real_escape_string($db,$filtroTanqueHidraulico),
-                mysqli_real_escape_string($db, $filtroCombustiblePrimario),mysqli_real_escape_string($db,$filtroCombustibleSecundario),/** To here */
-                mysqli_real_escape_string($db, $filtroTanqueGasoil),mysqli_real_escape_string($db,$tipoAceiteHidraulico),
-                mysqli_real_escape_string($db, $tipoAceiteMotor),mysqli_real_escape_string($db,$tipoAceiteTransmision),/** 4 more to go */
-                mysqli_real_escape_string($db, $tipoAceiteCaja),mysqli_real_escape_string($db,$capacidadCarterMotor),
-                mysqli_real_escape_string($db, $capacidadTanqueCaja),mysqli_real_escape_string($db,$capacidadTanqueTransmision),
-                mysqli_real_escape_string($db,$capacidadTanqueHidraulico),
-                $id);
-                /** They are all done now */         
-                //$marca = $modelo = $serial = $arreglo = $placa = $tipoMantenimiento = $tipoEquipo = '';
+            //$id = $_SESSION['myId'];
+            //$sql = sprintf ("UPDATE tarjetaEquipo SET  comentarios_actividades = '%s' , marca='%s', actividades='%s' ,modelo='%s',serial='%s',arreglo='%s',numeroPlaca='%s',fechaIngreso='%s',kilometrajeEnFecha='%s',horasEnFecha='%s',anoFabricacion='%s',ubicacion='%s',filtroAceiteMotor='%s',filtroAceiteHidraulico='%s',filtroAirePrimario='%s',filtroAireSecundario='%s',filtroTransmision='%s',filtroTanqueHidraulico='%s',filtroCombustiblePrimario='%s',filtroCombustibleSecundario='%s'/**Up here*/,filtroTanqueGasoil='%s',tipoAceiteHidraulico='%s',tipoAceiteMotor='%s',tipoAceiteTransmision='%s'/**To here*/,tipoAceiteCaja='%s',capacidadCarterMotor='%s',capacidadTanqueCaja='%s',capacidadTanqueTransmision='%s',capacidadTanqueHidraulico='%s'  WHERE id='%s' ", 
+            //    mysqli_real_escape_string($db,$comentariosActividades),
+            //    mysqli_real_escape_string($db, $marca),mysqli_real_escape_string($db,$actividades),
+            //    mysqli_real_escape_string($db, $modelo),mysqli_real_escape_string($db, $serial),
+            //    mysqli_real_escape_string($db, $arreglo),mysqli_real_escape_string($db, $placa),
+            //    mysqli_real_escape_string($db, $fechaIngreso),
+            //    mysqli_real_escape_string($db, $kilometraje),mysqli_real_escape_string($db,$horasUso),
+            //    mysqli_real_escape_string($db, $anoFabricacion),mysqli_real_escape_string($db,$ubicacion),
+            //    mysqli_real_escape_string($db, $filtroAceiteMotor),mysqli_real_escape_string($db,$filtroAceiteHidraulico),
+            //    mysqli_real_escape_string($db, $filtroAirePrimario),mysqli_real_escape_string($db,$filtroAireSecundario),/** From here */
+            //    mysqli_real_escape_string($db, $filtroTransmision),mysqli_real_escape_string($db,$filtroTanqueHidraulico),
+            //    mysqli_real_escape_string($db, $filtroCombustiblePrimario),mysqli_real_escape_string($db,$filtroCombustibleSecundario),/** To here */
+            //    mysqli_real_escape_string($db, $filtroTanqueGasoil),mysqli_real_escape_string($db,$tipoAceiteHidraulico),
+            //    mysqli_real_escape_string($db, $tipoAceiteMotor),mysqli_real_escape_string($db,$tipoAceiteTransmision),/** 4 more to go */
+            //    mysqli_real_escape_string($db, $tipoAceiteCaja),mysqli_real_escape_string($db,$capacidadCarterMotor),
+            //    mysqli_real_escape_string($db, $capacidadTanqueCaja),mysqli_real_escape_string($db,$capacidadTanqueTransmision),
+            //    mysqli_real_escape_string($db,$capacidadTanqueHidraulico),
+            //    $id);
+            //    /** They are all done now */         
+               
                 
-                mysqli_query($db, $sql);
+            //    mysqli_query($db, $sql);
 
             /** In between we are goin to get info back (marca,modelo,serial,arreglo) from previously registered users */
             /** So we will need to add it as well with the ON DUPLICATE KEY UPDATE mysql clause                       */

@@ -39,9 +39,9 @@ $(function () {
                 trueLists.forEach(equipo =>{
                     /** Some back-ticks magics */
                     template+=`
-                        <tr class='hover' taskId='${equipo.id}' deviceId='${equipo.deviceId}' > <!-- PAY ATENTION HERE-->
+                        <tr class='hover'  deviceId='${equipo.deviceId}' > <!-- PAY ATENTION HERE-->
                             <td>
-                                <span class='name'>${equipo.id}</span>
+                                <span class='name'>${equipo.deviceId}</span>
                             </td>
                             <td class='dot task-update'>
                                 <a><span class='name'>${equipo.name}</span></a>   
@@ -53,7 +53,7 @@ $(function () {
                             <td><span class='name'>${equipo.placa}</span></td>
                             <td class='rel'>    
                             
-                                <span class='name'>${equipo.tipo}</span>
+                             
                                 <img class='Elimi task-delete' src='css/img/delete.png' width='15'>
                                 <a href='#' class='updatEquipo absoluties' ><img class='absoluties' src='css/img/edit.png' width='15'> </a> 
                             </td>
@@ -96,9 +96,9 @@ $(function () {
                     let template = '';
                     tipos.forEach(tipo => {
                         template += `
-                        <tr letId='${tipo.id}' deviceId='${tipo.deviceId}' taskId='${tipo.id}'>
+                        <tr deviceId='${tipo.deviceId}'>
                             <td>
-                                <span class='name'>${tipo.id}</span>
+                                <span class='name'>${tipo.deviceId}</span>
                          
                             </td>
                             <td class='dot difUpdate'>
@@ -111,7 +111,7 @@ $(function () {
                             <td><span class='name'>${tipo.arreglo}</span></td>
                             <td><span class='name'>${tipo.placa}</span></td>
                             <td class='rel'>
-                                <span class='name'>${tipo.tipo}</span>
+                               
                                 <img class='Elimi task-delete' src='css/img/delete.png' width='15'>
                                 <a href='#' class='updatEquipo absoluties' ><img class='absoluties' src='css/img/edit.png' width='15'> </a> 
                             </td>
@@ -187,25 +187,32 @@ $(function () {
         $("html, body").delay(100).animate({scrollTop: $('.addThem').offset().top }, 700);
         // lets pick the id
         let element = $(this)[0].parentElement.parentElement;
-        let id = $(element).attr('taskId');
-        //console.log(id);
+        
         let devId = $(element).attr('deviceId');
         console.log(devId);
 
         $.ajax({
             type: "POST",
             url: "php/getSingleTask.php",
-            data: {id:id, devId:devId},
+            data: {devId:devId},
           
             success: function (response) {
                 // Lets remember we are editing.
                 edit = true;
+                if (edit) {
+                    $('#equipos').prop('disabled', 'disabled');
+                  
+                }
+                
+                   
+                    
+                
                 let x = JSON.parse(response);
 
                 console.log(x);
                
                 x.forEach(element => {
-                    $('#equipos option:selected').html(element.tipoEquipo); 
+                    $('#equipos option:selected').html(element.nombre); 
                     /** Trying to put its id */
                     $('#equipos').val(element.deviceId);
                     /** */
@@ -214,7 +221,7 @@ $(function () {
                     $('#serial').val(element.serial);
                     $('#arreglo').val(element.arreglo);
                     $('#placa').val(element.placa);
-                    $('#tipoMantenimiento option:selected').html(element.tipoMantenimiento);    
+               
                     $('#fechaIngreso').val(element.fechaIngreso);
                     $('#kilometraje').val(element.kilometraje); 
                     $('#horasUso').val(element.horasUso);
@@ -237,7 +244,7 @@ $(function () {
                     $('#capacidadTanqueCaja').val(element.capacidadTanqueCaja);  
                     $('#capacidadTanqueTransmision').val(element.capacidadTanqueTransmision);  
                     $('#capacidadTanqueHidraulico').val(element.capacidadTanqueHidraulico); 
-                    $('#observaciones').val(element.observaciones); 
+                   
                 });
             }
         }); 
@@ -283,7 +290,7 @@ $(function () {
                     $('#serial').val(element.serial);
                     $('#arreglo').val(element.arreglo);
                     $('#placa').val(element.placa);
-                    $('#tipoMantenimiento option:selected').html(element.tipoMantenimiento);    
+                    
                     $('#fechaIngreso').val(element.fechaIngreso);
                     $('#kilometraje').val(element.kilometraje); 
                     $('#horasUso').val(element.horasUso);
@@ -306,7 +313,7 @@ $(function () {
                     $('#capacidadTanqueCaja').val(element.capacidadTanqueCaja);  
                     $('#capacidadTanqueTransmision').val(element.capacidadTanqueTransmision);  
                     $('#capacidadTanqueHidraulico').val(element.capacidadTanqueHidraulico);  
-                    $('#observaciones').val(element.observaciones); 
+                   
                 });
                
             }
@@ -335,7 +342,7 @@ $(function () {
             /**Hagámosle una confirmación a la eliminación 
             /** Let get the clicked element */
             let element = $(this)[0].parentElement.parentElement; /** Element 0 - cause it's an array - was the clicked element. */
-            var id = $(element).attr('taskId');
+            var id = $(element).attr('deviceId');
             console.log(id);
             /** Hacemos una petición al servidor con AJAX desde Jquery */
             $.ajax({
@@ -392,129 +399,258 @@ $(function () {
         /** First 5 */
         if ($('#a_1').is(":checked")){
             actividades += ' 1)Revisión del nivel de aceite del eje trasero y delantero.';
-            comentariosActividades += '1)' + $('#act1').val() + '  ';
+            if ( $('#act1').val() != '' ){
+                comentariosActividades += '1) ' + $('#act1').val() + '  ';
+            } else {
+                comentariosActividades += '1) Actividad sin observación.  ';
+            }
         }
         if ($('#a_2').is(":checked")){
             actividades += ' 2)Revisión del nivel de aceite de mandos finales.';
-            comentariosActividades += '2)' + $('#act2').val() + '  ';
-            
+            if ( $('#act2').val() != '' ){
+                comentariosActividades += '2)' + $('#act2').val() + '  ';
+            } else {
+                comentariosActividades += '2) Actividad sin observación.  ';
+            }  
         }
         if ($('#a_3').is(":checked")){
             actividades += ' 3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.';
-            comentariosActividades += '3)' + $('#act3').val() + '  ';
+            if ( $('#act3').val() != '' ){
+                comentariosActividades += '3)' + $('#act3').val() + '  ';
+            } else {
+                comentariosActividades += '3) Actividad sin observación.  ';
+            }  
+            
         }
         if ($('#a_4').is(":checked")){
             actividades += ' 4)Revisar y limpiar filtro separador de agua de sistemas combustible.';
-            comentariosActividades += '4)' + $('#act4').val() + '  ';
+            if ( $('#act4').val() != '' ){
+                comentariosActividades += '4)' + $('#act4').val() + '  ';
+            } else {
+                comentariosActividades += '4) Actividad sin observación.  ';
+            }  
+           
         }
         if ($('#a_5').is(":checked")){
             actividades += ' 5)Revisión del nivel de electrolito y de los bornes de la batería.';
-            comentariosActividades += '5)' + $('#act5').val() + '  ';
+            if ( $('#act5').val() != '' ){
+                comentariosActividades += '5)' + $('#act5').val() + '  ';
+            } else {
+                comentariosActividades += '5) Actividad sin observación.  ';
+            }  
         }
         /** Five more (5-10) */
         if ($('#a_6').is(":checked")){
             actividades += ' 6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.';
-            comentariosActividades += '6)' + $('#act6').val() + '  ';
+            if ( $('#act6').val() != '' ){
+                comentariosActividades += '6)' + $('#act6').val() + '  ';
+            } else {
+                comentariosActividades += '6) Actividad sin observación.  ';
+            }  
         }
         if ($('#a_7').is(":checked")){
             actividades += ' 7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.';
-            comentariosActividades += '7)' + $('#act7').val() + '  ';
+            if ( $('#act7').val() != '' ){
+                comentariosActividades += '7)' + $('#act7').val() + '  ';
+            } else {
+                comentariosActividades += '7) Actividad sin observación.  ';
+            }     
         }
         if ($('#a_8').is(":checked")){
             actividades += ' 8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.';
-              comentariosActividades += '8)' + $('#act8').val() + '  ';
+            if ( $('#act8').val() != '' ){
+                comentariosActividades += '8)' + $('#act8').val() + '  ';
+            } else {
+                comentariosActividades += '8) Actividad sin observación.  ';
+            }    
         }
         if ($('#a_9').is(":checked")){
             actividades += ' 9)Cambio de aceite y del filtro del motor.';
-            comentariosActividades += '9)' + $('#act9').val() + '  ';
+            if ( $('#act9').val() != '' ){
+                comentariosActividades += '9)' + $('#act9').val() + '  ';
+            } else {
+                comentariosActividades += '9) Actividad sin observación.  ';
+            }    
         }
         if ($('#a_10').is(":checked")){
             actividades += ' 10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.';
-            comentariosActividades += '10)' + $('#act10').val() + '  ';
+            if ( $('#act10').val() != '' ){
+                comentariosActividades += '10)' + $('#act10').val() + '  ';
+            } else {
+                comentariosActividades += '10) Actividad sin observación.  ';
+            }  
         }
         /** Five more (10-15)*/
         if ($('#a_11').is(":checked")){
             actividades += ' 11)Lubricar crucetas de cardanes.';
-            comentariosActividades += '11)' + $('#act11').val() + '  ';
+            if ( $('#act11').val() != '' ){
+                comentariosActividades += '11)' + $('#act11').val() + '  ';
+            } else {
+                comentariosActividades += '11) Actividad sin observación.  ';
+            } 
+            
         }
         if ($('#a_12').is(":checked")){
             actividades += ' 12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.';
-            comentariosActividades += '12)' + $('#act12').val() + '  ';
+            if ( $('#act12').val() != '' ){
+                comentariosActividades += '12)' + $('#act12').val() + '  ';
+            } else {
+                comentariosActividades += '12) Actividad sin observación.  ';
+            }   
         }
         if ($('#a_13').is(":checked")){
             actividades += ' 13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.';
-            comentariosActividades += '13)' + $('#act13').val() + '  ';
+            if ( $('#act13').val() != '' ){
+                comentariosActividades += '13)' + $('#act13').val() + '  ';
+            } else {
+                comentariosActividades += '13) Actividad sin observación.  ';
+            } 
         }
         if ($('#a_14').is(":checked")){
             actividades += ' 14)Chequeo del sistema eléctrico y luces.';
-            comentariosActividades += '14)' + $('#act14').val() + '  ';
+            if ( $('#act14').val() != '' ){
+                comentariosActividades += '14)' + $('#act14').val() + '  ';
+            } else {
+                comentariosActividades += '14) Actividad sin observación.  ';
+            }           
         }
         if ($('#a_15').is(":checked")){
             actividades += ' 15)Limpieza general.';
-            comentariosActividades += '15)' + $('#act15').val() + '  ';
+            if ( $('#act15').val() != '' ){
+                comentariosActividades += '15)' + $('#act15').val() + '  ';
+            } else {
+                comentariosActividades += '15) Actividad sin observación.  ';
+            }  
         }
         /** Five more (15-20)*/
         if ($('#a_16').is(":checked")){
             actividades += ' 16)Revisión de la manguera de admisión de aire.';
-            comentariosActividades += '16)' + $('#act16').val() + '  ';
+            if ( $('#act16').val() != '' ){
+                comentariosActividades += '16)' + $('#act16').val() + '  ';
+            } else {
+                comentariosActividades += '16) Actividad sin observación.  ';
+            }   
         }
         if ($('#a_17').is(":checked")){
             actividades += ' 17)Cambio del filtro de aceite del sistema hidráulico.';
-            comentariosActividades += '17)' + $('#act17').val() + '  ';
+            if ( $('#act17').val() != '' ){
+                comentariosActividades += '17)' + $('#act17').val() + '  ';
+            } else {
+                comentariosActividades += '17) Actividad sin observación.  ';
+            }  
         }
         if ($('#a_18').is(":checked")){
             actividades += ' 18)Revisión del par de apriete del pasador entre el aguijón y el brazo.';
-            comentariosActividades += '18)' + $('#act18').val() + '  ';
+            if ( $('#act18').val() != '' ){
+                comentariosActividades += '18)' + $('#act18').val() + '  ';
+            } else {
+                comentariosActividades += '18) Actividad sin observación.  ';
+            }       
         }
         if ($('#a_19').is(":checked")){
             actividades += ' 19)Revisar funcionamiento de frenos de servicio y estacionamiento.';
-            comentariosActividades += '19)' + $('#act19').val() + '  ';
+            if ( $('#act19').val() != '' ){
+                comentariosActividades += '19)' + $('#act19').val() + '  ';
+            } else {
+                comentariosActividades += '19) Actividad sin observación.  ';
+            }   
         }
         if ($('#a_20').is(":checked")){
             actividades += ' 20)Cambio del filtro del combustible y separador de agua.';
-            comentariosActividades += '20)' + $('#act20').val() + '  ';
+            if ( $('#act20').val() != '' ){
+                comentariosActividades += '20)' + $('#act20').val() + '  ';
+            } else {
+                comentariosActividades += '20) Actividad sin observación.  ';
+            }   
         }
         /** Five more (20-25) */
         if ($('#a_21').is(":checked")){
             actividades += ' 21)Cambio del filtro de transmisión.';
-            comentariosActividades += '21)' + $('#act21').val() + '  ';
+            if ( $('#act21').val() != '' ){
+                comentariosActividades += '21)' + $('#act21').val() + '  ';
+            } else {
+                comentariosActividades += '21) Actividad sin observación.  ';
+            }   
+            
         }
         if ($('#a_22').is(":checked")){
             actividades += ' 22)Cambio de aceite del eje delantero y trasero.';
-            comentariosActividades += '22)' + $('#act22').val() + '  ';
+            if ( $('#act22').val() != '' ){
+                comentariosActividades += '22)' + $('#act22').val() + '  ';
+            } else {
+                comentariosActividades += '22) Actividad sin observación.  ';
+            }  
+            
         }
         if ($('#a_23').is(":checked")){
             actividades += ' 23)Revisión y ajuste del varillaje de control de velocidad del motor.';
-            comentariosActividades += '23)' + $('#act23').val() + '  ';
+            if ( $('#act23').val() != '' ){
+                comentariosActividades += '23)' + $('#act23').val() + '  ';
+            } else {
+                comentariosActividades += '23) Actividad sin observación.  ';
+            } 
+            
         }
         if ($('#a_24').is(":checked")){
             actividades += ' 24)Cambio de aceite y filtro del sistema hidráulico.';
-            comentariosActividades += '24)' + $('#act24').val() + '  ';
+            if ( $('#act24').val() != '' ){
+                comentariosActividades += '24)' + $('#act24').val() + '  ';
+            } else {
+                comentariosActividades += '24) Actividad sin observación.  ';
+            } 
+           
         }
         if ($('#a_25').is(":checked")){
             actividades += ' 25)Limpieza del tubo del respiradero del carter del motor.';
-            comentariosActividades += '25)' + $('#act25').val() + '  ';
+            if ( $('#act25').val() != '' ){
+                comentariosActividades += '25)' + $('#act25').val() + '  ';
+            } else {
+                comentariosActividades += '25) Actividad sin observación.  ';
+            } 
+            
         }
         /** Last five up to 30 */
         if ($('#a_26').is(":checked")){
             actividades += ' 26)Cambio de aceite y filtro de la transmisión y convertidor de par.';
-            comentariosActividades += '26)' + $('#act26').val() + '  ';
+            if ( $('#act26').val() != '' ){
+                comentariosActividades += '26)' + $('#act26').val() + '  ';
+            } else {
+                comentariosActividades += '26) Actividad sin observación.  ';
+            }    
         }
         if ($('#a_27').is(":checked")){
             actividades += ' 27)Cambio de aceite de mandos finales.';
-            comentariosActividades += '27)' + $('#act27').val() + '  ';
+            if ( $('#act27').val() != '' ){
+                comentariosActividades += '27)' + $('#act27').val() + '  ';
+            } else {
+                comentariosActividades += '27) Actividad sin observación.  ';
+            }   
         }
         if ($('#a_28').is(":checked")){
             actividades += '28)Sustitución de los elementos del filtro del aire.';
-            comentariosActividades += '28)' + $('#act28').val() + '  ';
+            if ( $('#act28').val() != '' ){
+                comentariosActividades += '28)' + $('#act28').val() + '  ';
+            } else {
+                comentariosActividades += '28) Actividad sin observación.  ';
+            }  
+            
         }
         if ($('#a_29').is(":checked")){
             actividades += ' 29)Drenaje y reemplazo de refrigerante motor.';
-            comentariosActividades += '29)' + $('#act29').val() + '  ';
+            if ( $('#act29').val() != '' ){
+                comentariosActividades += '29)' + $('#act29').val() + '  ';
+            } else {
+                comentariosActividades += '29) Actividad sin observación.  ';
+            }  
         }
         if ($('#a_30').is(":checked")){
             actividades += ' 30)Ajuste del juego de válvulas del motor.';
-            comentariosActividades += '30)' + $('#act30').val() + '  ';
+            if ( $('#act30').val() != '' ){
+                comentariosActividades += '30)' + $('#act30').val() + '  ';
+            } else {
+                comentariosActividades += '30) Actividad sin observación.  ';
+            } 
+            
         }
         /** Creamos el objeto a enviar */
         const pack = {
@@ -527,7 +663,7 @@ $(function () {
             serial: $('#serial').val(),
             arreglo: $('#arreglo').val(),
             placa: $('#placa').val(),
-            tipoMantenimiento: $('#tipoMantenimiento option:selected').html(),
+            
             fechaIngreso: $('#fechaIngreso').val(),
             kilometraje: $('#kilometraje').val(),
             horasUso: $('#horasUso').val(),
@@ -551,8 +687,7 @@ $(function () {
             capacidadTanqueTransmision: $('#capacidadTanqueTransmision').val(),
             capacidadTanqueHidraulico: $('#capacidadTanqueHidraulico').val(),
             actividades : actividades,
-            comentariosActividades :comentariosActividades ,
-            observaciones: $('#observaciones').val()
+            comentariosActividades :comentariosActividades
         }
         
         
@@ -581,6 +716,8 @@ $(function () {
                 $('.g').height ($(document).height() + $('.navbar').outerHeight() );
                 listThem();
                 edit = false;
+                $('#equipos').prop('disabled', false);
+                $('#equipos option:selected').html('Equipo:')
             } 
        
         });
