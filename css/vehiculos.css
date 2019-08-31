@@ -79,7 +79,8 @@ input#lookIt{
 /** This down here is just for color testing**/
 .conten{
     background-color: white;
-    padding: 12px;
+    padding: 10px;
+   
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
 -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
@@ -89,3 +90,105 @@ box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
 .hover:hover{
     background-color: #DDF0EC;
 }
+select{
+    border-radius: 10px;
+    text-indent: 10px;
+    width:100;
+}
+.inputs{
+    height: 36px;
+    border-radius: 10px;
+    text-indent: 10px;
+    
+}
+.formgroup {
+    margin-bottom: 0px;
+}
+.terceraHilera,.segundaHilera{
+    display:none;
+}
+.ocultar{
+    display:none;
+}
+.inputAct{
+    border-radius: 6px;
+    width: 96%;
+}
+.letMeSend {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+
+     /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+    margin: 2px 0;
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 1em;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #77C0B1;
+
+    position:absolute;
+    left:0px;
+    top:10px;
+
+  }
+  .letMeSend:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+  .letMeSend:hover{
+    color: #77C0B1;
+    border-color: currentColor;
+    background-color: white;
+  }
+  .disabled {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: none;
+
+     /* default for <button>, but useful for <a> */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    /* create a small space when buttons wrap on 2 lines */
+    margin: 2px 0;
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 1em;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: rgb(173, 173, 173);
+
+    position:absolute;
+    left:0px;
+    top:10px;
+
+  }
+  

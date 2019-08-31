@@ -177,15 +177,15 @@
                                 </div>
                                 <div class='rut1 rut4'>
                                     <div class="row">
-                                    <div class='col-7'>
-                                        <label for='a_2'><span class='actividadesClass'>2)Revisión del nivel de aceite de mandos finales</span></label>
-                                    </div>
-                                    <div class='col-2'>  <input id='a_2' type='checkbox'></div>
-                                    <div class='col-3'>
+                                        <div class='col-7'>
+                                            <label for='a_2'><span class='actividadesClass'>2)Revisión del nivel de aceite de mandos finales</span></label>
+                                        </div>
+                                        <div class='col-2'>  <input id='a_2' type='checkbox'></div>
+                                        <div class='col-3'>
 
-                                        <textarea id='act2' type='text' class='ocultar inputAct' ></textarea>
+                                            <textarea id='act2' type='text' class='ocultar inputAct' ></textarea>
 
-                                    </div>
+                                        </div>
                                     
                                     </div>
                                     
@@ -331,7 +331,7 @@
                                         </div>
                                         <div class='col-2'>  <input id='a_13' type='checkbox'></div>
                                         <div class='col-3'>
-                                    <textarea id='act13' type='text' class='ocultar inputAct' ></textarea>
+                                            <textarea id='act13' type='text' class='ocultar inputAct' ></textarea>
                                         </div>
                                         
         

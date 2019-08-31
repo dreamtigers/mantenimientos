@@ -515,7 +515,7 @@ $(function(){
 
                           
 
-                            /** OVER HERE */
+                            /** Acá listamos los mantenimientos; desde el primer Ajax request (Listalos.php) */
                             x.forEach(y => {
                                 //back ticks magics
                                 equipo = `
@@ -529,127 +529,16 @@ $(function(){
                                 <div class=''>
                                     ${y.fechaIngreso}
                                 </div>
-                                <table class='table table-bordered table-sm '>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                            <td>Nº registro</td>
-                                            <td>Fecha </td>
-                                            <td>Rutina</td>
-                                            
-                                            <td>Kilometraje</td>
-                                            <td>Horas Motor</td>
-                                            <td>Ubicación</td>
-                                            <td>Filtro <span style='font-size:10px'>(Aceite de motor)</span></td>
-                                            <td>Filtro <span style='font-size:10px'>(Aceite hidráulico)</span></td>
-                                            <td>Filtro <span style='font-size:10px'>(Aire primario)</span></td>
-                                            
-                                    
-                                        </tr>
                                 
-                                        </thead>
-                                        
-                                        <!-- Id registros, time to shine
-                                        -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                        <tbody id='registros2'>
-                                            
-                                            <tr>
-                                                <td>${y.numRegistro}</td>
-                                                <td>${y.fechaIngreso}</td>
-                                                <td>${y.rutina}</td>
-                                                <td>${y.kilometraje}</td>
-                                                <td>${y.horasMotor}</td>
-                                                <td>${y.ubicacion}</td>
-                                                <td>${y.filtroAceiteMotor}</td>
-                                                <td>${y.filtroAceiteHidraulico}</td>
-                                                <td>${y.filtroAirePrimario}</td>
-                                            </tr>
-
-                                        </tbody>
-                                        
-                                    </table>
                                     
-                                <table class='table table-bordered table-sm ' style='margin-top:-20px'>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                        <td>Filtro <span style='font-size:10px'>(Aire secundario)</span></td>    
-                                        <td>Filtro <span style='font-size:10px'>(Transmisión)</span></td>
-                                        <td>Filtro <span style='font-size:10px'>(combustible primario)</span></td>     
-                                        <td>Filtro <span style='font-size:10px'>(combustible secundario)</span></td>
-                                        <td>Filtro <span style='font-size:10px'>(tanque gasoil)</span></td>
-                                        <!-- Pues conseguí-->
-                                        <td>Filtro <span style='font-size:10px'>(aceite hidráulico)</span></td>
-                                        <td>Tipo <span style='font-size:10px'>(Aceite de motor)</span></td>
-                                        
-                                            
-                                    
-                                        </tr>
-                                
-                                        </thead>
-                                        
-                                        <!-- Id registros, time to shine
-                                        -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                        <tbody id='registros2'>
-                                            
-                                            <tr>
-                                                <td>${y.filtroAireSecundario}</td>
-                                                <td>${y.filtroTransmision}</td>
-                                                <td>${y.filtroCombustiblePrimario}</td>
-                                                <td>${y.filtroCombustibleSecundario}</td>
-                                                <td>${y.filtroTanqueGasoil}</td>
-                                                <td>${y.filtroAceiteHidraulico}</td>
-                                                <td>${y.tipoAceiteMotor}</td>
-                                            </tr>
-                                                
-                                            
-
-                                        </tbody>
-                                    </table>
-                                    <table class='table table-bordered table-sm ' style='margin-top:-20px'>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                        <td>Tipo <span style='font-size:10px'>(aceite transmisión)</span></td>    
-                                        <td>Tipo <span style='font-size:10px'>(aceite caja)</span></td>
-                                        <td>Capacidad <span style='font-size:10px'>(carter del motor)</span></td>     
-                                        <td>Capacidad <span style='font-size:10px'>(tanque caja)</span></td>
-                                        <td>Capacidad <span style='font-size:10px'>(tanque transmisión)</span></td>
-                                        <!-- Pues conseguí-->
-                                        <td>Capacidad <span style='font-size:10px'>(tanque hidráulico)</span></td>
-                                    
-                                        
-                                            
-                                    
-                                        </tr>
-                                
-                                        </thead>
-                                        
-                                        <!-- Id registros, time to shine
-                                        -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                        <tbody id='registros2'>
-                                            
-                                            <tr>
-                                                <td>${y.tipoAceiteTransmision}</td>
-                                                <td>${y.tipoAceiteCaja}</td>
-                                                <td>${y.capacidadCarterMotor}</td>
-                                                <td>${y.capacidadTanqueCaja}</td>
-                                                <td>${y.capacidadTanqueTransmision}</td>
-                                                <td>${y.capacidadTanqueHidraulico}</td>
-                                                
-                                            </tr>
-                                                
-                                            
-
-                                        </tbody>
-                                    </table>
+                               
 
                                 
 
 
 
                                     
-                                    <table class='table table-bordered table-sm' style='margin-top:-20px'>
+                                    <table class='table table-bordered table-sm' style='margin-top:-0px'>
                                         <thead class='tabledark' id='tableWeird'>
                                             <tr>
                                                                 

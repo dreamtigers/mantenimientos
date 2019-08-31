@@ -1,6 +1,18 @@
 <?php 
 
-require 'php/auth.php';
+    require 'php/auth.php';
+    
+    function fill_equipos(){
+        include('php/database.php');
+        $output = '';
+        $sql = 'SELECT * FROM equipos';
+        $res = mysqli_query($db, $sql);
+
+        while ($row = mysqli_fetch_array($res)){
+            $output .= '<option value="'.$row['deviceId'].'">'.$row['equipo'].'</option>';
+        }
+        return $output;
+    }
 
 ?>
 <!DOCTYPE html>
@@ -124,71 +136,107 @@ require 'php/auth.php';
             <div class='col-10 col10'>
                     <div class="row">
 
-                        <div class="col-9"> 
+                        <div class="col-3"> 
                             <div class='container conten my-2'>
 
-                                <h5 class='mt-1'>Vehículos registrados:</h5>
-                                <table class='table table-sm mt-2'>
-                                    <thead class='tablaNormal'>
-                                        <tr>
-                                            <td>Nº</td>
-                                            <td>Nombre</td>
-                                            <td>Última actualización</td>
-                                            <td>Teléfono</td>
-                                            <td>Categoría</td>
-                                        
-                                        
-                                        
-                                        </tr>
-                                
-                                    </thead>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card">
+                                            <form id='eligiendoEquipo'>
+                                            <select style='width:100%;'  name='equipos' id='equipos'>  
+                                                    <option value=''>Equipo:</option> 
+                                                    <?php echo fill_equipos(); ?>
+                                                </select> 
+                                            </form>
+                                        </div>
+                                    </div>
                                     
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros'>
-                                        
-                                    </tbody>
-                                </table>
+                                    </div>
 
 
-                            </div>
+
+                                    
+
+                                </div>
                           
-                        </div>
-                        <div class="col-3"></div>
+                            </div>
+                        <div class="col-9"></div>
 
                     </div>
-                    <div class="row">
+                    <div class="row segundaHilera mb-2 relative">
+                       
+                        <div class="col-6"> 
+                            
+                            <div class="row">
+                                <div class="col-10">
+                                        <div class='conten'>
+
+                                            <form id='eligiendoRutina'>
+                                                <div class='form-group formgroup'>
+
+                                                    <div class="row">
+                                                        <div class="col-6"><input class='inputs' autocomplete='off' type="date" name='fecha' id='fecha' ></div>
+
+                                                        <div class="col-6">
+
+                                                            <select style='width:100%;' name='rutina' id='rutina'> 
+                                                                <option value=''>Elegir rutina:</option>
+                                                                <option value='1'>1</option>
+                                                                <option value='2'>2</option>
+                                                                <option value='3'>3</option>
+                                                                <option value='4'>4</option>
+                                                            </select>
+
+                                                        </div>
+
+                                                    
+                                                    </div>
+
+                                                
+
+                                                </div>
+                                                
+                                            </form>
+
+                                        </div>
+                                    
+                                </div>
+
+                                <div class="col-2 ">
+                                    <button class='letMeSend mx-auto' id='sendMe' type='button'>Registrar</button>
+                                </div>
+
+                           
+
+                        </div>
+
+                      
+
+                        
+
+                        
+                        
+                    </div>
+                    <div class="row terceraHilera mt-2">
                        
                         <div class="col-12"> 
 
-                            <div class='container conten mt-2'>
+                            <div class='container conten'>
 
-                                <h5>Posiciones*:</h5>
-                                <p style='color:black;font-size:9px;'>*En última actualización.</p>
-                                <table class='table table-sm mt-2'>
-                                    <thead class='tablaNormal'>
-                                        <tr>
-                                            <td>Nº</td>
-                                            <td>Nombre</td>
-                                            <td>Velocidad </td>
-                                            <td>Horas Motor</td>
-                                        
-                                            <td>Distancia recorrida</td>
-                                            <td>Actualización Nº</td>
+                                <form name='eligiendoActividades' id='eligiendoActividades'>
+                                    <div class='form-group formgroup'>
 
-                                        
-                                        
-                                        </tr>
-                                
-                                    </thead>
+                                        <div class="row">
+                                            <div class='col-12' id='actividades'>
+
+                                            </div>
+                                        </div>
+
+                                       
+
+                                    </div>
                                     
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                    </tbody>
-                                </table>
-
+                                </form>
 
                             </div>
 
