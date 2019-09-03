@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        // Traccar users
+        $this->call(Tc_usersTableSeeder::class);
+        // Normal app info
+        $this->call(EquiposTableSeeder::class);
+        $this->call(FiltroPosicionTableSeeder::class);
+        $this->call(Registrado_antesTableSeeder::class);
+        $this->call(TarjetaEquipoTableSeeder::class);
     }
 }
