@@ -7,3 +7,4 @@ php/mantenimientos/database.php
 php/usuarios/database.php
 php/vehiculos/database.php
 php/vehiculosU/database.php
+php/infoEquipo/database.php

@@ -388,7 +388,7 @@ $(function(){
 
 
     /** For navigation */
-    $(document).on('click', '#register', function(e){
+    $(document).on('click', '#vehiculos', function(e){
 
         //e.preventDefault();
 

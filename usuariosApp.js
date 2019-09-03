@@ -48,7 +48,7 @@ $(function () {
 
     });
     /** Navigating */
-    $(document).on('click', '#vehiculo', function(){
+    $(document).on('click', '#mantenimientos', function(){
         document.location = 'vehiculos.php';
     })
     /** For navigation */

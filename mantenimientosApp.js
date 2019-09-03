@@ -50,7 +50,7 @@ $(function(){
     })
 
      /** Navigating */
-     $(document).on('click', '#vehiculo', function(){
+     $(document).on('click', '#mantenimientos', function(){
         document.location = 'vehiculos.php';
     })
     /** For navigation END*/
@@ -61,8 +61,10 @@ $(function(){
     })
 
       /** Back to Dashboard */
-    $(document).on('click', '.dashi', function(){
-       // window.location.href='dashboard.php';
+    $(document).on('click', '#imprimible1,#imprimible2,#imprimible3,#imprimible4', function(){
+       /** Cinco */
+       var w = window.open('css/img/text.pdf');
+        w.print();
     })
    
    
@@ -521,6 +523,10 @@ $(function(){
                                 equipo = `
                                             <a idHoras=${y.idHoras} href='#' class='gooHoras'>${y.nombre}</a>
                                         `;
+
+                                equipoSinLink = `
+                                    ${y.nombre}
+                                `;
                                 
 
                                 template2 += `
@@ -572,7 +578,7 @@ $(function(){
                                             `;
                            
                             });   
-                            $('#equipo').html(equipo);
+                            $('#equipo').html(equipoSinLink);
                             //$('#registros').html(template);
                             $('#inHere').html(template2);
 

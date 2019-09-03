@@ -99,8 +99,9 @@ require 'php/auth.php';
                     
                     <div class="row my-2 relative">                       
                         <!--button id='vehiculo' class="btn-block btn-success btnn adminBtn" >Vehículos</button-->
-                        <span id='vehiculo' class='boton adminBtn'> Vehículos </span>
-                        <img class='abso_icons' src='css/img/vehiculo.svg' id='vehi_icon' width='24px' height="24px">
+                        <span id='mantenimientos' class='boton adminBtn'> Mantenimientos </span>
+                        <img class='abso_icons' src='css/img/note.svg' id='note' width='24px' height="24px">
+                       
                     </div>
                     <div class="row my-2 relative">
                         <!--button id='usuarios' class="btn-block btn-success btnn adminBtn">Usuarios</button-->
@@ -111,8 +112,9 @@ require 'php/auth.php';
                     <div class="row my-2 relative">
                         <!-- Register_app -->
                         <!--button id='register' class="btn-block btn-success btnn adminBtn">Registrar mantenimiento</button-->
-                        <span id='register' class='boton adminBtn'> Registros </span>
-                        <img class='abso_icons' src='css/img/note.svg' id='note' width='24px' height="24px">
+                        <span id='register' class='boton adminBtn'> Vehiculos </span>
+                        <img class='abso_icons' src='css/img/vehiculo.svg' id='vehi_icon' width='24px' height="24px">
+                       
                     </div>
                     <div class='row my-2 relative'>
                         <span id='logout' class='boton logOut'> Cerrar Sesión </span>

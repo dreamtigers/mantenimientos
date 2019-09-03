@@ -1004,12 +1004,12 @@ $(function () {
         
         $.ajax({
             type: "POST",
-            url: "php/goHours.php",
+            url: "php/infoEquipo/detallesEquipo.php",
             data: {id:id},
             
             success: function (response) {
                 console.log(response);
-                document.location = 'horasRestantes.php';
+                document.location = 'infoEquipo.php';
             }
         });
 
@@ -1327,7 +1327,7 @@ $(function () {
 
     })
     /** For navigation */
-    $(document).on('click', '#register', function(e){
+    $(document).on('click', '#vehiculos', function(e){
 
         //e.preventDefault();
         
@@ -1344,12 +1344,9 @@ $(function () {
 
     });
 
-    $(document).on('click', '#registrarVehiculo', function(){
-        document.location = 'datosDeIngreso.php';
-    })
 
      /** Navigating */
-     $(document).on('click', '#vehiculo', function(){
+     $(document).on('click', '#mantenimiento', function(){
         document.location = 'vehiculos.php';
     })
     /** For navigation */

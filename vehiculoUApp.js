@@ -130,7 +130,7 @@ $(function(){
         }
         listing2();
     }
-    //listThem(); Here we won't be listing anymore.
+    listThem();// Here we won't be listing anymore.
 
     // HORAS; nueva vista para usuarios    
     $(document).on('click', '.horasM', function(){

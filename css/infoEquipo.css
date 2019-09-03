@@ -42,14 +42,48 @@ input#lookIt{
     cursor:pointer; 
     width:100%;
 }
-#historial{
+#vehiculos{
     /**text-indent: 14px;
     /** Cause 'selected' **/
     background-color: #DDF0EC;
 }
-.tabledark{
-    background-color: #DDF0EC;
+input{
+    width:100%;
+    
 }
+.dot{cursor: pointer;color:rgb(7, 105, 253);}
+
+ /*End so far*/
+ .btnn{
+    height: 50px;
+    
+}
+html,body{
+    height:100%;
+}
+.col2{
+    background-color: #ffffff;
+    min-height: 100%;
+}
+.main{
+    
+    height:100%;
+}
+.in::placeholder{
+    color:aquamarine;
+}
+.poin{cursor:pointer;display:none;}
+.hid{
+    display:none;
+}
+.colorFul{
+    font-weight: 600;
+}
+#userVehiculos{
+    display:none;
+}
+
+
 .boton:hover{
     background-color:#DDF0EC;
 }
@@ -74,26 +108,31 @@ input#lookIt{
     top:13px;
     left:40px;
 }
-
 #logout{left:36px}
 #vehi_icon{
     top:13px;
 }
-.conten{
-    background-color: white;
-    padding:6px;
-    border-radius: 10px;
-    -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
-    -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
-    box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+.relative{
+    position:relative;
 }
-.contenApp{
+.contenedor{
     background-color: white;
+    position:absolute;
+    left:20px;
+    top:20px;
     padding:10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
-    -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
-    box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+    border-radius: 3px;
+    width:90%;
+}
+/*Making TD's relative*/
+.rel{
+    position: relative;
+}
+/* information.png images to be Absolute */
+.absImg{
+    position: absolute;
+    margin-left:10px;
+    cursor: pointer;
 }
 /* Making tooltips wider */
 .tooltip-inner {
@@ -103,11 +142,19 @@ input#lookIt{
 li{
     text-align:left;
 } 
-label{
-    margin-bottom:0px;
+.tabledark {
+    background-color: #DDF0EC;
 }
-.abs{
+.aceites{
     position:absolute;
-    right: 20px;
-    cursor:pointer;
+    font-size:10px;
+}
+.this{
+    width: 12%;
+}
+/** Back arrow */
+.back{
+   position:absolute;
+   right:20px;
+   cursor: pointer;
 }

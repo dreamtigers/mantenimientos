@@ -91,8 +91,9 @@ require 'php/auth.php';
                     
                     <div class="row my-2 relative">                       
                         <!--button id='vehiculo' class="btn-block btn-success btnn adminBtn" >Vehículos</button-->
-                        <span id='vehiculo' class='boton adminBtn'> Vehículos </span>
-                        <img class='abso_icons' src='css/img/vehiculo.svg' id='vehi_icon' width='24px' height="24px">
+                        <span id='mantenimientos' class='boton adminBtn'> Mantenimientos </span>
+                        <img class='abso_icons' src='css/img/note.svg' id='note' width='24px' height="24px">
+                       
                     </div>
                     <div class="row my-2 relative">
                         <!--button id='usuarios' class="btn-block btn-success btnn adminBtn">Usuarios</button-->
@@ -103,8 +104,9 @@ require 'php/auth.php';
                     <div class="row my-2 relative">
                         <!-- Register_app -->
                         <!--button id='register' class="btn-block btn-success btnn adminBtn">Registrar mantenimiento</button-->
-                        <span id='register' class='boton adminBtn'> Registros </span>
-                        <img class='abso_icons' src='css/img/note.svg' id='note' width='24px' height="24px">
+                        <span id='register' class='boton adminBtn'> Vehiculos </span>
+                        <img class='abso_icons' src='css/img/vehiculo.svg' id='vehi_icon' width='24px' height="24px">
+                       
                     </div>
                     <div class='row my-2 relative'>
                         <span id='logout' class='boton logOut'> Cerrar Sesión </span>
@@ -184,7 +186,7 @@ require 'php/auth.php';
                                                     
 
 
-                                                    <td>
+                                                    <td style='position:relative;'>
                                                         <b>Rutina 1</b>
                                                         <img title="<ul id='wrapper'>
                                                                 <li>Revisión del nivel de aceite del eje trasero y delantero (TDM).</li>
@@ -202,10 +204,11 @@ require 'php/auth.php';
                                                                 <li>Chequear lineas hidráulicas por fugas, desgastes, soportes flojos, etc.</li>
                                                                 <li>Chequeo del funcionamiento del sistema eléctrico y luces.</li>
                                                                 <li>Limpieza general.</li>
-                                                            </ul>" container="body"  class='absImg' src='css/img/information.png' width=16 data-toggle="tooltip" data-placement="right" data-html="true" >    <br>
+                                                            </ul>" container="body"  class='absImg' src='css/img/information.png' width=16 data-toggle="tooltip" data-placement="right" data-html="true" >    
                                       
-                                                    </td>
-                                                    <td>
+                                                        <img id='imprimible1' class='abs' src='css/img/printer.svg' width='20'> 
+                                                        </td>
+                                                    <td style='position:relative;'>
                                                         <b>Rutina 2</b>
                                                         <img title="<ul>
                                                                 <li>Revisión de la manguera de admisión de aire.</li>
@@ -214,11 +217,12 @@ require 'php/auth.php';
                                                                 <li>Revisar funcionamiento de frenos de servicio y estacionamiento.</li>
                                                                 <li>Cambio del filtro del combustible y separador de agua.</li>
                                                                 <li>Cambio del filtro de la transmisión.</li>
-                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>    <br>
-                                            
+                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>    
+                                                        
+                                                        <img id='imprimible2'  class='abs' src='css/img/printer.svg' width='20'> 
                                                 
                                                     </td>
-                                                    <td>
+                                                    <td style='position:relative;'>
                                                         <b>Rutina 3</b>
                                                         <img title="<ul>
                                                                 <li>Cambio de aceite del eje delantero y trasero.</li>
@@ -228,11 +232,12 @@ require 'php/auth.php';
                                                                 <li>Cambio del aceite y filtro de la transmisión y convertidor de par.</li>
                                                                 <li>Cambio de aceite de mandos finales.</li>
                                                                 <li>Sustitución de los elementos de filtro de aire.</li>
-                                                            </ul>" container="body" data-toggle="tooltip" data-placement="left" data-html="true" class='absImg' src='css/img/information.png' width=16>    <br>
-                                            
+                                                            </ul>" container="body" data-toggle="tooltip" data-placement="left" data-html="true" class='absImg' src='css/img/information.png' width=16>   
+                                                        
+                                                        <img id='imprimible3'  class='abs' src='css/img/printer.svg' width='20'> 
                                                 
                                                     </td>
-                                                    <td>
+                                                    <td style='position:relative;'>
                                                         <b>Rutina 4</b>
                                                         <img title="<ul>
                                                                 <li>Revisión del nivel de aceite del eje trasero y delantero (TDM).</li>
@@ -265,8 +270,8 @@ require 'php/auth.php';
                                                                 <li>Sustitución de los elementos de filtro de aire.</li>
                                                                 <li>Drenaje y reemplazo de refrigerante motor.</li>
                                                                 <li>Ajuste del juego de válvulas del motor.</li>
-                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>    <br>
-                                            
+                                                            </ul>" data-toggle="tooltip" data-placement="left" data-html="true" container="body" class='absImg' src='css/img/information.png' width=16>   
+                                                        <img id='imprimible4'  class='abs' src='css/img/printer.svg' width='20'>
                                              
                                                     </td>
                                                   

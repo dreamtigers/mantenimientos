@@ -30,109 +30,111 @@
      */
     $longitud = count($devices);
     for($i = 0;$i < $longitud;$i++){
-        //getName
-        $queryx = "SELECT * FROM tc_devices WHERE id LIKE $devices[$i]";
-        $resultx = mysqli_query($dbPiston, $queryx);
-        $myRowx = mysqli_fetch_array($resultx);
-        //getName end
+                //getName
+                $queryx = "SELECT * FROM tc_devices WHERE id LIKE $devices[$i]";
+                $resultx = mysqli_query($dbPiston, $queryx);
+                $myRowx = mysqli_fetch_array($resultx);
+                //getName end
 
-        //getRest
-        $query2 = "SELECT    *
-        FROM      tc_positions WHERE deviceid LIKE $devices[$i]
-        ORDER BY  id DESC
-        LIMIT     1";
+                //getRest
+                $query2 = "SELECT    *
+                FROM      tc_positions WHERE deviceid LIKE $devices[$i]
+                ORDER BY  id DESC
+                LIMIT     1";
 
-        $result= mysqli_query($dbPiston,$query2);
-        $myRow = mysqli_fetch_array($result);
-        //getRest end
+                $result= mysqli_query($dbPiston,$query2);
+                $myRow = mysqli_fetch_array($result);
+                //getRest end
 
-        /** I need now to access some data which is, imho, an 
-         *  ************ OBJECT WITHIN ARRAY ****************
-         */
-        
-        // It wasn't an 'object' but a JSON (hurr)
-        $a = json_decode($myRow['attributes']);
-        $first = $a->totalDistance;
-        $km = $first/1000;
-        $distanciaT = $km . ' km.';
-        
-      
-        // Comenzemos con el proceso de las horas Motor
-       
-        /** Finally, what i had been looking for
-         * a JSON holding value from tc_positions
-         */
-       
-        //condicional para devices con horas Motor
-        if(isset($a->hours)){
-            $milisecs = $a->hours;
-            /**segundo a horas*/
-            /**but let's round it first. */
-            $roundedHoras = round($milisecs/3600000,3);
-
-            $horas = $roundedHoras;
-            //Conectando a filtroPosicion (Para filtrar)
-            $hardsql = sprintf("INSERT INTO filtroPosicion (nombre, velocidad, latitud, longitud, distanciaRecorrida,horasMotor, updateNumber,deviceId) VALUES ('%s', '%s', '%s','%s', '%s','%s', '%s','%s') 
-            ",  mysqli_real_escape_string($db, $myRowx['name']),
-           
-                mysqli_real_escape_string($db, $myRow['speed']),
-                mysqli_real_escape_string($db, $myRow['latitude']),
-                mysqli_real_escape_string($db, $myRow['longitude']),
-                mysqli_real_escape_string($db, $distanciaT),
-                mysqli_real_escape_string($db, $horas),
-                mysqli_real_escape_string($db, $myRow['id']),
-                mysqli_real_escape_string($db, $devices[$i]) );
-            //Conectando a 'equipos' para el calculo de horas, sólo en caso de existir horas
-            $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,deviceId) VALUES ('%s', '%s','%s')
-                        ON DUPLICATE KEY UPDATE hrsMotor='%s';",
-                $myRowx['name'],
-                $horas,
-                $myRow['deviceid'],
-                $horas );
-                 mysqli_query($db, $equipoSql);
-            // Si sí hay horas, crea un json con horasMotor
-            $number += 1;
-                $jsonPosition[] = array(
-                    'number' => $number,
-                    'numb' => $myRowx['name'],
-                    'id' => $myRow['deviceid'],
-                    'velocidad' => $myRow['speed'],
-                  
-                    'horasMotor' => $horas,
-                    'updateNumber' => $myRow['id'],
-                    'distance' => $distanciaT 
-                );
-
-        } else {
-            //Conectando a filtroPosicion (Para filtrar)
-            $hardsql = sprintf("INSERT INTO filtroPosicion (nombre, velocidad, latitud, longitud, distanciaRecorrida, updateNumber,deviceId) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%s') 
-            ",  mysqli_real_escape_string($db, $myRowx['name']),
-       
-            mysqli_real_escape_string($db, $myRow['speed']),
-            mysqli_real_escape_string($db, $myRow['latitude']),
-            mysqli_real_escape_string($db, $myRow['longitude']),
-            mysqli_real_escape_string($db, $distanciaT),
+                /** I need now to access some data which is, imho, an 
+                 *  ************ OBJECT WITHIN ARRAY ****************
+                 */
+                
+                // It wasn't an 'object' but a JSON (hurr)
+                $a = json_decode($myRow['attributes']);
+                $first = $a->totalDistance;
+                $km = $first/1000;
+                $distanciaT = $km . ' km.';
+                
             
-            mysqli_real_escape_string($db, $myRow['id']),
-            mysqli_real_escape_string($db, $devices[$i]));
+                // Comenzemos con el proceso de las horas Motor
+            
+                /** Finally, what i had been looking for
+                 * a JSON holding value from tc_positions
+                 */
+            
+                //condicional para devices con horas Motor
+                if(isset($a->hours)){
+                    $milisecs = $a->hours;
+                    /**segundo a horas*/
+                    /**but let's round it first. */
+                    $roundedHoras = round($milisecs/3600000,3);
 
-            // Si no hay horas, crea json sin horasMotor
-            $number += 1;
-            $jsonPosition[] = array(
-                'number' => $number,
-                'numb' => $myRowx['name'],
-                'id' => $myRow['deviceid'],
-                'velocidad' => $myRow['speed'],
-              
-                'horasMotor' => '',
-                'updateNumber' => $myRow['id'],
-                'distance' => $distanciaT 
-            );
-        }
-        mysqli_query($db, $hardsql);
-       
-        
+                    $horas = $roundedHoras;
+                    //Conectando a filtroPosicion (Para filtrar)
+                    $hardsql = sprintf("INSERT INTO filtroPosicion (nombre, velocidad, latitud, longitud, distanciaRecorrida,horasMotor, updateNumber,deviceId) VALUES ('%s', '%s', '%s','%s', '%s','%s', '%s','%s') 
+                    ",  mysqli_real_escape_string($db, $myRowx['name']),
+                
+                        mysqli_real_escape_string($db, $myRow['speed']),
+                        mysqli_real_escape_string($db, $myRow['latitude']),
+                        mysqli_real_escape_string($db, $myRow['longitude']),
+                        mysqli_real_escape_string($db, $distanciaT),
+                        mysqli_real_escape_string($db, $horas),
+                        mysqli_real_escape_string($db, $myRow['id']),
+                        mysqli_real_escape_string($db, $devices[$i]) );
+                    //Conectando a 'equipos' para el calculo de horas, sólo en caso de existir horas
+                    $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,deviceId,userId) VALUES ('%s', '%s','%s','%s')
+                                ON DUPLICATE KEY UPDATE hrsMotor='%s', userId='%s' ;",
+                        $myRowx['name'],
+                        $horas,
+                        $myRow['deviceid'],
+                        $id,
+                        $horas, $id );
+                        mysqli_query($db, $equipoSql);
+                    // Si sí hay horas, crea un json con horasMotor
+                    $number += 1;
+                        $jsonPosition[] = array(
+                            'number' => $number,
+                            'numb' => $myRowx['name'],
+                            'id' => $myRow['deviceid'],
+                            'velocidad' => $myRow['speed'],
+                        
+                            'horasMotor' => $horas,
+                            'updateNumber' => $myRow['id'],
+                            'distance' => $distanciaT 
+                        );
+
+                } else {
+                    //Conectando a filtroPosicion (Para filtrar)
+                    $hardsql = sprintf("INSERT INTO filtroPosicion (nombre, velocidad, latitud, longitud, distanciaRecorrida, updateNumber,deviceId) VALUES ('%s', '%s', '%s','%s', '%s', '%s','%s') 
+                    ",  mysqli_real_escape_string($db, $myRowx['name']),
+            
+                    mysqli_real_escape_string($db, $myRow['speed']),
+                    mysqli_real_escape_string($db, $myRow['latitude']),
+                    mysqli_real_escape_string($db, $myRow['longitude']),
+                    mysqli_real_escape_string($db, $distanciaT),
+                    
+                    mysqli_real_escape_string($db, $myRow['id']),
+                    mysqli_real_escape_string($db, $devices[$i]));
+
+                    // Si no hay horas, crea json sin horasMotor
+                    $number += 1;
+                    $jsonPosition[] = array(
+                        'number' => $number,
+                        'numb' => $myRowx['name'],
+                        'id' => $myRow['deviceid'],
+                        'velocidad' => $myRow['speed'],
+                    
+                        'horasMotor' => '',
+                        'updateNumber' => $myRow['id'],
+                        'distance' => $distanciaT 
+                    );
+                }
+                mysqli_query($db, $hardsql);
+         
+    
     } 
+
     $long = count($jsonPosition);
     $jsonString = json_encode($jsonPosition);
     // jsonEncoded var
