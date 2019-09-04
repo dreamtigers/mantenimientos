@@ -1,19 +1,29 @@
-# Mantenimientos
+# PistonPosición: Mantenimientos
 
 ## Getting started
+
 1. Clone the repo.
+
 2. Install composer dependencies:
     ```sh
     cd app
     composer install
     ```
+
 3. Run migrations:
     ```sh
     php artisan migrate
     ```
+
 4. Seed the database:
     ```sh
     php artisan db:seed
+    ```
+
+5. Give `storage/` and `bootstrap/cache/` all the permissions they need:
+    ```sh
+    chmod -R 777 storage/
+    chmod -R 777 bootstrap/cache/
     ```
 
 ## About Laravel
@@ -32,4 +42,5 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## License
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-source software licensed under the [MIT
+license](https://opensource.org/licenses/MIT).
