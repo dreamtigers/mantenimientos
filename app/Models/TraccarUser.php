@@ -64,6 +64,17 @@ class TraccarUser extends GenericUser implements AuthenticatableContract
     {
         return $this->attributes['salt'];
     }
+
+    /*
+     * Is the user an administrator?
+     *
+     * @return boolean
+     */
+    public function isAdmin()
+    {
+        /* Casting 0 or 1 to FALSE or TRUE, respectively. */
+        return ((bool) $this->attributes['administrator']);
+    }
 }
 
 ?>
