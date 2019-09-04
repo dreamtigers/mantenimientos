@@ -14,6 +14,7 @@ class EquiposTableSeeder extends Seeder
         DB::table('equipos')->insert([
             array(
                 'equipo' => 'Caja Magica',
+                'userId' => '1',
                 'hrsMotor' => '12',
                 'hrsMantenimiento' => '12',
                 'rutina1' => '242',
@@ -25,7 +26,8 @@ class EquiposTableSeeder extends Seeder
                 'rutina4' => '1992'
             ),
             array(
-                'equipo' => 'CamionetaPastorino',
+                'equipo' => 'Camioneta Pastorino',
+                'userId' => '1',
                 'hrsMotor' => '490',
                 'hrsMantenimiento' => '490',
                 'rutina1' => '250',
@@ -38,6 +40,7 @@ class EquiposTableSeeder extends Seeder
             ),
             array(
                 'equipo' => 'Orinoco Yuli',
+                'userId' => '1',
                 'hrsMotor' => '6',
                 'hrsMantenimiento' => '6',
                 'rutina1' => '250',
