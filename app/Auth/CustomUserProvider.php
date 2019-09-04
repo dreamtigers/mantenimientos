@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Thanks to:
+ * https://laracasts.com/discuss/channels/laravel/replacing-the-laravel-authentication-with-a-custom-authentication
+ */
+
 namespace App\Auth;
 
 use DB;
