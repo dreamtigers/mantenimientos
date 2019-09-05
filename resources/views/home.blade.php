@@ -1,25 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="card">
+    <div class="card-header">
+        <div class="card-header-title">Dashboard</div>
+    </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    You are logged in!
-                    @if ( auth()->user()->isAdmin() )
-                        You're also an admin!
-                    @endif
-                </div>
+    <div class="card-content">
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
             </div>
-        </div>
+        @endif
+        You are logged in!
+        @admin
+            You're also an admin!
+        @endadmin
     </div>
 </div>
 @endsection
