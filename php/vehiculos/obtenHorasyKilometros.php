@@ -3,6 +3,10 @@
     session_start();
     include('database.php');
     $id = $_POST['id'];
+    /** We will also want to pass id to POST[hoursId] so we can redirect after doing a maintenance*/
+    $_SESSION['hoursId'] = $id;
+
+
     // First db connection
     $sql = "SELECT * FROM filtroPosicion WHERE deviceId LIKE '$id' ";
     $res = mysqli_query($db, $sql);

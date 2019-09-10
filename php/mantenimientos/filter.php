@@ -48,6 +48,7 @@
                 'filtroTransmision' => $row['filtroTransmision'],
                 'filtroTanqueHidraulico' => $row['filtroTanqueHidraulico'],
                 'actividades' => $row['actividades'],
+                'comentariosActividades' => $row['comentarios_actividades'],
                 'observaciones' => $row['observaciones'],
                 'idHoras' => $deviceId
 

@@ -77,257 +77,257 @@ $(function(){
         /** Hold on for the 30 activities down here */
         /** First 5 */
         if ($('#a_1').is(":checked")){
-            actividades += ' 1)Revisión del nivel de aceite del eje trasero y delantero.';
+            actividades += ' 1)Revisión del nivel de aceite del eje trasero y delantero.<br>';
             if ( $('#act1').val() != '' ){
-                comentariosActividades += '1) ' + $('#act1').val() + '  ';
+                comentariosActividades += '1) ' + $('#act1').val() + '<br>  ';
             } else {
-                comentariosActividades += '1) Actividad sin observación.  ';
+                comentariosActividades += '1) Actividad sin observación.<br>';
             }
         }
         if ($('#a_2').is(":checked")){
-            actividades += ' 2)Revisión del nivel de aceite de mandos finales.';
+            actividades += ' 2)Revisión del nivel de aceite de mandos finales.<br>';
             if ( $('#act2').val() != '' ){
-                comentariosActividades += '2)' + $('#act2').val() + '  ';
+                comentariosActividades += '2)' + $('#act2').val() + ' <br> ';
             } else {
-                comentariosActividades += '2) Actividad sin observación.  ';
+                comentariosActividades += '2) Actividad sin observación.<br> ';
             }  
         }
         if ($('#a_3').is(":checked")){
-            actividades += ' 3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.';
+            actividades += ' 3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.<br>';
             if ( $('#act3').val() != '' ){
-                comentariosActividades += '3)' + $('#act3').val() + '  ';
+                comentariosActividades += '3)' + $('#act3').val() + '<br>  ';
             } else {
-                comentariosActividades += '3) Actividad sin observación.  ';
+                comentariosActividades += '3) Actividad sin observación.<br>';
             }  
             
         }
         if ($('#a_4').is(":checked")){
-            actividades += ' 4)Revisar y limpiar filtro separador de agua de sistemas combustible.';
+            actividades += ' 4)Revisar y limpiar filtro separador de agua de sistemas combustible.<br>';
             if ( $('#act4').val() != '' ){
-                comentariosActividades += '4)' + $('#act4').val() + '  ';
+                comentariosActividades += '4)' + $('#act4').val() + '<br>';
             } else {
-                comentariosActividades += '4) Actividad sin observación.  ';
+                comentariosActividades += '4) Actividad sin observación.<br>';
             }  
            
         }
         if ($('#a_5').is(":checked")){
-            actividades += ' 5)Revisión del nivel de electrolito y de los bornes de la batería.';
+            actividades += ' 5)Revisión del nivel de electrolito y de los bornes de la batería.<br>';
             if ( $('#act5').val() != '' ){
-                comentariosActividades += '5)' + $('#act5').val() + '  ';
+                comentariosActividades += '5)' + $('#act5').val() + '<br>';
             } else {
-                comentariosActividades += '5) Actividad sin observación.  ';
+                comentariosActividades += '5) Actividad sin observación.<br>';
             }  
         }
         /** Five more (5-10) */
         if ($('#a_6').is(":checked")){
-            actividades += ' 6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.';
+            actividades += ' 6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.<br>';
             if ( $('#act6').val() != '' ){
-                comentariosActividades += '6)' + $('#act6').val() + '  ';
+                comentariosActividades += '6)' + $('#act6').val() + '<br>';
             } else {
-                comentariosActividades += '6) Actividad sin observación.  ';
+                comentariosActividades += '6) Actividad sin observación.<br>';
             }  
         }
         if ($('#a_7').is(":checked")){
-            actividades += ' 7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.';
+            actividades += ' 7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.<br>';
             if ( $('#act7').val() != '' ){
-                comentariosActividades += '7)' + $('#act7').val() + '  ';
+                comentariosActividades += '7)' + $('#act7').val() + '<br>';
             } else {
-                comentariosActividades += '7) Actividad sin observación.  ';
+                comentariosActividades += '7) Actividad sin observación. <br>';
             }     
         }
         if ($('#a_8').is(":checked")){
-            actividades += ' 8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.';
+            actividades += ' 8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.<br>';
             if ( $('#act8').val() != '' ){
-                comentariosActividades += '8)' + $('#act8').val() + '  ';
+                comentariosActividades += '8)' + $('#act8').val() + '<br>';
             } else {
-                comentariosActividades += '8) Actividad sin observación.  ';
+                comentariosActividades += '8) Actividad sin observación. <br> ';
             }    
         }
         if ($('#a_9').is(":checked")){
-            actividades += ' 9)Cambio de aceite y del filtro del motor.';
+            actividades += ' 9)Cambio de aceite y del filtro del motor.<br>';
             if ( $('#act9').val() != '' ){
-                comentariosActividades += '9)' + $('#act9').val() + '  ';
+                comentariosActividades += '9)' + $('#act9').val() + '<br>';
             } else {
-                comentariosActividades += '9) Actividad sin observación.  ';
+                comentariosActividades += '9) Actividad sin observación. <br> ';
             }    
         }
         if ($('#a_10').is(":checked")){
-            actividades += ' 10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.';
+            actividades += ' 10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.<br>';
             if ( $('#act10').val() != '' ){
-                comentariosActividades += '10)' + $('#act10').val() + '  ';
+                comentariosActividades += '10)' + $('#act10').val() + '<br>';
             } else {
-                comentariosActividades += '10) Actividad sin observación.  ';
+                comentariosActividades += '10) Actividad sin observación. <br>';
             }  
         }
         /** Five more (10-15)*/
         if ($('#a_11').is(":checked")){
-            actividades += ' 11)Lubricar crucetas de cardanes.';
+            actividades += ' 11)Lubricar crucetas de cardanes.<br>';
             if ( $('#act11').val() != '' ){
-                comentariosActividades += '11)' + $('#act11').val() + '  ';
+                comentariosActividades += '11)' + $('#act11').val() + '<br>';
             } else {
-                comentariosActividades += '11) Actividad sin observación.  ';
+                comentariosActividades += '11) Actividad sin observación.<br>';
             } 
             
         }
         if ($('#a_12').is(":checked")){
-            actividades += ' 12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.';
+            actividades += ' 12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.<br>';
             if ( $('#act12').val() != '' ){
-                comentariosActividades += '12)' + $('#act12').val() + '  ';
+                comentariosActividades += '12)' + $('#act12').val() + '<br>';
             } else {
-                comentariosActividades += '12) Actividad sin observación.  ';
+                comentariosActividades += '12) Actividad sin observación. <br>';
             }   
         }
         if ($('#a_13').is(":checked")){
-            actividades += ' 13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.';
+            actividades += ' 13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.<br>';
             if ( $('#act13').val() != '' ){
-                comentariosActividades += '13)' + $('#act13').val() + '  ';
+                comentariosActividades += '13)' + $('#act13').val() + '<br>';
             } else {
-                comentariosActividades += '13) Actividad sin observación.  ';
+                comentariosActividades += '13) Actividad sin observación. <br> ';
             } 
         }
         if ($('#a_14').is(":checked")){
-            actividades += ' 14)Chequeo del sistema eléctrico y luces.';
+            actividades += ' 14)Chequeo del sistema eléctrico y luces.<br>';
             if ( $('#act14').val() != '' ){
-                comentariosActividades += '14)' + $('#act14').val() + '  ';
+                comentariosActividades += '14)' + $('#act14').val() + '<br>';
             } else {
-                comentariosActividades += '14) Actividad sin observación.  ';
+                comentariosActividades += '14) Actividad sin observación. <br> ';
             }           
         }
         if ($('#a_15').is(":checked")){
-            actividades += ' 15)Limpieza general.';
+            actividades += ' 15)Limpieza general.<br>';
             if ( $('#act15').val() != '' ){
-                comentariosActividades += '15)' + $('#act15').val() + '  ';
+                comentariosActividades += '15)' + $('#act15').val() + '<br>';
             } else {
-                comentariosActividades += '15) Actividad sin observación.  ';
+                comentariosActividades += '15) Actividad sin observación. <br> ';
             }  
         }
         /** Five more (15-20)*/
         if ($('#a_16').is(":checked")){
-            actividades += ' 16)Revisión de la manguera de admisión de aire.';
+            actividades += ' 16)Revisión de la manguera de admisión de aire.<br>';
             if ( $('#act16').val() != '' ){
-                comentariosActividades += '16)' + $('#act16').val() + '  ';
+                comentariosActividades += '16)' + $('#act16').val() + '<br>';
             } else {
-                comentariosActividades += '16) Actividad sin observación.  ';
+                comentariosActividades += '16) Actividad sin observación. <br> ';
             }   
         }
         if ($('#a_17').is(":checked")){
-            actividades += ' 17)Cambio del filtro de aceite del sistema hidráulico.';
+            actividades += ' 17)Cambio del filtro de aceite del sistema hidráulico.<br>';
             if ( $('#act17').val() != '' ){
-                comentariosActividades += '17)' + $('#act17').val() + '  ';
+                comentariosActividades += '17)' + $('#act17').val() + '<br>';
             } else {
-                comentariosActividades += '17) Actividad sin observación.  ';
+                comentariosActividades += '17) Actividad sin observación.<br>';
             }  
         }
         if ($('#a_18').is(":checked")){
-            actividades += ' 18)Revisión del par de apriete del pasador entre el aguijón y el brazo.';
+            actividades += ' 18)Revisión del par de apriete del pasador entre el aguijón y el brazo.<br>';
             if ( $('#act18').val() != '' ){
-                comentariosActividades += '18)' + $('#act18').val() + '  ';
+                comentariosActividades += '18)' + $('#act18').val() + '<br>';
             } else {
-                comentariosActividades += '18) Actividad sin observación.  ';
+                comentariosActividades += '18) Actividad sin observación.<br>';
             }       
         }
         if ($('#a_19').is(":checked")){
-            actividades += ' 19)Revisar funcionamiento de frenos de servicio y estacionamiento.';
+            actividades += ' 19)Revisar funcionamiento de frenos de servicio y estacionamiento.<br>';
             if ( $('#act19').val() != '' ){
-                comentariosActividades += '19)' + $('#act19').val() + '  ';
+                comentariosActividades += '19)' + $('#act19').val() + '<br>';
             } else {
-                comentariosActividades += '19) Actividad sin observación.  ';
+                comentariosActividades += '19) Actividad sin observación.<br>';
             }   
         }
         if ($('#a_20').is(":checked")){
-            actividades += ' 20)Cambio del filtro del combustible y separador de agua.';
+            actividades += ' 20)Cambio del filtro del combustible y separador de agua.<br>';
             if ( $('#act20').val() != '' ){
-                comentariosActividades += '20)' + $('#act20').val() + '  ';
+                comentariosActividades += '20)' + $('#act20').val() + '<br>';
             } else {
-                comentariosActividades += '20) Actividad sin observación.  ';
+                comentariosActividades += '20) Actividad sin observación.<br>';
             }   
         }
         /** Five more (20-25) */
         if ($('#a_21').is(":checked")){
-            actividades += ' 21)Cambio del filtro de transmisión.';
+            actividades += ' 21)Cambio del filtro de transmisión.<br>';
             if ( $('#act21').val() != '' ){
-                comentariosActividades += '21)' + $('#act21').val() + '  ';
+                comentariosActividades += '21)' + $('#act21').val() + '<br>';
             } else {
-                comentariosActividades += '21) Actividad sin observación.  ';
+                comentariosActividades += '21) Actividad sin observación.<br>';
             }   
             
         }
         if ($('#a_22').is(":checked")){
-            actividades += ' 22)Cambio de aceite del eje delantero y trasero.';
+            actividades += ' 22)Cambio de aceite del eje delantero y trasero.<br>';
             if ( $('#act22').val() != '' ){
-                comentariosActividades += '22)' + $('#act22').val() + '  ';
+                comentariosActividades += '22)' + $('#act22').val() + '<br>';
             } else {
-                comentariosActividades += '22) Actividad sin observación.  ';
+                comentariosActividades += '22) Actividad sin observación. <br> ';
             }  
             
         }
         if ($('#a_23').is(":checked")){
-            actividades += ' 23)Revisión y ajuste del varillaje de control de velocidad del motor.';
+            actividades += ' 23)Revisión y ajuste del varillaje de control de velocidad del motor.<br>';
             if ( $('#act23').val() != '' ){
-                comentariosActividades += '23)' + $('#act23').val() + '  ';
+                comentariosActividades += '23)' + $('#act23').val() + '<br>';
             } else {
-                comentariosActividades += '23) Actividad sin observación.  ';
+                comentariosActividades += '23) Actividad sin observación. <br> ';
             } 
             
         }
         if ($('#a_24').is(":checked")){
-            actividades += ' 24)Cambio de aceite y filtro del sistema hidráulico.';
+            actividades += ' 24)Cambio de aceite y filtro del sistema hidráulico.<br>';
             if ( $('#act24').val() != '' ){
-                comentariosActividades += '24)' + $('#act24').val() + '  ';
+                comentariosActividades += '24)' + $('#act24').val() + '<br>';
             } else {
-                comentariosActividades += '24) Actividad sin observación.  ';
+                comentariosActividades += '24) Actividad sin observación. <br> ';
             } 
            
         }
         if ($('#a_25').is(":checked")){
-            actividades += ' 25)Limpieza del tubo del respiradero del carter del motor.';
+            actividades += ' 25)Limpieza del tubo del respiradero del carter del motor.<br>';
             if ( $('#act25').val() != '' ){
-                comentariosActividades += '25)' + $('#act25').val() + '  ';
+                comentariosActividades += '25)' + $('#act25').val() + '<br>';
             } else {
-                comentariosActividades += '25) Actividad sin observación.  ';
+                comentariosActividades += '25) Actividad sin observación. <br> ';
             } 
             
         }
         /** Last five up to 30 */
         if ($('#a_26').is(":checked")){
-            actividades += ' 26)Cambio de aceite y filtro de la transmisión y convertidor de par.';
+            actividades += ' 26)Cambio de aceite y filtro de la transmisión y convertidor de par.<br>';
             if ( $('#act26').val() != '' ){
-                comentariosActividades += '26)' + $('#act26').val() + '  ';
+                comentariosActividades += '26)' + $('#act26').val() + '<br>';
             } else {
-                comentariosActividades += '26) Actividad sin observación.  ';
+                comentariosActividades += '26) Actividad sin observación. <br> ';
             }    
         }
         if ($('#a_27').is(":checked")){
-            actividades += ' 27)Cambio de aceite de mandos finales.';
+            actividades += ' 27)Cambio de aceite de mandos finales.<br>';
             if ( $('#act27').val() != '' ){
-                comentariosActividades += '27)' + $('#act27').val() + '  ';
+                comentariosActividades += '27)' + $('#act27').val() + '<br>';
             } else {
-                comentariosActividades += '27) Actividad sin observación.  ';
+                comentariosActividades += '27) Actividad sin observación.  <br>';
             }   
         }
         if ($('#a_28').is(":checked")){
-            actividades += '28)Sustitución de los elementos del filtro del aire.';
+            actividades += '28)Sustitución de los elementos del filtro del aire.<br>';
             if ( $('#act28').val() != '' ){
-                comentariosActividades += '28)' + $('#act28').val() + '  ';
+                comentariosActividades += '28)' + $('#act28').val() + '<br>';
             } else {
-                comentariosActividades += '28) Actividad sin observación.  ';
+                comentariosActividades += '28) Actividad sin observación. <br> ';
             }  
             
         }
         if ($('#a_29').is(":checked")){
-            actividades += ' 29)Drenaje y reemplazo de refrigerante motor.';
+            actividades += ' 29)Drenaje y reemplazo de refrigerante motor.<br>';
             if ( $('#act29').val() != '' ){
-                comentariosActividades += '29)' + $('#act29').val() + '  ';
+                comentariosActividades += '29)' + $('#act29').val() + '<br>';
             } else {
-                comentariosActividades += '29) Actividad sin observación.  ';
+                comentariosActividades += '29) Actividad sin observación. <br> ';
             }  
         }
         if ($('#a_30').is(":checked")){
-            actividades += ' 30)Ajuste del juego de válvulas del motor.';
+            actividades += ' 30)Ajuste del juego de válvulas del motor.<br>';
             if ( $('#act30').val() != '' ){
-                comentariosActividades += '30)' + $('#act30').val() + '  ';
+                comentariosActividades += '30)' + $('#act30').val() + '<br>';
             } else {
-                comentariosActividades += '30) Actividad sin observación.  ';
+                comentariosActividades += '30) Actividad sin observación. <br> ';
             } 
             
         }
@@ -369,7 +369,9 @@ $(function(){
                 $('.segundaHilera').fadeOut();
                 $('html, body').animate({scrollTop: '0px'}, 420);
 
-              
+                alert('Mantenimiento registrado');
+                window.location.href = 'mantenimiento.php';
+
             } 
        
         });

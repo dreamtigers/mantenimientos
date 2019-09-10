@@ -60,7 +60,7 @@ $(function(){
         history.back();
     })
 
-      /** Back to Dashboard */
+   
     $(document).on('click', '#imprimible1,#imprimible2,#imprimible3,#imprimible4', function(){
        /** Cinco */
        var w = window.open('css/img/text.pdf');
@@ -160,248 +160,248 @@ $(function(){
                                     /** We will now do another Ajax request */
                                     let rutina1 = `
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act1'>1)Revisión del nivel de aceite del eje trasero y delantero.</label></div>
-                                                        <div class='col-1'><input id='act1' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act1'>1)Revisión del nivel de aceite del eje trasero y delantero.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act2'>2)Revisión del nivel de aceite de mandos finales.</label></div>
-                                                        <div class='col-1'><input id='act2' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act2'>2)Revisión del nivel de aceite de mandos finales.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act3'>3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</label></div>
-                                                        <div class='col-1'><input id='act3' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act3'>3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act4'>4)Revisar y limpiar filtro separador de agua de sistemas combustible.</label></div>
-                                                        <div class='col-1'><input id='act4' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act4'>4)Revisar y limpiar filtro separador de agua de sistemas combustible.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act5'>5)Revisión del nivel de electrolito y de los bornes de la batería.</label></div>
-                                                        <div class='col-1'><input id='act5' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act5'>5)Revisión del nivel de electrolito y de los bornes de la batería.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act6'>6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.</label></div>
-                                                        <div class='col-1'><input id='act6' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act6'>6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act7'>7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</label></div>
-                                                        <div class='col-1'><input id='act7' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act7'>7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act8'>8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</label></div>
-                                                        <div class='col-1'><input id='act8' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act8'>8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act9'>9)Cambio de aceite y del filtro del motor.</label></div>
-                                                        <div class='col-1'><input id='act9' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act9'>9)Cambio de aceite y del filtro del motor.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act10'>10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</label></div>
-                                                        <div class='col-1'><input id='act10' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act10'>10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act11'>11)Lubricar crucetas de cardanes.</label></div>
-                                                        <div class='col-1'><input id='act11' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act11'>11)Lubricar crucetas de cardanes.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act12'>12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</label></div>
-                                                        <div class='col-1'><input id='act12' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act12'>12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act13'>13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.</label></div>
-                                                        <div class='col-1'><input id='act13' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act13'>13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act14'>14)Chequeo del sistema eléctrico y luces.</label></div>
-                                                        <div class='col-1'><input id='act14' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act14'>14)Chequeo del sistema eléctrico y luces.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act15'>15)Limpieza general.</label></div>
-                                                        <div class='col-1'><input id='act15' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act15'>15)Limpieza general.</label></div>
+                                                       
                                                     </div>
                                                     
                                                     `;
                                     let rutina2 = `
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act16'> 16)Revisión de la manguera de admisión de aire.</label></div>
-                                                        <div class='col-1'><input id='act16' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act16'> 16)Revisión de la manguera de admisión de aire.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act17'> 17)Cambios del filtro de aceite del sistema hidráulico.</label></div>
-                                                        <div class='col-1'><input id='act17' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act17'> 17)Cambios del filtro de aceite del sistema hidráulico.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act18'> 18)Revisión del par de apriete del pasador entre el aguilón y el brazo.</label></div>
-                                                        <div class='col-1'><input id='act18' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act18'> 18)Revisión del par de apriete del pasador entre el aguilón y el brazo.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act19'> 19)Revisar funcionamiento de frenos de servicio y estacionamiento.</label></div>
-                                                        <div class='col-1'><input id='act19' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act19'> 19)Revisar funcionamiento de frenos de servicio y estacionamiento.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act20'> 20)Cambios del filtro del combustible y separador de agua.</label></div>
-                                                        <div class='col-1'><input id='act20' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act20'> 20)Cambios del filtro del combustible y separador de agua.</label></div>
+                                                        
                                                     </div>
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act21'> 21)Cambios del filtro de la transmisión.</label></div>
-                                                        <div class='col-1'><input id='act21' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act21'> 21)Cambios del filtro de la transmisión.</label></div>
+                                                        
                                                     </div>
                                                     `
                                     let rutina3 = `
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act22'> 22)Cambio de aceite de eje delantero y trasero.</label></div>
-                                                        <div class='col-1'><input id='act22' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act22'> 22)Cambio de aceite de eje delantero y trasero.</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act23'> 23)Revisión y ajuste del vanillaje de control de velocidad del motor.</label></div>
-                                                        <div class='col-1'><input id='act23' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act23'> 23)Revisión y ajuste del vanillaje de control de velocidad del motor.</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act24'> 24)Cambios de aceite y filtro del sistema hidráulico.</label></div>
-                                                        <div class='col-1'><input id='act24' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act24'> 24)Cambios de aceite y filtro del sistema hidráulico.</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act25'> 25)Limpieza de tubo del respiradero de carter del motor.</label></div>
-                                                        <div class='col-1'><input id='act25' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act25'> 25)Limpieza de tubo del respiradero de carter del motor.</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act26'> 26)Cambio de aceite y filtro de la transmisión y convertidor en par.</label></div>
-                                                        <div class='col-1'><input id='act26' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act26'> 26)Cambio de aceite y filtro de la transmisión y convertidor en par.</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act27'> 27)Cambio de aceite de mandos finales</label></div>
-                                                        <div class='col-1'><input id='act27' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act27'> 27)Cambio de aceite de mandos finales</label></div>
+                                                        
                                                     </div> 
                                                     <div class='row'>
-                                                        <div class='col-11'><label for='act28'> 28)Sustitución de los elementos de filtro de aire</label></div>
-                                                        <div class='col-1'><input id='act28' type='checkbox'></div>
+                                                        <div class='col-12'><label for='act28'> 28)Sustitución de los elementos de filtro de aire</label></div>
+                                                        
                                                     </div> 
 
                                                 `;
                                     let rutina4 = `
                                                 <!-- Rutina 1 -->
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act1'>1)Revisión del nivel de aceite del eje trasero y delantero.</label></div>
-                                                    <div class='col-1'><input id='act1' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act1'>1)Revisión del nivel de aceite del eje trasero y delantero.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act2'>2)Revisión del nivel de aceite de mandos finales.</label></div>
-                                                    <div class='col-1'><input id='act2' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act2'>2)Revisión del nivel de aceite de mandos finales.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act3'>3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</label></div>
-                                                    <div class='col-1'><input id='act3' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act3'>3)Inspeccionar y limpiar filtro de aire primario y válvula de descarga de polvo.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act4'>4)Revisar y limpiar filtro separador de agua de sistemas combustible.</label></div>
-                                                    <div class='col-1'><input id='act4' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act4'>4)Revisar y limpiar filtro separador de agua de sistemas combustible.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act5'>5)Revisión del nivel de electrolito y de los bornes de la batería.</label></div>
-                                                    <div class='col-1'><input id='act5' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act5'>5)Revisión del nivel de electrolito y de los bornes de la batería.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act6'>6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.</label></div>
-                                                    <div class='col-1'><input id='act6' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act6'>6)Revisión de niveles de aceite del sistemas hidráulico y transmisión.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act7'>7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</label></div>
-                                                    <div class='col-1'><input id='act7' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act7'>7)Revisión del nivel de refrigerante. Estado del radiador y mangueras.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act8'>8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</label></div>
-                                                    <div class='col-1'><input id='act8' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act8'>8)Revisión del estado de la(s) correa(s) del motor y comprobar tensión.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act9'>9)Cambio de aceite y del filtro del motor.</label></div>
-                                                    <div class='col-1'><input id='act9' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act9'>9)Cambio de aceite y del filtro del motor.</label></div>
+                                                
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act10'>10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</label></div>
-                                                    <div class='col-1'><input id='act10' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act10'>10)Lubricar puntos de pivote de cargadora, excavadora y estabilizadores.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act11'>11)Lubricar crucetas de cardanes.</label></div>
-                                                    <div class='col-1'><input id='act11' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act11'>11)Lubricar crucetas de cardanes.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act12'>12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</label></div>
-                                                    <div class='col-1'><input id='act12' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act12'>12)Revisión del estado y presión de neumáticos. Chequeo del apriete de tuercas.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act13'>13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.</label></div>
-                                                    <div class='col-1'><input id='act13' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act13'>13)Chequeo de lineas hidráulicas por fugas, desgastes, etc.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act14'>14)Chequeo del sistema eléctrico y luces.</label></div>
-                                                    <div class='col-1'><input id='act14' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act14'>14)Chequeo del sistema eléctrico y luces.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act15'>15)Limpieza general.</label></div>
-                                                    <div class='col-1'><input id='act15' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act15'>15)Limpieza general.</label></div>
+                                                    
                                                 </div>
                                                 <!-- Rutina 2 -->
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act16'> 16)Revisión de la manguera de admisión de aire.</label></div>
-                                                    <div class='col-1'><input id='act16' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act16'> 16)Revisión de la manguera de admisión de aire.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act17'> 17)Cambios del filtro de aceite del sistema hidráulico.</label></div>
-                                                    <div class='col-1'><input id='act17' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act17'> 17)Cambios del filtro de aceite del sistema hidráulico.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act18'> 18)Revisión del par de apriete del pasador entre el aguilón y el brazo.</label></div>
-                                                    <div class='col-1'><input id='act18' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act18'> 18)Revisión del par de apriete del pasador entre el aguilón y el brazo.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act19'> 19)Revisar funcionamiento de frenos de servicio y estacionamiento.</label></div>
-                                                    <div class='col-1'><input id='act19' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act19'> 19)Revisar funcionamiento de frenos de servicio y estacionamiento.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act20'> 20)Cambios del filtro del combustible y separador de agua.</label></div>
-                                                    <div class='col-1'><input id='act20' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act20'> 20)Cambios del filtro del combustible y separador de agua.</label></div>
+                                                    
                                                 </div>
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act21'> 21)Cambios del filtro de la transmisión.</label></div>
-                                                    <div class='col-1'><input id='act21' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act21'> 21)Cambios del filtro de la transmisión.</label></div>
+                                                    
                                                 </div>
                                                 <!-- Rutina 3 -->
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act22'> 22)Cambio de aceite de eje delantero y trasero.</label></div>
-                                                    <div class='col-1'><input id='act22' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act22'> 22)Cambio de aceite de eje delantero y trasero.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act23'> 23)Revisión y ajuste del vanillaje de control de velocidad del motor.</label></div>
-                                                    <div class='col-1'><input id='act23' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act23'> 23)Revisión y ajuste del vanillaje de control de velocidad del motor.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act24'> 24)Cambios de aceite y filtro del sistema hidráulico.</label></div>
-                                                    <div class='col-1'><input id='act24' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act24'> 24)Cambios de aceite y filtro del sistema hidráulico.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act25'> 25)Limpieza de tubo del respiradero de carter del motor.</label></div>
-                                                    <div class='col-1'><input id='act25' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act25'> 25)Limpieza de tubo del respiradero de carter del motor.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act26'> 26)Cambio de aceite y filtro de la transmisión y convertidor en par.</label></div>
-                                                    <div class='col-1'><input id='act26' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act26'> 26)Cambio de aceite y filtro de la transmisión y convertidor en par.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act27'> 27)Cambio de aceite de mandos finales</label></div>
-                                                    <div class='col-1'><input id='act27' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act27'> 27)Cambio de aceite de mandos finales</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act28'> 28)Sustitución de los elementos de filtro de aire</label></div>
-                                                    <div class='col-1'><input id='act28' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act28'> 28)Sustitución de los elementos de filtro de aire</label></div>
+                                                    
                                                 </div> 
                                                 <!-- Rutina 4 -->
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act29'> 29)Drenaje y reemplazo de refrigerante motor.</label></div>
-                                                    <div class='col-1'><input id='act29' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act29'> 29)Drenaje y reemplazo de refrigerante motor.</label></div>
+                                                    
                                                 </div> 
                                                 <div class='row'>
-                                                    <div class='col-11'><label for='act30'> 30)Ajuste del juego de válvulas del motor.</label></div>
-                                                    <div class='col-1'><input id='act30' type='checkbox'></div>
+                                                    <div class='col-12'><label for='act30'> 30)Ajuste del juego de válvulas del motor.</label></div>
+                                                    
                                                 </div> 
                                                 `;
                                     function detectarRutinaCercana(){
@@ -437,22 +437,22 @@ $(function(){
                                                 /** Luego comparamos para hallar a qué rutina corresponde ese número */
                                                     if  ($('.rut1').attr('hrs') == menor ) {
                                                        alert('Rutina más cercana: 1.');
-                                                       $('#rutina').html('Rutina 1.')
+                                                       $('#rutina').html('Se aproximan las actividades para la <b>Rutina 1.</b>');
                                                        $('#actividadesCercanas').html(rutina1);
                                                     }
                                                     if ($('.rut2').attr('hrs') == menor ){
                                                        alert('Rutina más cercana: 2.');
-                                                       $('#rutina').html('Rutina 2.')
+                                                       $('#rutina').html('Se aproximan las actividades para la <b>Rutina 2.</b>');
                                                        $('#actividadesCercanas').html(rutina2);
                                                     }
                                                     if ($('.rut3').attr('hrs') == menor  ){
                                                        alert('Rutina más cercana: 3.');
-                                                       $('#rutina').html('Rutina 3.')
+                                                       $('#rutina').html('Se aproximan las actividades para la <b>Rutina 3.</b>');
                                                        $('#actividadesCercanas').html(rutina3);
                                                     }
                                                     if ($('.rut4').attr('hrs') == menor ){
                                                        alert('Rutina más cercana: 4.');
-                                                       $('#rutina').html('Rutina 4.')
+                                                       $('#rutina').html('Se aproximan las actividades para la <b>Rutina 4.</b>');
                                                        $('#actividadesCercanas').html(rutina4);
                                                     }
                                         }
@@ -535,15 +535,7 @@ $(function(){
                                 <div class=''>
                                     ${y.fechaIngreso}
                                 </div>
-                                
-                                    
-                               
-
-                                
-
-
-
-                                    
+                                                                    
                                     <table class='table table-bordered table-sm' style='margin-top:-0px'>
                                         <thead class='tabledark' id='tableWeird'>
                                             <tr>
@@ -560,12 +552,21 @@ $(function(){
                                             
                                             <tr>
 
-                                                <td>
+                                            <td>
+
+                                                <div class='row'>
+        
+                                                    <div class='col'> <b>Actividades:</b><br> ${y.actividades}</div>
+                                                    <div class='col'> <b>Observaciones:</b><br> ${y.comentariosActividades}</div>
                                                 
-                                                    <b>Actividades:</b><br> ${y.actividades}<br>
-                                                    <hr>
-                                                    <b>Observaciones:</b><br> ${y.comentariosActividades}
-                                                </td>
+                                                
+                                                
+        
+                                                </div>
+                                                <hr>
+                                                <br>
+                                       
+                                            </td>
                                         
                                             </tr>
                                                 
@@ -640,182 +641,50 @@ $(function(){
                     filtrados.forEach(y =>{
                         templateX += `
 
-                        <div class='contenApp my-4'>
-                            <div class=''>
-                                ${y.fechaIngreso}
-                            </div>
-                            <table class='table table-bordered table-sm '>
-                                <thead class='tabledark' id='tableWeird'>
-                                    <tr>
-                                                        
-                                        <td>Nº registro</td>
-                                        <td>Fecha </td>
-                                        <td>Rutina</td>
-                                        
-                                        <td>Kilometraje</td>
-                                        <td>Horas Motor</td>
-                                        <td>Ubicación</td>
-                                        <td>Filtro <span style='font-size:10px'>(Aceite de motor)</span></td>
-                                        <td>Filtro <span style='font-size:10px'>(Aceite hidráulico)</span></td>
-                                        <td>Filtro <span style='font-size:10px'>(Aire primario)</span></td>
-                                        
-                                
-                                    </tr>
-                            
-                                    </thead>
+                       <div class='contenApp my-4'>
+                                <div class=''>
+                                    ${y.fechaIngreso}
+                                </div>
+                                                                    
+                                    <table class='table table-bordered table-sm' style='margin-top:-0px'>
+                                        <thead class='tabledark' id='tableWeird'>
+                                            <tr>
+                                                                
+                                                <td> Rutina de mantenimiento Nº: ${y.rutina}</td>    
                                     
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                        <tr>
-                                            <td>${y.numRegistro}</td>
-                                            <td>${y.fechaIngreso}</td>
-                                            <td>${y.rutina}</td>
-                                            <td>${y.kilometraje}</td>
-                                            <td>${y.horasMotor}</td>
-                                            <td>${y.ubicacion}</td>
-                                            <td>${y.filtroAceiteMotor}</td>
-                                            <td>${y.filtroAceiteHidraulico}</td>
-                                            <td>${y.filtroAirePrimario}</td>
-                                        </tr>
-
-                                    </tbody>
-                                    
-                                </table>
+                                            </tr>
                                 
-                               <table class='table table-bordered table-sm ' style='margin-top:-20px'>
-                                <thead class='tabledark' id='tableWeird'>
-                                    <tr>
-                                                        
-                                    <td>Filtro <span style='font-size:10px'>(Aire secundario)</span></td>    
-                                    <td>Filtro <span style='font-size:10px'>(Transmisión)</span></td>
-                                    <td>Filtro <span style='font-size:10px'>(combustible primario)</span></td>     
-                                    <td>Filtro <span style='font-size:10px'>(combustible secundario)</span></td>
-                                    <td>Filtro <span style='font-size:10px'>(tanque gasoil)</span></td>
-                                    <!-- Pues conseguí-->
-                                    <td>Filtro <span style='font-size:10px'>(aceite hidráulico)</span></td>
-                                    <td>Tipo <span style='font-size:10px'>(Aceite de motor)</span></td>
-                                      
+                                        </thead>
                                         
-                                
-                                    </tr>
-                            
-                                    </thead>
-                                    
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                        <tr>
-                                            <td>${y.filtroAireSecundario}</td>
-                                            <td>${y.filtroTransmision}</td>
-                                            <td>${y.filtroCombustiblePrimario}</td>
-                                            <td>${y.filtroCombustibleSecundario}</td>
-                                            <td>${y.filtroTanqueGasoil}</td>
-                                            <td>${y.filtroAceiteHidraulico}</td>
-                                            <td>${y.tipoAceiteMotor}</td>
-                                        </tr>
+                                        <!-- Id registros, time to shine
+                                        -- In here we will load all of our data got from listingEquipos.php through app.js     -->
+                                        <tbody id='registros2'>
                                             
-                                           
-
-                                    </tbody>
-                                </table>
-                                <table class='table table-bordered table-sm ' style='margin-top:-20px'>
-                                <thead class='tabledark' id='tableWeird'>
-                                    <tr>
-                                                        
-                                    <td>Tipo <span style='font-size:10px'>(aceite transmisión)</span></td>    
-                                    <td>Tipo <span style='font-size:10px'>(aceite caja)</span></td>
-                                    <td>Capacidad <span style='font-size:10px'>(carter del motor)</span></td>     
-                                    <td>Capacidad <span style='font-size:10px'>(tanque caja)</span></td>
-                                    <td>Capacidad <span style='font-size:10px'>(tanque transmisión)</span></td>
-                                    <!-- Pues conseguí-->
-                                    <td>Capacidad <span style='font-size:10px'>(tanque hidráulico)</span></td>
-                                   
-                                      
-                                        
-                                
-                                    </tr>
-                            
-                                    </thead>
-                                    
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                        <tr>
-                                            <td>${y.tipoAceiteTransmision}</td>
-                                            <td>${y.tipoAceiteCaja}</td>
-                                            <td>${y.capacidadCarterMotor}</td>
-                                            <td>${y.capacidadTanqueCaja}</td>
-                                            <td>${y.capacidadTanqueTransmision}</td>
-                                            <td>${y.capacidadTanqueHidraulico}</td>
-                                            
-                                        </tr>
-                                            
-                                           
-
-                                    </tbody>
-                                </table>
-
-                                <table class='table table-bordered table-sm' style='margin-top:-20px'>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                            <td>Observaciones: </span></td>    
-                                
-                                        </tr>
-                            
-                                    </thead>
-                                    
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
-                                        
-                                        <tr>
+                                            <tr>
 
                                             <td>
-                                                 ${y.observaciones}
-                                            </td>
-                                    
-                                        </tr>
                                             
-                                           
-
-                                    </tbody>
-                                </table>
-
-
-
-                                
-                                <table class='table table-bordered table-sm' style='margin-top:-20px'>
-                                    <thead class='tabledark' id='tableWeird'>
-                                        <tr>
-                                                            
-                                            <td>Actividades realizadas: </span></td>    
-                                
-                                        </tr>
-                            
-                                    </thead>
-                                    
-                                    <!-- Id registros, time to shine
-                                    -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registros2'>
+                                                <div class='row'>
+        
+                                                    <div class='col'> <b>Actividades:</b><br> ${y.actividades}</div>
+                                                    <div class='col'> <b>Observaciones:</b><br> ${y.comentariosActividades}</div>
+                                                
+                                                
+                                                
+        
+                                                </div>
+                                                <hr>
+                                                <br>
+                                       
+                                            </td>
                                         
-                                        <tr>
-
-                                            <td>
-                                               Rutina de mantenimiento Nº: ${y.rutina}<br> Actividades realizadas: ${y.actividades}
-                                            </td>
-                                    
-                                        </tr>
+                                            </tr>
+                                                
                                             
-                                           
 
-                                    </tbody>
-                                </table>
-                            </div>        
+                                        </tbody>
+                                    </table>
+                                </div>        
 
                                         `;
                         

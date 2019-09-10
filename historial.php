@@ -90,18 +90,16 @@ require 'php/auth.php';
 
             
             <div class='col-2 col2'>
-                    <div class="row mt-4 relative">
-                        <!--button id='historial' class="btn-block btn-success btnn" >Historial de mantenimientos</button-->
-                        <img class='abso_icons' src='css/img/time.svg' width='24px' height="24px"><span id='historial' class='boton  adminBtn'> Historial </span>
-                    </div>
-
-                   
-                    
-                    <div class="row my-2 relative">                       
+                
+                    <div class="row mt-4 relative">                       
                         <!--button id='vehiculo' class="btn-block btn-success btnn adminBtn" >Vehículos</button-->
                         <span id='mantenimientos' class='boton adminBtn'> Mantenimientos </span>
                         <img class='abso_icons' src='css/img/note.svg' id='note' width='24px' height="24px">
                        
+                    </div>
+                    <div class="row my-2 relative">
+                        <!--button id='historial' class="btn-block btn-success btnn" >Historial de mantenimientos</button-->
+                        <img class='abso_icons' src='css/img/time.svg' width='24px' height="24px"><span id='historial' class='boton  adminBtn'> Historial </span>
                     </div>
                     <div class="row my-2 relative">
                         <!--button id='usuarios' class="btn-block btn-success btnn adminBtn">Usuarios</button-->

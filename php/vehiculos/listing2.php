@@ -66,7 +66,7 @@
                 //condicional para devices con horas Motor
                 if(isset($a->hours)){
                     $milisecs = $a->hours;
-                    /**segundo a horas*/
+                    /**milisegundo a horas*/
                     /**but let's round it first. */
                     $roundedHoras = round($milisecs/3600000,3);
 
@@ -90,6 +90,7 @@
                         $myRow['deviceid'],
                         $id,
                         $horas, $id );
+                        
                         mysqli_query($db, $equipoSql);
                     // Si sí hay horas, crea un json con horasMotor
                     $number += 1;
