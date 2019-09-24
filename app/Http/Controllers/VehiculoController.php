@@ -58,7 +58,7 @@ class VehiculoController extends Controller
      */
     public function show($id)
     {
-        $equipo = Equipo::where('id', $id)->get();
+        $equipo = Equipo::where('id', $id)->first();
 
         return view('vehiculos.show', ['equipo' => $equipo]);
     }
