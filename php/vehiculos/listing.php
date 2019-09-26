@@ -20,7 +20,7 @@
 
     /** Transformemos el querie recibido a arreglo */
     //$json = array();
-    $nombres = array();
+   
     $devices = array();
     /**y ese arreglo luego a JSON */
     while($row = mysqli_fetch_array($res)){

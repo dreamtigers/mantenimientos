@@ -2,17 +2,6 @@
 
     require 'php/auth.php';
     
-    function fill_equipos(){
-        include('php/database.php');
-        $output = '';
-        $sql = 'SELECT * FROM equipos';
-        $res = mysqli_query($db, $sql);
-
-        while ($row = mysqli_fetch_array($res)){
-            $output .= '<option value="'.$row['deviceId'].'">'.$row['equipo'].'</option>';
-        }
-        return $output;
-    }
 
 ?>
 <!DOCTYPE html>
@@ -90,12 +79,6 @@
                         <a href="#" class="navbar-brand dashi"><img class='menuHambur' src='css/img/hambur.png' width='24'></a>
                         <!--img src='img/backArrow.png' class='ml-4 poin' width="30"></img-->
                         
-                        <ul class="navbar-nav ml-auto hid">
-                            <form action="" class="form-inline my-lg-0 lookForm">
-                                <input  autocomplete="off" type="search" id='lookIt' class='form-control in mr-5' placeholder="Buscar...">
-                              
-                            </form>
-                        </ul>
     </nav>
 
     <div class="container-fluid main">
@@ -144,15 +127,15 @@
                                     <div class="col-sm-12">
                                         <div class="card">
                                             <form id='eligiendoEquipo'>
-                                            <select style='width:100%;'  name='equipos' id='equipos'>  
+                                                <select style='width:100%;'  name='equipos' id='equipos'>  
                                                     <option value=''>Equipo:</option> 
-                                                    <?php echo fill_equipos(); ?>
+                                                    
                                                 </select> 
                                             </form>
                                         </div>
                                     </div>
                                     
-                                    </div>
+                                  
 
 
 
@@ -161,7 +144,10 @@
                                 </div>
                           
                             </div>
-                        <div class="col-9"></div>
+                        </div>
+
+                        <div class="col-9">
+                        </div>
 
                     </div>
                     <div class="row segundaHilera mb-2 relative">

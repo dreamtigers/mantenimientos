@@ -26,7 +26,7 @@ $(function () {
      /** Logic for the list-loading process 
      * At least Equipos, so far.
     getThem */ 
-   function listThem(){
+    function listThem(){
         $.ajax({
             url: 'php/listingEquipos.php',
             type: 'GET',

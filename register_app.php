@@ -585,7 +585,7 @@
                             <div class="card-body">
 
                                 <form id='registerForm'>
-                                    <div class="form-group">
+                                    <div class="form-group" id='form-group1'>
                                         
                                         <div class='mb-2' style='margin-top:-26px;'>
                                             <span>Datos generales del vehículo:</span>
@@ -599,31 +599,39 @@
                                                     <?php echo fill_equipos(); ?>
                                                 </select> 
                                             </div>
+                                            <span id='anoTitulo' class='titulo' id='anoTitulo'>Año de fabricación:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="number" id='anoFabricacion' placeholder="año de fabricación"></div>
                                             <span id='anoSugerido' class='sugerencia'></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <div class="row">
-                                        
-                                                <div class="col-2">  <input class='inputs'  autocomplete='off'  type="text" id="marca" placeholder="marca"> </div>
+
+                                                <span class='titulo' id='marcaTitulo'>Marca:</span>
+                                                <div class="col-2"><input class='inputs'  autocomplete='off'  type="text" id="marca" placeholder="marca"> </div>
+                                                <span class='titulo' id='modeloTitulo'>Modelo:</span>
                                                 <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='modelo' placeholder="modelo"></div>
+                                                <span class='titulo' id='serialTitulo'>Serial:</span>
                                                 <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='serial' placeholder="serial"></div>
+                                                <span class='titulo' id='placaTitulo'>Placa:</span>
                                                 <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='placa' placeholder="placa"></div>
+                                                <span class='titulo' id='kilometrajeTitulo'>Kilometraje:</span>
                                                 <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='kilometraje' placeholder="kilometraje"></div>
+                                                <span class='titulo' id='horasTitulo'>Horas de uso:</span>
                                                 <div class="col-2"><input class='inputs' autocomplete='off' type="number" id='horasUso' placeholder="horas de uso"></div>
                                             
                                             </div>
                                     </div>
                                     
-                                    <div class='mb-1' style=''>
+                                    <div class='mb-3' style=''>
                                             <span>Datos generales del servicio:</span>
                                     </div>
                                     <div class="form-group">
                                             <div class="row">
+                                                <span class='titulo' id='ubicacionTitulo'>Ubicación:</span>
                                                 <div class="col-4"><input class='inputs' autocomplete='off' type="text" id='ubicacion' placeholder="ubicación"></div>
                                                 <span id='ubicacionSugerida' class='sugerencia'></span>
-                                                
+                                                <span class='titulo' id='arregloTitulo'>Arreglo:</span>
                                                 <div class="col-4"><input class='inputs' autocomplete='off' type="number" id='arreglo' placeholder="arreglo"></div>
 
                                                 <!--div class="col-3">
@@ -636,7 +644,7 @@
                                                         <option value='4'>4</option>
                                                     </select>
                                                 </div-->
-
+                                                <span class='titulo' id='fechaTitulo'>Fecha de ingreso:</span>
                                                 <div class="col-4"><input class='inputs' autocomplete='off' type="date" id='fechaIngreso'></div><br>
                                                 <span id='fechaSugerida' class='sugerencia'></span>
 
@@ -644,20 +652,22 @@
                                         
                                     </div>
                                    
-                                    <div class='mb-1' style=''>
+                                    <div class='mb-3' style=''>
                                             <span>Filtros:</span>
                                     </div>
                                     
-                                    <div class="form-group">
+                                    <div class="form-group" id='form-group2'>
                                         <div class="row rowRelative">
                                             
+                                            <span class='titulo' id='aceiteMotorTitulo'>Aceite motor:</span>
                                             <div class="col-4"><input class='inputs' autocomplete='off' type="text" id='filtroAceiteMotor' placeholder="aceite del motor"></div>
                                             <span id='f_aceiteMotor' class='sugerencia'></span>
 
+                                            <span class='titulo' id='airePrimarioTitulo'>Aire primario:</span>
                                             <div class="col-4"><input class='inputs' autocomplete='off' type="text" id='filtroAirePrimario' placeholder="aire primario"></div>
                                             <span id='f_airePrimario' class='sugerencia'></span>
 
-
+                                            <span class='titulo' id='aireSecundarioTitulo'>Aire secundario:</span>
                                             <div class="col-4"><input class='inputs' autocomplete='off' type="text" id='filtroAireSecundario' placeholder="aire secundario"></div>
                                             <span id='f_aireSecundario' class='sugerencia'></span>
 
@@ -668,64 +678,78 @@
                                     <div class="form-group">
                                         <div class="row rowRelative">
                                            
+                                            <span class='titulo' id='transmisionTitulo'>Transmisión:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroTransmision' placeholder="transmisión"></div>
                                             <span id='f_transmision' class='sugerencia'></span>
 
+                                            <span class='titulo' id='tanqueHidraulicoTitulo'>Tanque hidraulico:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroTanqueHidraulico' placeholder="tanque hidráulico"></div>
                                             <span id='f_tanqueHidraulico' class='sugerencia'></span>
 
+                                            <span class='titulo' id='combustiblePrimarioTitulo'>Combustible primario:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroCombustiblePrimario' placeholder="combustible primario"></div>
                                             <span id='f_combustiblePrimario' class='sugerencia'></span>
 
+                                            <span class='titulo' id='combustibleSecundarioTitulo'>Combustible secundario:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroCombustibleSecundario' placeholder="combustible secundario" ></div>
                                             <span id='f_combustibleSecundario' class='sugerencia'></span>
 
+                                            <span class='titulo' id='tanqueGasoilTitulo'>Tanque gasoil:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroTanqueGasoil' placeholder="tanque gasoil" ></div>
                                             <span id='f_tanqueGasoil' class='sugerencia'></span>
 
+                                            <span class='titulo' id='aceiteHidraulicoTitulo'>Aceite hidraulico:</span>
                                             <div class="col-2"><input class='inputs' autocomplete='off' type="text" id='filtroAceiteHidraulico' placeholder="aceite hidráulico" ></div>
                                             <span id='f_aceiteHidraulico' class='sugerencia'></span>
 
                                         </div>    
                                     </div>
 
-                                    <div class='mb-1' style=''>
+                                    <div class='mb-3' style=''>
                                             <span>Tipos:</span>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="row rowRelative">
                                        
+                                            <span class='titulo' id='tipoAceiteMotorTitulo'>De aceite motor:</span>
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='tipoAceiteMotor' placeholder="de aceite motor" ></div>
                                             <span id='t_aceiteMotor' class='sugerencia'></span>
 
+                                            <span class='titulo' id='tipoAceiteTransmisionTitulo'>De aceite transmision:</span>
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='tipoAceiteTransmision' placeholder="de aceite transmisión" ></div>
                                             <span id='t_aceiteTransmision' class='sugerencia'></span>
 
+                                            <span class='titulo' id='tipoAceiteCajaTitulo'>De aceite de caja:</span>
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='tipoAceiteCaja' placeholder="de aceite de caja" ></div>
                                             <span id='t_aceiteCaja' class='sugerencia'></span>
 
+                                            <span class='titulo' id='tipoAceiteHidraulicoTitulo'>De aceite hidraulico:</span>
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='tipoAceiteHidraulico' placeholder="de aceite hidráulico" ></div>
                                             <span id='t_aceiteHidraulico' class='sugerencia'></span>
                                         </div>    
                                     </div>
 
-                                    <div class='mb-1' style=''>
+                                    <div class='mb-3' style=''>
                                             <span>Capacidades:</span>
                                     </div>
                                    
                                     <div class="form-group">
                                         <div class="row rowRelative">
-                                           
+                                            
+                                            <span class='titulo' id='capacidadCarterMotorTitulo'>Carter motor:</span>                                           
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='capacidadCarterMotor' placeholder="carter del motor" ></div>
                                             <span id='c_carterMotor' class='sugerencia'></span>
 
+                                            <span class='titulo' id='capacidadTanqueCajaTitulo'>Tanque de caja:</span>  
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='capacidadTanqueCaja' placeholder="tanque de la caja" ></div>
                                             <span id='c_tanqueCaja' class='sugerencia'></span>
 
+                                            <span class='titulo' id='capacidadTanqueTransmisionTitulo'>Tanque de transmisión:</span> 
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='capacidadTanqueTransmision' placeholder="tanque de la transmisión" ></div>
                                             <span id='c_tanqueTransmision' class='sugerencia'></span>
 
+                                            <span class='titulo' id='capacidadTanqueHidraulicoTitulo'>Tanque hidraulico:</span> 
                                             <div class="col-3"><input class='inputs' autocomplete='off' type="text" id='capacidadTanqueHidraulico' placeholder="tanque hidráulico" ></div>
                                             <span id='c_tanqueHidraulico' class='sugerencia'></span>
                                         </div>

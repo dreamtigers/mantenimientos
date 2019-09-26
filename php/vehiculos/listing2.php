@@ -29,6 +29,7 @@
       * Peeeeeeero, ahora viene lo nuevo.
      */
     $longitud = count($devices);
+    
     for($i = 0;$i < $longitud;$i++){
                 //getName
                 $queryx = "SELECT * FROM tc_devices WHERE id LIKE $devices[$i]";
@@ -83,13 +84,13 @@
                         mysqli_real_escape_string($db, $myRow['id']),
                         mysqli_real_escape_string($db, $devices[$i]) );
                     //Conectando a 'equipos' para el calculo de horas, sólo en caso de existir horas
-                    $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,deviceId,userId) VALUES ('%s', '%s','%s','%s')
-                                ON DUPLICATE KEY UPDATE hrsMotor='%s', userId='%s' ;",
+                    $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,deviceId,) VALUES ('%s', '%s','%s')
+                                ON DUPLICATE KEY UPDATE hrsMotor='%s',  ;",
                         $myRowx['name'],
                         $horas,
                         $myRow['deviceid'],
-                        $id,
-                        $horas, $id );
+                        
+                        $horas );
                         
                         mysqli_query($db, $equipoSql);
                     // Si sí hay horas, crea un json con horasMotor

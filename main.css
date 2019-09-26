@@ -101,7 +101,7 @@ input[type=submit]{
     background-color: #7ae4c9;
   }
   .myAnchor{
-    position: relative;
+    
     /* default for <button>, but useful for <a> */
     display: inline-block;
     /*text-align: center;*/
@@ -112,7 +112,7 @@ input[type=submit]{
 
     /* invisible border (will be colored on hover/focus) */
     border: solid 1px transparent;
-    border-radius: 8px;
+    
 
     /* size comes from text & padding (no width/height) */
     padding: 4.2px 10px;
@@ -123,6 +123,25 @@ input[type=submit]{
     /*ADDED OF MINE*/
     width:50%;
     margin-top:9px;
+    /***/
+    
+    left: 66.39%;
+    right: 8.61%;
+    top: 60.35%;
+    bottom: 34.28%;
+
+    background: #76C2AF;
+    border-radius: 5px;
+    width:300px;
+    text-indent: 30px;
+  }
+  .in{
+ 
+    width:300px;
+    text-indent: 30px;
+    border-radius: 5px;
+    padding:4px;
+    border:1px solid #cccccc
   }
 .ingresar{
     margin-left:30%;
@@ -186,10 +205,17 @@ input[type=submit]{
     padding: 0px;
     border:0px;
     background-color: transparent;
-    top:37%;
+    top:38%;
     left:26%;
     position:absolute;
     
+}
+.loguito{
+    position: absolute;
+    width: 267px;
+    height: 150px;
+    top:15%;
+    left:25%;
 }
 /*Form*/
 #myform{
@@ -199,14 +225,7 @@ input[type=submit]{
 .fullP{
     background-color: #3b8ed6;
 }
-.in{
- 
-  width:300px;
-  text-indent: 30px;
-  border-radius: 13px;
-  padding:4px;
-  border:1px solid #cccccc
-}
+
 .backG{
     background-color: rgba(118, 194, 175,0.60);
     padding:0px;
@@ -214,9 +233,10 @@ input[type=submit]{
 }
 
 .col7{
-    background-image: url('css/img/perfectParkingLot2.jpg');
-    padding:0px;
-    margin:0px;
+    background-image: url('css/img/mantenimiento2.png');
+    background-size: 100% 100%;
+    
+   
 }
 .welcome{
     position:relative;

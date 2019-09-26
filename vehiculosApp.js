@@ -18,6 +18,30 @@ $(function(){
         });
     }
 
+    /** Lets load select OPTIONS */
+    function load(){
+
+        $.ajax({
+            type: "GET",
+            url: "php/vehiculos/fill_equipos.php",
+           
+            success: function (response) {
+                
+                let equipos = JSON.parse(response);
+                /** Parsing the json 
+                 * And iterating thru it
+                */
+                $.each(equipos, function (indexInArray, valueOfElement) { 
+                     $('<option>').val(valueOfElement.deviceId).text(valueOfElement.equipo).appendTo('#equipos');
+                });
+            }
+        });
+
+
+    };
+    load();
+
+
     
     /** Mostrando seguraHilera al haberse elegido un vehículo */
     $('#equipos').change(function(){

@@ -1,3 +1,6 @@
+#form-group1,#form-group2{
+    margin-bottom:1.8rem;
+}
 .inputAct{
     border-radius: 6px;
     width: 96%;
@@ -32,12 +35,127 @@ html,body{
     font-size:9px;
     color:brown;
 }
+.titulo{
+    position: absolute;
+    font-size:10px;
+    text-decoration:underline;
+}
+#anoTitulo{
+    left: 890px;
+    top: 48px;
+}
+#marcaTitulo{
+    left: 28px;
+    top: 116px;
+}
+#modeloTitulo{
+    left: 198px;
+    top: 116px;
+}
+#serialTitulo{
+    left: 372px;
+    top: 116px;
+}
+#placaTitulo{
+    left: 542px;
+    top: 116px;
+}
+#kilometrajeTitulo{
+    left: 716px;
+    top: 116px;
+}
+#horasTitulo{
+    left: 890px;
+    top: 116px;
+}
+#ubicacionTitulo{
+    left: 28px;
+    top: 205px;
+}
+#arregloTitulo{
+    left: 372px;
+    top: 205px;
+}
+#fechaTitulo{
+    left: 716px;
+    top: 205px;
+}
+#aceiteMotorTitulo{
+    left: 24px;
+    top: -16px;
+}
+#airePrimarioTitulo{
+    left: 368px;
+    top: -16px;
+}
+#aireSecundarioTitulo{
+    left: 712px;
+    top: -16px;
+}
+#transmisionTitulo{
+    left: 26px;
+    top: -16px;
+}
+#tanqueHidraulicoTitulo{
+    left: 196px;
+    top: -16px;
+}
+#combustiblePrimarioTitulo{
+    left: 368px;
+    top: -16px;
+}
+#combustibleSecundarioTitulo{
+    left: 538px;
+    top: -16px;
+}
+#tanqueGasoilTitulo{
+    left: 712px;
+    top: -16px;
+}
+#aceiteHidraulicoTitulo{
+    left: 886px;
+    top: -16px;
+}
+#tipoAceiteMotorTitulo{
+    left: 24px;
+    top: -16px;
+}
+#tipoAceiteTransmisionTitulo{
+    left: 280px;
+    top: -16px;
+}
+#tipoAceiteCajaTitulo{
+    left: 540px;
+    top: -16px;
+}
+#tipoAceiteHidraulicoTitulo{
+    left: 798px;
+    top: -16px;
+}
+#capacidadCarterMotorTitulo{
+    left: 24px;
+    top: -16px;
+}
+#capacidadTanqueCajaTitulo{
+    left: 280px;
+    top: -16px;
+}
+#capacidadTanqueTransmisionTitulo{
+    left: 540px;
+    top: -16px;
+}
+#capacidadTanqueHidraulicoTitulo{
+    left: 798px;
+    top: -16px;
+}
+
+
 #fechaSugerida{
-    top:233px;
+    top:258px;
     left:710px;
 }
 #ubicacionSugerida{
-    top:232px;
+    top:258px;
     left:22px;
     
 }
