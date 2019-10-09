@@ -1,6 +1,3 @@
--- Create additional db which simulates the prod env
-CREATE DATABASE IF NOT EXISTS `dbpistongps`;
-
 -- phpMyAdmin SQL Dump
 -- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
@@ -29,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tc_users`
 --
 
-CREATE TABLE `dbpistongps`.`tc_users` (
+CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_users` (
   `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
@@ -79,5 +76,3 @@ ALTER TABLE `dbpistongps`.`tc_users`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-grant all on *.* to mant;
