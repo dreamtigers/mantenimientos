@@ -80,6 +80,7 @@ $(function () {
                             console.log('We are not receiving anything.');
                             alert('No existen mantenimientos registrados para ' + nombre);
                             /* window.history.back(); */
+                            $('#equipo').html(nombre);
                             /** Lets create another AJAX call, so we can solve the FIRST problem */
                             $.ajax({
                                 type: "GET",
