@@ -18,8 +18,8 @@ class CreateActivitiesTable extends Migration
 
             $table->text('description');
 
-            $table->integer('maintenanceId');
-            $table->foreign('maintenanceId')->references('id')->on('dbpistongps.tc_maintenaces');
+            $table->integer('maintenance_id');
+            $table->foreign('maintenance_id')->references('id')->on('dbpistongps.tc_maintenances');
         });
     }
 

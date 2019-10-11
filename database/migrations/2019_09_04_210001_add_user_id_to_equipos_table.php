@@ -14,8 +14,8 @@ class AddUserIdToEquiposTable extends Migration
     public function up()
     {
         Schema::table('equipos', function (Blueprint $table) {
-            $table->integer('userId');
-            $table->foreign('userId')->references('id')->on('dbpistongps.tc_users');
+            $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on('dbpistongps.tc_users');
         });
     }
 
@@ -27,8 +27,8 @@ class AddUserIdToEquiposTable extends Migration
     public function down()
     {
         Schema::table('equipos', function (Blueprint $table) {
-            $table->dropForeign(['userId']);
-            $table->dropColumn('userId');
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
         });
     }
 }

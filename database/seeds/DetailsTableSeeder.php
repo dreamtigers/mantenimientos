@@ -14,15 +14,12 @@ class DetailsTableSeeder extends Seeder
         //
         DB::table('details')->insert([
             array(
-                'deviceId' => '1',
+                'device_id' => '5',
                 'marca' => 'LastDone',
-                'modelo' => 'Doesit12',
                 'serial' => '1231231',
                 'arreglo' => '2',
                 'placa' => 'Single',
-                'fecha' => '2019-07-17',
                 'anoFabricacion' => '12312',
-                'ubicacion' => '123123123',
                 'filtroAceiteMotor' => '12312',
                 'filtroAceiteHidraulico' => '12312',
                 'filtroAirePrimario' => '123123',
@@ -43,15 +40,12 @@ class DetailsTableSeeder extends Seeder
             ),
 
             array(
-                'deviceId' => '2',
+                'device_id' => '11',
                 'marca' => 'Camioneta',
-                'modelo' => 'de2312',
                 'serial' => 'algÃºn',
                 'arreglo' => '12',
                 'placa' => 'P4$T0R',
-                'fecha' => '2019-08-13',
                 'anoFabricacion' => '1981',
-                'ubicacion' => '11111',
                 'filtroAceiteMotor' => '11',
                 'filtroAceiteHidraulico' => '11',
                 'filtroAirePrimario' => '11',
@@ -72,15 +66,12 @@ class DetailsTableSeeder extends Seeder
             ),
 
             array(
-                'deviceId' => '3',
+                'device_id' => '12',
                 'marca' => 'Xecent',
-                'modelo' => 'Xelor',
                 'serial' => 'FullStr',
                 'arreglo' => '4',
                 'placa' => 'Nuke1r',
-                'fecha' => '2019-07-09',
                 'anoFabricacion' => '11111',
-                'ubicacion' => '111111',
                 'filtroAceiteMotor' => '123123',
                 'filtroAceiteHidraulico' => '3123123',
                 'filtroAirePrimario' => '123123',

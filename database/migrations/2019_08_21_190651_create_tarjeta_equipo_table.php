@@ -16,8 +16,8 @@ class CreateTarjetaEquipoTable extends Migration
         Schema::create('tarjetaEquipo', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('deviceId');
-            $table->foreign('deviceId')->references('id')->on('equipos');
+            $table->unsignedBigInteger('device_id');
+            $table->foreign('device_id')->references('id')->on('equipos');
 
             $table->string('tipoDeEquipo');
             $table->string('marca');

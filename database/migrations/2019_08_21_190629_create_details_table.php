@@ -16,17 +16,14 @@ class CreateDetailsTable extends Migration
         Schema::create('details', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->integer('deviceId');
-            $table->foreign('deviceId')->references('id')->on('dbpistongps.tc_devices');
+            $table->integer('device_id');
+            $table->foreign('device_id')->references('id')->on('dbpistongps.tc_devices');
 
             $table->string('marca');
-            $table->string('modelo');
             $table->string('serial');
             $table->string('arreglo');
             $table->string('placa');
-            $table->date('fecha');
             $table->integer('anoFabricacion');
-            $table->string('ubicacion');
 
             $table->string('filtroAceiteMotor');
             $table->string('filtroAceiteHidraulico');

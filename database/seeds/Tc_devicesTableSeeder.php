@@ -24,7 +24,7 @@ class Tc_devicesTableSeeder extends Seeder
                 'model' => '',
                 'contact' => '',
                 'category' => NULL,
-                'disabled' => '0'
+                'disabled' => 0
             ),
 
             array(
@@ -39,7 +39,7 @@ class Tc_devicesTableSeeder extends Seeder
                 'model' => '',
                 'contact' => '',
                 'category' => NULL,
-                'disabled' => '0'
+                'disabled' => 0
             ),
 
             array(
@@ -54,7 +54,7 @@ class Tc_devicesTableSeeder extends Seeder
                 'model' => '',
                 'contact' => '',
                 'category' => NULL,
-                'disabled' => '0'
+                'disabled' => 0
             ),
 
             array(
@@ -69,7 +69,7 @@ class Tc_devicesTableSeeder extends Seeder
                 'model' => '',
                 'contact' => '',
                 'category' => 'car',
-                'disabled' => '0'
+                'disabled' => 0
             )
         ]);
     }
