@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegistradoAntesTable extends Migration
+class CreateDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateRegistradoAntesTable extends Migration
      */
     public function up()
     {
-        Schema::create('registrado_antes', function (Blueprint $table) {
+        Schema::create('details', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('nombre');
-            $table->string('actividades');
+            $table->integer('deviceId');
+            $table->foreign('deviceId')->references('id')->on('dbpistongps.tc_devices');
+
             $table->string('marca');
             $table->string('modelo');
             $table->string('serial');
@@ -58,6 +59,6 @@ class CreateRegistradoAntesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registrado_antes');
+        Schema::dropIfExists('details');
     }
 }
