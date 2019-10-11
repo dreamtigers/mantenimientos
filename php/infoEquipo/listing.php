@@ -5,19 +5,46 @@
     
     $user = $_SESSION['user'];
 
-    /** db con */
+    /** db con to get static data */
     $sql = "SELECT * FROM registrado_antes WHERE deviceId LIKE '$id' ";
     $res = mysqli_query($db, $sql);
-
     $row = mysqli_fetch_array($res);
+    /** db con to get horasMotor y kilometraje en vivo */
+    $query2 = "SELECT    *
+    FROM      tc_positions WHERE deviceid LIKE '$id'
+    ORDER BY  id DESC
+    LIMIT     1";
+
+    $result= mysqli_query($dbPiston,$query2);
+    if (!$result){
+        die('Querie failed: '. mysqli_error($dbPiston));
+    }
+    $myRow = mysqli_fetch_array($result);
+    /** Now we json_decode it */
+    
+    $jsonField = json_decode($myRow['attributes']);
+    /** This conditional down below was added because 'Patineta' suddenly stopped sending hours  */
+    if(isset($jsonField->hours)){
+        $hours = $jsonField->hours/3600000;
+        $totalDistance = $jsonField->totalDistance/1000;
+        $kms = $totalDistance . " kms";
+    } else {
+        $hours = 0;
+        $totalDistance = $jsonField->totalDistance/1000;
+        $kms = $totalDistance . " kms";
+    }
+    
+    
     $arreglo = array();
     if($row){
 
         $arreglo[] = array(
             'id' => $row['deviceId'],
             'nombre' => $row['nombre'],
-            'hrsMotor' => $row['horasEnFecha'],
-            'kms' => $row['kilometrajeEnFecha'],
+            /** */
+            'hrsMotor' => $hours,
+            'kms' => $kms,
+            /** */
             'marca' => $row['marca'],
             'modelo' => $row['modelo'],
             'serial' => $row['serial'],

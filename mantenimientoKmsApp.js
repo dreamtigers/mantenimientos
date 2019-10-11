@@ -9,7 +9,7 @@ $(function () {
     /** For navigation */
     $(document).on('click', '#historial', function(e){
         //e.preventDefault();
-        window.location.href = 'historialU.php';
+        window.location.href = 'historial.php';
 
     });
 
@@ -33,12 +33,12 @@ $(function () {
 
     /** Navigating */
      $(document).on('click', '#mantenimientos', function(){
-        document.location = 'vehiculosU.php';
+        document.location = 'vehiculos.php';
     })
     /** For navigation END*/
     $(document).on('click', '#imprimible1,#imprimible2,#imprimible3,#imprimible4', function(){
         /** Cinco */
-        var w = window.open('css/img/formato_mp');
+        var w = window.open('css/img/formato_mp.pdf');
             w.print();
         })
 
@@ -133,7 +133,7 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "php/ultimoMantenimiento/getMainRow.php",
+            url: "php/ultimoMantenimiento/getMainRowKms.php",
             
             success: function (response) {
                 console.log(response);
@@ -154,10 +154,10 @@ $(function () {
                     templating += 
                             `
                                 <tr>
-                                    <td class='rut1' hrs='${element.hrsReales1}' >${element.rutina1}</td>
-                                    <td class='rut2' hrs='${element.hrsReales2}' >${element.rutina2}</td>
-                                    <td class='rut3' hrs='${element.hrsReales3}' >${element.rutina3}</td>
-                                    <td class='rut4' hrs='${element.hrsReales4}' >${element.rutina4}</td>
+                                    <td class='rut1' hrs='${element.kmsReales1}' >${element.rutina1}</td>
+                                    <td class='rut2' hrs='${element.kmsReales2}' >${element.rutina2}</td>
+                                    <td class='rut3' hrs='${element.kmsReales3}' >${element.rutina3}</td>
+                                    <td class='rut4' hrs='${element.kmsReales4}' >${element.rutina4}</td>
                                 </tr>
                             `
                     nombre = element.nombre;

@@ -7,9 +7,10 @@
 
     /** hoursId is used to go to horasMantenimiento */
     $deviceId = $_SESSION['hoursId'];
+    
 
 
-    $sql= "SELECT * FROM tarjetaEquipo WHERE deviceId LIKE '$deviceId' ";
+    $sql= "SELECT * FROM tarjetaEquipo WHERE deviceId LIKE '$deviceId' AND enFuncionDe LIKE 'kms' ";
     $res = mysqli_query($db, $sql);
     if (!$res){
         die('Querie failed: '. mysqli_error($db));

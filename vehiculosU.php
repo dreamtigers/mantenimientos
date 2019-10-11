@@ -2,18 +2,6 @@
 
     require 'php/auth.php';
     
-    function fill_equipos(){
-        /* include('php/database.php');
-        
-        $output = '';
-        $sql = 'SELECT * FROM equipos';
-        $res = mysqli_query($db, $sql);
-
-        while ($row = mysqli_fetch_array($res)){
-            $output .= '<option value="'.$row['deviceId'].'">'.$row['equipo'].'</option>';
-        }
-        return $output; */
-    }
 
 ?>
 <!DOCTYPE html>

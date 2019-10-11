@@ -46,17 +46,18 @@
         $actividades = $_POST['actividades'];
         $comentariosActividades = $_POST['comentariosActividades'];
         $rutina = $_POST['rutina'];
+        $enFuncionDe = $_POST['enFuncionDe'];
       
 
         if ($ok){
           
-            $sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,comentarios_actividades,actividades,fechaIngreso,kilometrajeEnFecha, horasEnFecha, deviceId, tipoMantenimiento) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s') 
+            $sql = sprintf("INSERT INTO tarjetaEquipo (tipoDeEquipo,comentarios_actividades,actividades,fechaIngreso,kilometrajeEnFecha, horasEnFecha, deviceId, tipoMantenimiento, enFuncionDe) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s') 
             ",  mysqli_real_escape_string($db, $equipo),
                 mysqli_real_escape_string($db,$comentariosActividades),
                 mysqli_real_escape_string($db,$actividades),
                 mysqli_real_escape_string($db, $fecha),
                 mysqli_real_escape_string($db, $km), mysqli_real_escape_string($db, $hs),
-                $deviceId, $rutina);
+                $deviceId, $rutina,$enFuncionDe);
                
                 
             mysqli_query($db, $sql);
@@ -68,53 +69,103 @@
             if (!$res){
                 die('Querie failed: '. mysqli_error($db));
             }
-            //Only one row in this case
-            while($row = mysqli_fetch_array($res)){
-                $updateHour = $row['hrsMotor'];
-            }
-            if($rutina == 1){
-                //Now replace 'hrsMotor' en 'hrsMantenimiento'
-                $order = sprintf("INSERT INTO equipos (hrsMantenimiento, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMantenimiento='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            } else if ($rutina == 2){
-                $order = sprintf("INSERT INTO equipos (hrsMant2, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant2='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            } else if ($rutina == 3){
-                $order = sprintf("INSERT INTO equipos (hrsMant3, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant3='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
-                mysqli_query($db, $order);
-            }   else if ($rutina == 4){
-                $order = sprintf("INSERT INTO equipos (hrsMant4, deviceId) VALUE ('%s','%s')
-                ON DUPLICATE KEY UPDATE hrsMant4='%s' ",
-                    $updateHour,
-                    $deviceId,
-                    $updateHour);
 
+            if($_POST['enFuncionDe']== 'hrs'){
+
+                        //Only one row in this case
+                        while($row = mysqli_fetch_array($res)){
+                            $updateHour = $row['hrsMotor'];
+                        }
+                        if($rutina == 1){
+                            //Now replace 'hrsMotor' en 'hrsMantenimiento'
+                            $order = sprintf("INSERT INTO equipos (hrsMantenimiento, deviceId) VALUE ('%s','%s')
+                            ON DUPLICATE KEY UPDATE hrsMantenimiento='%s' ",
+                                $updateHour,
+                                $deviceId,
+                                $updateHour);
+                            mysqli_query($db, $order);
+                        } else if ($rutina == 2){
+                            $order = sprintf("INSERT INTO equipos (hrsMant2, deviceId) VALUE ('%s','%s')
+                            ON DUPLICATE KEY UPDATE hrsMant2='%s' ",
+                                $updateHour,
+                                $deviceId,
+                                $updateHour);
+                            mysqli_query($db, $order);
+                        } else if ($rutina == 3){
+                            $order = sprintf("INSERT INTO equipos (hrsMant3, deviceId) VALUE ('%s','%s')
+                            ON DUPLICATE KEY UPDATE hrsMant3='%s' ",
+                                $updateHour,
+                                $deviceId,
+                                $updateHour);
+                            mysqli_query($db, $order);
+                        }   else if ($rutina == 4){
+                            $order = sprintf("INSERT INTO equipos (hrsMant4, deviceId) VALUE ('%s','%s')
+                            ON DUPLICATE KEY UPDATE hrsMant4='%s' ",
+                                $updateHour,
+                                $deviceId,
+                                $updateHour);
+
+                                mysqli_query($db, $order);
+                        }
+            
+
+            } else if($_POST['enFuncionDe']== 'kms'){
                 
-            }
-            mysqli_query($db, $order);
+                    //Only one row in this case
+                    while($row = mysqli_fetch_array($res)){
+                        $updateKms = $row['kilometraje'];
+                    }
+                    if($rutina == 1){
+                        //Now replace 'hrsMotor' en 'hrsMantenimiento'
+                        $order = sprintf("INSERT INTO equipos (kmsMant1, deviceId) VALUE ('%s','%s')
+                        ON DUPLICATE KEY UPDATE kmsMant1='%s' ",
+                            $updateKms,
+                            $deviceId,
+                            $updateKms);
 
-        }
+                        mysqli_query($db, $order);
+                    } else if ($rutina == 2){
+                        $order = sprintf("INSERT INTO equipos (kmsMant2, deviceId) VALUE ('%s','%s')
+                        ON DUPLICATE KEY UPDATE kmsMant2='%s' ",
+                            $updateKms,
+                            $deviceId,
+                            $updateKms);
+
+                        mysqli_query($db, $order);
+                    } else if ($rutina == 3){
+                        $order = sprintf("INSERT INTO equipos (kmsMant3, deviceId) VALUE ('%s','%s')
+                        ON DUPLICATE KEY UPDATE kmsMant3='%s' ",
+                            $updateKms,
+                            $deviceId,
+                            $updateKms);
+                        mysqli_query($db, $order);
+                    }   else if ($rutina == 4){
+                        $order = sprintf("INSERT INTO equipos (kmsMant4, deviceId) VALUE ('%s','%s')
+                        ON DUPLICATE KEY UPDATE kmsMant4='%s' ",
+                            $updateKms,
+                            $deviceId,
+                            $updateKms);
+
+                        mysqli_query($db, $order);
+                    }
+                    
+
+                    
+
+            }
+            
 
        
 
-    }
+        }
      /** Mandando valor al front End */
+    
+
+    }
+       
     echo json_encode(array(
         "ok"=>$ok
         
     ));
-       
-
+    
 ?>

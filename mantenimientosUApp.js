@@ -63,7 +63,7 @@ $(function(){
    
     $(document).on('click', '#imprimible1,#imprimible2,#imprimible3,#imprimible4', function(){
        /** Cinco */
-       var w = window.open('css/img/text.pdf');
+       var w = window.open('css/img/formato_mp.pdf');
         w.print();
     })
    

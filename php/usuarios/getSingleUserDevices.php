@@ -43,8 +43,8 @@
         
         // It wasn't an 'object' but a JSON (hurr)
         $x = json_decode($myRow['attributes']);
-        $first = $x->totalDistance;
-        $distanciaT = $first . ' metros';
+        $first = $x->totalDistance/1000;
+        $distanciaT = $first . ' kms';
         /** Finally, what i had been looking for
          * a JSON holding value from tc_positions
          */

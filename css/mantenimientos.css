@@ -86,7 +86,44 @@ input#lookIt{
     -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
     -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
     box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+    position:relative;
 }
+#btnKms{
+    position:absolute;
+    right: 30px;
+    top:10px;
+    /**Enoug positioning, now styling*/
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+     /* create a small space when buttons wrap on 2 lines */
+    margin: 2px 0;
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 1em;
+
+    /* make sure colors have enough contrast! */
+    color: black;
+    background-color: #77C0B1;
+}
+#btnKms:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+#btnKms:hover {
+    color: #77C0B1;
+    border-color: currentColor;
+    background-color: white;
+  }
 .contenApp{
     background-color: white;
     padding:10px;

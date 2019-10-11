@@ -14,7 +14,7 @@ require 'php/auth.php';
       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/mantenimientos.css">
+    <link rel="stylesheet" href="css/mantenimientosKms.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
@@ -121,7 +121,7 @@ require 'php/auth.php';
 
                             <div class='conten mt-3'>       
 
-                                    <button id='btnKms' type='button'>Ver en función de Kilómetros</button>
+                                    <button id='btnHrs' type='button'>Ver en función de Horas</button>
 
                                     <h5 class='mt-3'>Mantenimientos registrados para: &nbsp;&nbsp; <span id='equipo'></span> </h5>
 
@@ -172,7 +172,7 @@ require 'php/auth.php';
                                 </table>
 
                              
-                                <span>Horas restantes:</span>
+                                <span>&nbsp;Kilometros restantes:</span>
                                 <table class='table table-sm mt-1'>
                                     <thead class='tabledark'>
                                     
@@ -292,7 +292,7 @@ require 'php/auth.php';
                                     
                                     <!-- Id registros, time to shine
                                     -- In here we will load all of our data got from listingEquipos.php through app.js     -->
-                                    <tbody id='registrosHoras'>
+                                    <tbody id='registrosKms'>
                                         
                                     </tbody>
                                 </table>
@@ -355,6 +355,6 @@ require 'php/auth.php';
 
     </div>
 
-    <script src='mantenimientosApp.js'></script>
+    <script src='mantenimientosKmsApp.js'></script>
 </body>
 </html>

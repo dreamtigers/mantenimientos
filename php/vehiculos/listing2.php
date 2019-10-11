@@ -84,14 +84,13 @@
                         mysqli_real_escape_string($db, $myRow['id']),
                         mysqli_real_escape_string($db, $devices[$i]) );
                     //Conectando a 'equipos' para el calculo de horas, sólo en caso de existir horas
-                    $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,deviceId,) VALUES ('%s', '%s','%s')
-                                ON DUPLICATE KEY UPDATE hrsMotor='%s',  ;",
-                        $myRowx['name'],
-                        $horas,
-                        $myRow['deviceid'],
-                        
-                        $horas );
-                        
+                    $equipoSql = sprintf("INSERT INTO equipos (equipo, hrsMotor,kilometraje,deviceId) VALUES ('%s', '%s','%s','%s')
+                        ON DUPLICATE KEY UPDATE hrsMotor='%s', kilometraje='%s';",
+                    $myRowx['name'],
+                    $horas, $km,
+                    $myRow['deviceid'],
+                    $horas, $km );
+                            
                         mysqli_query($db, $equipoSql);
                     // Si sí hay horas, crea un json con horasMotor
                     $number += 1;

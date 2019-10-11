@@ -125,6 +125,7 @@ $(function () {
                 if (response==false){
                     let empty = '';
                     $('#registro2').html(empty);
+                    alert('Este usuario no posee ningún dispositivo registrado.')
 
                 } else {
                     let devices = JSON.parse(response);

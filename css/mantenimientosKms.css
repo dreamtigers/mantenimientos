@@ -10,7 +10,6 @@
     z-index:1;
     
 }
-.table td,.table tr{border-top: 0px solid transparent;}
 .dashi{
     line-height: -10px;
     margin-left:20px;
@@ -23,8 +22,8 @@
     border-radius: 16px;
 }
 input#lookIt{
-    background-image: url('img/lupa.svg');
-    background-position: 8px 8px;
+    background-image: url('img/lupa.png');
+    background-size:36px;   
     background-repeat: no-repeat;
 }
 .menuHambur{
@@ -43,9 +42,12 @@ input#lookIt{
     cursor:pointer; 
     width:100%;
 }
-#mantenimientos{
+#historial{
     /**text-indent: 14px;
     /** Cause 'selected' **/
+    background-color: #DDF0EC;
+}
+.tabledark{
     background-color: #DDF0EC;
 }
 .boton:hover{
@@ -72,49 +74,25 @@ input#lookIt{
     top:13px;
     left:40px;
 }
+
 #logout{left:36px}
 #vehi_icon{
     top:13px;
 }
-/** This down here is just for color testing**/
 .conten{
     background-color: white;
-    padding: 10px;
-   
-    border-radius: 5px;
+    padding:6px;
+    border-radius: 10px;
     -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
--moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
-
+    -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
+    box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+    position:relative;
 }
-.hover:hover{
-    background-color: #DDF0EC;
-}
-select{
-    border-radius: 10px;
-    text-indent: 10px;
-    width:100;
-}
-.inputs{
-    height: 36px;
-    border-radius: 10px;
-    text-indent: 10px;
-    
-}
-.formgroup {
-    margin-bottom: 0px;
-}
-.terceraHilera,.terceraHileraKms,.segundaHilera,.segundaHileraKms,.enFuncionDe{
-    display:none;
-}
-.ocultar{
-    display:none;
-}
-.inputAct{
-    border-radius: 6px;
-    width: 96%;
-}
-.letMeSend {
+#btnHrs{
+    position:absolute;
+    right: 30px;
+    top:10px;
+    /**Enoug positioning, now styling*/
     padding: 0;
     border: none;
     font: inherit;
@@ -123,13 +101,7 @@ select{
     /* show a hand cursor on hover; some argue that we
     should keep the default arrow cursor for buttons */
     cursor: pointer;
-
-     /* default for <button>, but useful for <a> */
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-
-    /* create a small space when buttons wrap on 2 lines */
+     /* create a small space when buttons wrap on 2 lines */
     margin: 2px 0;
 
     /* invisible border (will be colored on hover/focus) */
@@ -140,55 +112,73 @@ select{
     padding: 0.5em 1em;
 
     /* make sure colors have enough contrast! */
-    color: #ffffff;
+    color: black;
     background-color: #77C0B1;
-
-    position:absolute;
-    left:0px;
-    top:10px;
-
-  }
-  .letMeSend:active {
+}
+#btnHrs:active {
     transform: translateY(1px);
     filter: saturate(150%);
-  }
-  .letMeSend:hover{
+}
+#btnHrs:hover {
     color: #77C0B1;
     border-color: currentColor;
     background-color: white;
   }
-  .disabled {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    /* show a hand cursor on hover; some argue that we
-    should keep the default arrow cursor for buttons */
-    cursor: none;
-
-     /* default for <button>, but useful for <a> */
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-
-    /* create a small space when buttons wrap on 2 lines */
-    margin: 2px 0;
-
-    /* invisible border (will be colored on hover/focus) */
-    border: solid 1px transparent;
-    border-radius: 4px;
-
-    /* size comes from text & padding (no width/height) */
-    padding: 0.5em 1em;
-
-    /* make sure colors have enough contrast! */
-    color: #ffffff;
-    background-color: rgb(173, 173, 173);
-
+.contenApp{
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+    -moz-box-shadow: 2px 2px 2px 1px rgba(97, 97, 97, 0.75);
+    box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
+}
+/* Making tooltips wider */
+.tooltip-inner {
+    max-width: 100% !important;
+}
+/* Aligning <li> inside wrapper to the left */
+li{
+    text-align:left;
+} 
+label{
+    margin-bottom:0px;
+}
+.abs{
     position:absolute;
-    left:0px;
-    top:10px;
+    right: 20px;
+    cursor:pointer;
+}
+/* hr with text */
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
 
-  }
-  
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: gray;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+/* hr with text */
