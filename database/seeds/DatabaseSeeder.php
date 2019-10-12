@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(Tc_maintenancesTableSeeder::class);
         $this->call(Tc_devicesTableSeeder::class);
         $this->call(Tc_positionsTableSeeder::class);
+        $this->call(Tc_user_deviceTableSeeder::class);
 
         // Mantenimientos seeds
         $this->call(ActivitiesTableSeeder::class);
