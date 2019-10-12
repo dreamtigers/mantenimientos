@@ -18,3 +18,5 @@ Auth::routes();
 Route::resource('vehiculos', 'VehiculoController')->only([
     'index', 'show'
 ]);
+
+Route::resource('actividades', 'ActivityController')->only(['index']);
