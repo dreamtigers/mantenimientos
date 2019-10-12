@@ -11,7 +11,7 @@ class Tc_user_deviceTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('piston')->table('tc_user_device')->insert([
+        DB::connection('traccar')->table('tc_user_device')->insert([
             array('userid' => '1','deviceid' => '5'),
             array('userid' => '1','deviceid' => '9'),
             array('userid' => '2','deviceid' => '11'),

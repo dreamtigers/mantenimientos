@@ -14,12 +14,14 @@ class CreateActivitiesTable extends Migration
     public function up()
     {
         Schema::create('activities', function (Blueprint $table) {
+            $db = DB::connection('traccar')->getDatabaseName();
+
             $table->bigIncrements('id');
 
             $table->text('description');
 
             $table->integer('maintenance_id');
-            $table->foreign('maintenance_id')->references('id')->on('dbpistongps.tc_maintenances');
+            $table->foreign('maintenance_id')->references('id')->on($db . '.tc_maintenances');
         });
     }
 

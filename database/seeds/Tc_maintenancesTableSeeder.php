@@ -11,7 +11,7 @@ class Tc_maintenancesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('piston')->table('tc_maintenances')->insert([
+        DB::connection('traccar')->table('tc_maintenances')->insert([
             array(
                 'id' => '1',
                 'name' => 'test',

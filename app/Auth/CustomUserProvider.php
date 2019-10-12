@@ -25,7 +25,7 @@ class CustomUserProvider implements UserProvider {
      */
     public function retrieveById($identifier)
     {
-        $user = DB::connection('piston')->table($this->table)->find($identifier);
+        $user = DB::connection('traccar')->table($this->table)->find($identifier);
 
         return $this->getGenericUser($user);
     }
@@ -40,7 +40,7 @@ class CustomUserProvider implements UserProvider {
     public function retrieveByToken($identifier, $token)
     {
         $user = $this->getGenericUser(
-            DB::connection('piston')->table($this->table)->find($identifier)
+            DB::connection('traccar')->table($this->table)->find($identifier)
         );
 
         return $user && $user->getRememberToken() && hash_equals($user->getRememberToken(), $token)
@@ -56,7 +56,7 @@ class CustomUserProvider implements UserProvider {
      */
     public function updateRememberToken(Authenticatable $user, $token)
     {
-        DB::connection('piston')->table($this->table)
+        DB::connection('traccar')->table($this->table)
                 ->where($user->getAuthIdentifierName(), $user->getAuthIdentifier())
                 ->update([$user->getRememberTokenName() => $token]);
     }
@@ -78,7 +78,7 @@ class CustomUserProvider implements UserProvider {
         // First we will add each credential element to the query as a where clause.
         // Then we can execute the query and, if we found a user, return it in a
         // generic "user" object that will be utilized by the Guard instances.
-        $query = DB::connection('piston')->table($this->table);
+        $query = DB::connection('traccar')->table($this->table);
 
         foreach ($credentials as $key => $value) {
             if (Str::contains($key, 'password')) {

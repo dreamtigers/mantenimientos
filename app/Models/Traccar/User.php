@@ -16,7 +16,7 @@ class User extends GenericUser implements AuthenticatableContract
      *
      * @var string
      */
-    protected $connection = 'piston';
+    protected $connection = 'traccar';
     /**
      * The attributes that are mass assignable.
      *
