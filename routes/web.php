@@ -20,3 +20,4 @@ Route::resource('vehiculos', 'VehiculoController')->only([
 ]);
 
 Route::resource('actividades', 'ActivityController')->only(['index']);
+Route::resource('usuarios', 'UserController')->only(['index']);

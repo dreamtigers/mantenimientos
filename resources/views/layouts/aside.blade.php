@@ -4,14 +4,17 @@
         <p class="menu-label">General</p>
         <ul class="menu-list">
             <li>
-                <a href="#">Vehiculos</a>
+                <a href="actividades">Actividades</a>
+            </li>
+            <li>
+                <a href="vehiculos">Vehiculos</a>
             </li>
         </ul>
         @admin
             <p class="menu-label">Administration</p>
             <ul class="menu-list">
                 <li>
-                    <a href="#">Usuarios</a>
+                    <a href="usuarios">Usuarios</a>
                 </li>
             </ul>
         @endadmin
