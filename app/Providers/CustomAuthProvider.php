@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Auth\CustomUserProvider;
+use App\Auth\CustomEloquentUserProvider;
 use Illuminate\Support\ServiceProvider;
 
 class CustomAuthProvider extends ServiceProvider
@@ -15,9 +15,10 @@ class CustomAuthProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app['auth']->provider('custom', function()
+        $this->app['auth']->provider('custom_eloquent', function()
         {
-            return new CustomUserProvider();
+            $model = config('auth.providers.users.model');
+            return new CustomEloquentUserProvider($model);
         });
     }
 

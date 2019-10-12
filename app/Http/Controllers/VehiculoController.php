@@ -23,7 +23,7 @@ class VehiculoController extends Controller
         if (auth()->user()->isAdmin()) {
             $devices = Device::all();
         } else {
-            $devices = Device::where('userId', auth()->user()->id)->get();
+            $devices = auth()->user()->devices;
         }
 
         return view('vehiculos.index', ['devices' => $devices]);

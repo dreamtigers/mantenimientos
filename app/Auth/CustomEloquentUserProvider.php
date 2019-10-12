@@ -1,33 +1,46 @@
 <?php
 
-/*
- * Thanks to:
- * https://laracasts.com/discuss/channels/laravel/replacing-the-laravel-authentication-with-a-custom-authentication
- */
-
 namespace App\Auth;
 
-use DB;
-use Str;
-use App\Models\Traccar\User;
-use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Support\Str;
 use Illuminate\Contracts\Auth\UserProvider;
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Auth\Authenticatable as UserContract;
 
-class CustomUserProvider implements UserProvider {
+class CustomEloquentUserProvider implements UserProvider
+{
+    /**
+     * The Eloquent user model.
+     *
+     * @var string
+     */
+    protected $model;
 
-    protected $table = 'tc_users';
+    /**
+     * Create a new database user provider.
+     *
+     * @param  \Illuminate\Contracts\Hashing\Hasher  $hasher
+     * @param  string  $model
+     * @return void
+     */
+    public function __construct($model)
+    {
+        $this->model = $model;
+    }
 
     /**
      * Retrieve a user by their unique identifier.
      *
-     * @param mixed $identifier
+     * @param  mixed  $identifier
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
     public function retrieveById($identifier)
     {
-        $user = DB::connection('traccar')->table($this->table)->find($identifier);
+        $model = $this->createModel();
 
-        return $this->getGenericUser($user);
+        return $this->newModelQuery($model)
+                    ->where($model->getAuthIdentifierName(), $identifier)
+                    ->first();
     }
 
     /**
@@ -39,26 +52,34 @@ class CustomUserProvider implements UserProvider {
      */
     public function retrieveByToken($identifier, $token)
     {
-        $user = $this->getGenericUser(
-            DB::connection('traccar')->table($this->table)->find($identifier)
-        );
+        $model = $this->createModel();
 
-        return $user && $user->getRememberToken() && hash_equals($user->getRememberToken(), $token)
-                    ? $user : null;
+        $retrievedModel = $this->newModelQuery($model)->where(
+            $model->getAuthIdentifierName(), $identifier
+        )->first();
+
+        if (! $retrievedModel) {
+            return;
+        }
+
+        $rememberToken = $retrievedModel->getRememberToken();
+
+        return $rememberToken && hash_equals($rememberToken, $token)
+                        ? $retrievedModel : null;
     }
 
     /**
      * Update the "remember me" token for the given user in storage.
      *
-     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+     * @param  \Illuminate\Contracts\Auth\Authenticatable|\Illuminate\Database\Eloquent\Model  $user
      * @param  string  $token
      * @return void
      */
-    public function updateRememberToken(Authenticatable $user, $token)
+    public function updateRememberToken(UserContract $user, $token)
     {
-        DB::connection('traccar')->table($this->table)
-                ->where($user->getAuthIdentifierName(), $user->getAuthIdentifier())
-                ->update([$user->getRememberTokenName() => $token]);
+        $user->setRememberToken($token);
+
+        $user->save();
     }
 
     /**
@@ -77,8 +98,8 @@ class CustomUserProvider implements UserProvider {
 
         // First we will add each credential element to the query as a where clause.
         // Then we can execute the query and, if we found a user, return it in a
-        // generic "user" object that will be utilized by the Guard instances.
-        $query = DB::connection('traccar')->table($this->table);
+        // Eloquent User "model" that will be utilized by the Guard instances.
+        $query = $this->newModelQuery();
 
         foreach ($credentials as $key => $value) {
             if (Str::contains($key, 'password')) {
@@ -92,25 +113,7 @@ class CustomUserProvider implements UserProvider {
             }
         }
 
-        // Now we are ready to execute the query to see if we have an user matching
-        // the given credentials. If not, we will just return nulls and indicate
-        // that there are no matching users for these given credential arrays.
-        $user = $query->first();
-
-        return $this->getGenericUser($user);
-    }
-
-    /**
-     * Get the generic user.
-     *
-     * @param  mixed  $user
-     * @return \Illuminate\Auth\GenericUser|null
-     */
-    protected function getGenericUser($user)
-    {
-        if (! is_null($user)) {
-            return new User((array) $user);
-        }
+        return $query->first();
     }
 
     /**
@@ -120,14 +123,15 @@ class CustomUserProvider implements UserProvider {
      * @param  array  $credentials
      * @return bool
      */
-    public function validateCredentials(Authenticatable $user, array $credentials)
+    public function validateCredentials(UserContract $user, array $credentials)
     {
+        $plain_password = $credentials['password'];
         $algo = 'sha1';
         $iterations = 1000;
         $length = 48;
         $salt = $this->hexToString($user->getAuthSalt());
 
-        $hashedValue = hash_pbkdf2( $algo, $credentials['password'], $salt,
+        $hashedValue = hash_pbkdf2( $algo, $plain_password, $salt,
             $iterations, $length);
 
         if (strlen($hashedValue) === 0) {
@@ -138,6 +142,31 @@ class CustomUserProvider implements UserProvider {
         /* print_r($user->getAuthIdentifier()); */
         /* print '</pre>'; */
         return hash_equals($user->getAuthPassword(), $hashedValue);
+    }
+
+    /**
+     * Get a new query builder for the model instance.
+     *
+     * @param  \Illuminate\Database\Eloquent\Model|null  $model
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function newModelQuery($model = null)
+    {
+        return is_null($model)
+                ? $this->createModel()->newQuery()
+                : $model->newQuery();
+    }
+
+    /**
+     * Create a new instance of the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function createModel()
+    {
+        $class = '\\'.ltrim($this->model, '\\');
+
+        return new $class;
     }
 
     // Thanks to Ivalenzuela for these 2 functions
@@ -151,7 +180,6 @@ class CustomUserProvider implements UserProvider {
         }
         return strtoupper($hex);
     }
-
     private function hexToString($hex)
     {
         $string = '';
@@ -161,6 +189,27 @@ class CustomUserProvider implements UserProvider {
         }
         return $string;
     }
-}
 
-?>
+    /**
+     * Gets the name of the Eloquent user model.
+     *
+     * @return string
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    /**
+     * Sets the name of the Eloquent user model.
+     *
+     * @param  string  $model
+     * @return $this
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+}
