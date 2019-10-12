@@ -1,16 +1,22 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Traccar;
 
 use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Auth\GenericUser;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
-class TraccarUser extends GenericUser implements AuthenticatableContract
+class User extends GenericUser implements AuthenticatableContract
 {
     use Notifiable;
 
+    /**
+     * The connection name for the model.
+     *
+     * @var string
+     */
+    protected $connection = 'piston';
     /**
      * The attributes that are mass assignable.
      *
@@ -30,6 +36,16 @@ class TraccarUser extends GenericUser implements AuthenticatableContract
         /* 'password', 'remember_token', */
         'hashedpassword', 'token',
     ];
+
+    /**
+     * Get the devices that belong to this user
+     *
+     * @return array of App\Traccar\Device
+     */
+    /* public function devices() */
+    /* { */
+    /*     return $this->hasMany('App\Traccar\Device'); */
+    /* } */
 
     /**
      * Get the password for the user.

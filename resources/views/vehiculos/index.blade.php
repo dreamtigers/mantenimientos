@@ -10,10 +10,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($equipos as $equipo)
+        @foreach ($devices as $device)
             <tr>
-                <td>{{ $equipo->id }}</td>
-                <td>{{ $equipo->equipo }}</td>
+                <td>{{ $device->id }}</td>
+                <td>{{ $device->detail }}</td>
             </tr>
         @endforeach
     </tbody>

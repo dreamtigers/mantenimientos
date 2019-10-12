@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'custom',
-            /* 'model' => App\Models\TraccarUser::class, */
+            /* 'model' => App\Models\Traccar\User::class, */
         ],
 
         // 'users' => [

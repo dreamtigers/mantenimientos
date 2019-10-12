@@ -9,7 +9,7 @@ namespace App\Auth;
 
 use DB;
 use Str;
-use App\Models\TraccarUser;
+use App\Models\Traccar\User;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
 
@@ -109,7 +109,7 @@ class CustomUserProvider implements UserProvider {
     protected function getGenericUser($user)
     {
         if (! is_null($user)) {
-            return new TraccarUser((array) $user);
+            return new User((array) $user);
         }
     }
 

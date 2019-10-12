@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Equipo;
+use App\Models\Traccar\Device;
 use Illuminate\Http\Request;
 
 class VehiculoController extends Controller
@@ -21,12 +21,12 @@ class VehiculoController extends Controller
     public function index()
     {
         if (auth()->user()->isAdmin()) {
-            $equipos = Equipo::all();
+            $devices = Device::all();
         } else {
-            $equipos = Equipo::where('userId', auth()->user()->id)->get();
+            $devices = Device::where('userId', auth()->user()->id)->get();
         }
 
-        return view('vehiculos.index', ['equipos' => $equipos]);
+        return view('vehiculos.index', ['devices' => $devices]);
     }
 
     /**
@@ -53,23 +53,23 @@ class VehiculoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Equipo  $equipo
+     * @param  \App\Models\Traccar\Device  $device
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $equipo = Equipo::where('id', $id)->first();
+        $device = Device::where('id', $id)->first();
 
-        return view('vehiculos.show', ['equipo' => $equipo]);
+        return view('vehiculos.show', ['device' => $device]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Equipo  $equipo
+     * @param  \App\Models\Traccar\Device  $device
      * @return \Illuminate\Http\Response
      */
-    /* public function edit(Equipo $equipo) */
+    /* public function edit(Device $device) */
     /* { */
     /*     // */
     /* } */
@@ -78,10 +78,10 @@ class VehiculoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Equipo  $equipo
+     * @param  \App\Models\Traccar\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipo $equipo)
+    public function update(Request $request, Device $device)
     {
         //
     }
@@ -89,10 +89,10 @@ class VehiculoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Equipo  $equipo
+     * @param  \App\Models\Traccar\Device  $device
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Equipo $equipo)
+    public function destroy(Device $device)
     {
         //
     }

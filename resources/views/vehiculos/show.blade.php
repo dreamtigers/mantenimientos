@@ -7,31 +7,31 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>nombre</th>
-                <th>hrsMotor</th>
-                <th>hrsMantenimiento</th>
-                <th>rutina1</th>
-                <th>hr1Mant2</th>
-                <th>rutina2</th>
-                <th>hrsMant3</th>
-                <th>rutina3</th>
-                <th>hrsMant4</th>
-                <th>rutina4</th>
+                <th>Nombre</th>
+                <th>última Actualización</th>
+                <th>Teléfono</th>
+                <th>Modelo</th>
+                <th>Marca</th>
+                <th>Serial</th>
+                <th>Arreglo</th>
+                <th>Placa</th>
+                <th>Año de Fabricación</th>
+                <th>Filtro de Aceite Motor</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>{{ $equipo->id }}</td>
-                <td>{{ $equipo->equipo }}</td>
-                <td>{{ $equipo->hrsMotor }}</td>
-                <td>{{ $equipo->hrsMantenimiento }}</td>
-                <td>{{ $equipo->rutina1 }}</td>
-                <td>{{ $equipo->hr1Mant2 }}</td>
-                <td>{{ $equipo->rutina2 }}</td>
-                <td>{{ $equipo->hrsMant3 }}</td>
-                <td>{{ $equipo->rutina3 }}</td>
-                <td>{{ $equipo->hrsMant4 }}</td>
-                <td>{{ $equipo->rutina4 }}</td>
+                <td>{{ $device->id }}</td>
+                <td>{{ $device->name }}</td>
+                <td>{{ $device->lastupdate }}</td>
+                <td>{{ $device->phone }}</td>
+                <td>{{ $device->model }}</td>
+                <td>{{ $device->detail->marca }}</td>
+                <td>{{ $device->detail->serial }}</td>
+                <td>{{ $device->detail->arreglo }}</td>
+                <td>{{ $device->detail->placa }}</td>
+                <td>{{ $device->detail->anoFabricacion }}</td>
+                <td>{{ $device->detail->filtroAceiteMotor }}</td>
             </tr>
         </tbody>
     </table>
