@@ -30,6 +30,13 @@
     ```sh
     npm run dev
     ```
+## Protip
+
+If you just added or renamed a file, run:
+```sh
+composer dumpautoload
+```
+To regenerate the optimized files. I always forget this.
 
 ## About Laravel
 

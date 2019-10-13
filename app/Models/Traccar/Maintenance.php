@@ -18,6 +18,6 @@ class Maintenance extends Model
      * Balancear los cauchos
      */
     public function activities() {
-        return $this->hasMany('App\Model\Activity');
+        return $this->hasMany('App\Models\Activity');
     }
 }
