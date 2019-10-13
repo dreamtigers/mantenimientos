@@ -25,7 +25,10 @@ class CreateRecordsTable extends Migration
             $table->integer('maintenance_id');
             $table->foreign('maintenance_id')->references('id')->on($db . '.tc_maintenances');
             $table->integer('position_id');
-            $table->foreign('position_id')->references('id')->on($db . '.tc_positions');
+            // I'm not sure if we should link to the positions or not Traccar.
+            // For example, does not link through a fk the device to the
+            // position, even tho it's capable of.
+            // $table->foreign('position_id')->references('id')->on($db . '.tc_positions');
 
             $table->integer('total_hours');
             $table->integer('total_distance');

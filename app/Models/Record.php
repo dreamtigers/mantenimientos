@@ -29,4 +29,13 @@ class Record extends Model
     {
         return $this->belongsTo('App\Models\Maintenance');
     }
+
+    // I'm not sure if we should link to the positions or not Traccar. For
+    // example, does not link through a fk the device to the position, even tho
+    // it's capable of.
+    /* // Each record belongs only to one position. */
+    /* public function position() */
+    /* { */
+    /*     return $this->belongsTo('App\Models\Traccar\Position'); */
+    /* } */
 }
