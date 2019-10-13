@@ -38,6 +38,6 @@ class RecordsTableSeeder extends Seeder
                 'total_hours' => '7600000',
                 'total_distance' => '5005',
             )
-
+        ]);
     }
 }

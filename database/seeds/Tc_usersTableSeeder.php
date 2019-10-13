@@ -40,8 +40,8 @@ class Tc_usersTableSeeder extends Seeder
             array(
                 'name' => 'user',
                 'email' => 'user@user.com',
-                'hashedpassword' => 'a9f6dbba7bf81eeb124479ba402ef300d8b7988d945c1bb9',
-                'salt' => '409d126d827d6826d910e31dfb0a111015adc1ccd9f21af9',
+                'hashedpassword' => '14a982b6baec6d4b8d8e6817493817efd8ecaf0a877145bd',
+                'salt' => '5bc7446a257095633efaa480fc7ba80557dcf5ba8418d593',
                 'readonly' => 0,
                 'administrator' => 0,
                 'map' => '',

@@ -16,9 +16,9 @@ class CreateActivityRecord extends Migration
         Schema::create('activity_record', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->integer('record_id');
+            $table->unsignedBigInteger('record_id');
             $table->foreign('record_id')->references('id')->on('records');
-            $table->integer('activity_id');
+            $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('activities');
 
             $table->string('observation');

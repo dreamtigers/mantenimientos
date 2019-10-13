@@ -30,8 +30,8 @@ class CreateRecordsTable extends Migration
             // position, even tho it's capable of.
             // $table->foreign('position_id')->references('id')->on($db . '.tc_positions');
 
-            $table->integer('total_hours');
-            $table->integer('total_distance');
+            $table->unsignedBigInteger('total_hours');
+            $table->unsignedBigInteger('total_distance');
 
             $table->timestamps();
         });

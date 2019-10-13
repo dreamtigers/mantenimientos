@@ -41,5 +41,6 @@ class Activity_recordTableSeeder extends Seeder
                 'activity_id' => '31',
                 'observation' => 'Correas del motor buenas',
             )
+        ]);
     }
 }

@@ -14,7 +14,13 @@ class CreateEquiposTable extends Migration
     public function up()
     {
         Schema::create('equipos', function (Blueprint $table) {
+            $db = DB::connection('traccar')->getDatabaseName();
+
             $table->bigIncrements('id');
+
+
+            $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on($db . '.tc_users');
 
             $table->text('equipo');
             $table->integer('hrsMotor');
