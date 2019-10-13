@@ -14,46 +14,73 @@ class Tc_maintenancesTableSeeder extends Seeder
         DB::connection('traccar')->table('tc_maintenances')->insert([
             array(
                 'id' => '1',
-                'name' => 'test',
-                'type' => 'distance',
+                'name' => 'Rutina 1 Horas',
+                'type' => 'hours',
                 'start' => '0',
-                'period' => '7000',
+                'period' => '900000000',
                 'attributes' => '{}'
             ),
 
             array(
                 'id' => '2',
-                'name' => 'Rutina 1',
+                'name' => 'Rutina 2 Horas',
                 'type' => 'hours',
-                'start' => '900000000',
-                'period' => '86400000',
+                'start' => '0',
+                'period' => '1800000000',
                 'attributes' => '{}'
             ),
 
             array(
                 'id' => '3',
-                'name' => 'Rutina 2',
+                'name' => 'Rutina 3 Horas',
                 'type' => 'hours',
-                'start' => '1800000000',
-                'period' => '86400000',
+                'start' => '0',
+                'period' => '3600000000',
                 'attributes' => '{}'
             ),
 
             array(
                 'id' => '4',
-                'name' => 'Rutina 3',
+                'name' => 'Rutina 4 Horas',
                 'type' => 'hours',
-                'start' => '3600000000',
-                'period' => '86400000',
+                'start' => '0',
+                'period' => '7200000000',
                 'attributes' => '{}'
             ),
 
             array(
                 'id' => '5',
-                'name' => 'Rutina 4',
-                'type' => 'hours',
-                'start' => '7200000000',
-                'period' => '86400000',
+                'name' => 'Rutina 1 Distancia',
+                'type' => 'distance',
+                'start' => '0',
+                'period' => '5000',
+                'attributes' => '{}'
+            ),
+
+            array(
+                'id' => '6',
+                'name' => 'Rutina 2 Distancia',
+                'type' => 'distance',
+                'start' => '0',
+                'period' => '10000',
+                'attributes' => '{}'
+            ),
+
+            array(
+                'id' => '7',
+                'name' => 'Rutina 3 Distancia',
+                'type' => 'distance',
+                'start' => '0',
+                'period' => '20000',
+                'attributes' => '{}'
+            ),
+
+            array(
+                'id' => '8',
+                'name' => 'Rutina 4 Distancia',
+                'type' => 'distance',
+                'start' => '0',
+                'period' => '40000',
                 'attributes' => '{}'
             )
         ]);
