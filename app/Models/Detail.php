@@ -6,11 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Detail extends Model
 {
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
+    // The connection name for the model.
     protected $connection = 'mysql';
 
     public function device()
