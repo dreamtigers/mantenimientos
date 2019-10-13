@@ -15,9 +15,16 @@ class Maintenance extends Model
 
     /* One maintenance (say, Rutina 1), can have many activities, like
      * Lubricar el cardan
-     * Balancear los cauchos
-     */
-    public function activities() {
+     * Balancear los cauchos */
+    public function activities()
+    {
         return $this->hasMany('App\Models\Activity');
+    }
+
+    // Each maintenance has lots of records, but a record can only have one
+    // maintenance.
+    public function records()
+    {
+        return $this->hasMany('App\Models\Record');
     }
 }

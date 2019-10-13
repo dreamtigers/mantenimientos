@@ -19,4 +19,11 @@ class Device extends Model
     {
         return $this->hasOne('App\Models\Detail'); // fk: device_id
     }
+
+    // Each device has lots of records, but a record can only belong to one
+    // device.
+    public function records()
+    {
+        return $this->hasMany('App\Models\Record');
+    }
 }
