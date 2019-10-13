@@ -114,7 +114,7 @@ require 'php/auth.php';
             </div>
 
 
-            <div class='col-10'>
+            <div class='col-10' id='col_10'>
                     <div class="row">
 
                         <div class="col-12"> 

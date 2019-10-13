@@ -1004,7 +1004,7 @@ $(function(){
 
     })
 
-     /** Logic for the filtering process */
+    /** Logic for the filtering process */
      $('#lookIt').change(function () { 
         
         /** If there's a valua on the search (#lookIT) then proceed */
@@ -1077,8 +1077,8 @@ $(function(){
                         
                     })
                     $('#inHere').html(templateX);
-              
                    
+                    $('#col_10').height( ($(document).height() ) );
 
 
 

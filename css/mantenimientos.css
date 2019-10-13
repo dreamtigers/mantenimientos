@@ -88,6 +88,9 @@ input#lookIt{
     box-shadow: 2px 2px 2px 1px rgba(98, 98, 98, 0.75);
     position:relative;
 }
+#col_10{
+    background-color: #ededed;
+}
 #btnKms{
     position:absolute;
     right: 30px;

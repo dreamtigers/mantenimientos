@@ -10,7 +10,7 @@
 
     //if there is a value in search
     if($search){
-        $sql = "SELECT * FROM tarjetaEquipo WHERE fechaIngreso LIKE '$search' ";
+        $sql = "SELECT * FROM tarjetaEquipo WHERE fechaIngreso LIKE '$search' AND deviceId LIKE '$deviceId' AND enFuncionDe LIKE 'hrs' ";
         $result = mysqli_query($db, $sql);
         /** En caso de no haber conexión, habrá error y será mostrado cual fue. */
         if(!$result){
@@ -27,7 +27,7 @@
                 'fechaIngreso' => $row['fechaIngreso'],
                 'kilometraje' => $row['kilometrajeEnFecha'],
                 'horasMotor' => $row['horasEnFecha'],
-                'anoFabricacion' => $row['anoFabricacion'],
+                /* 'anoFabricacion' => $row['anoFabricacion'],
                 'ubicacion' => $row['ubicacion'],
                 'filtroAceiteMotor' => $row['filtroAceiteMotor'],
                 'filtroAceiteHidraulico' => $row['filtroAceiteHidraulico'],
@@ -43,13 +43,13 @@
                 'capacidadCarterMotor' => $row['capacidadCarterMotor'],
                 'capacidadTanqueCaja' => $row['capacidadTanqueCaja'],
                 'capacidadTanqueTransmision' => $row['capacidadTanqueTransmision'],
-                'capacidadTanqueHidraulico' => $row['capacidadTanqueHidraulico'],
+                'capacidadTanqueHidraulico' => $row['capacidadTanqueHidraulico'], */
                 //since i assume order doesn't matter
-                'filtroTransmision' => $row['filtroTransmision'],
-                'filtroTanqueHidraulico' => $row['filtroTanqueHidraulico'],
+                /* 'filtroTransmision' => $row['filtroTransmision'],
+                'filtroTanqueHidraulico' => $row['filtroTanqueHidraulico'], */
                 'actividades' => $row['actividades'],
                 'comentariosActividades' => $row['comentarios_actividades'],
-                'observaciones' => $row['observaciones'],
+                /* 'observaciones' => $row['observaciones'], */
                 'idHoras' => $deviceId
 
             );
