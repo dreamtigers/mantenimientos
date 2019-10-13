@@ -21,8 +21,9 @@ class DatabaseSeeder extends Seeder
         // Mantenimientos seeds
         $this->call(ActivitiesTableSeeder::class);
         $this->call(DetailsTableSeeder::class);
+        $this->call(RecordsTableSeeder::class);
+        $this->call(Activity_recordTableSeeder::class);
 
         $this->call(EquiposTableSeeder::class);
-        $this->call(FiltroPosicionTableSeeder::class);
     }
 }
