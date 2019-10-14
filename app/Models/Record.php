@@ -15,7 +15,7 @@ class Record extends Model
     // We will make use of that pivot table.
     public function activities()
     {
-        return $this->belongsToMany('App\Models\Activity');
+        return $this->belongsToMany('App\Models\Activity')->withPivot('observation');
     }
 
     // Each record belongs only to one device.
@@ -27,7 +27,7 @@ class Record extends Model
     // Each record belongs only to one maintenance.
     public function maintenance()
     {
-        return $this->belongsTo('App\Models\Maintenance');
+        return $this->belongsTo('App\Models\Traccar\Maintenance');
     }
 
     // I'm not sure if we should link to the positions or not Traccar. For

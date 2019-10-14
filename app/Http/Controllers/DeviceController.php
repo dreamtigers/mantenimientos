@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Traccar\Device;
 use Illuminate\Http\Request;
 
-class VehiculoController extends Controller
+class DeviceController extends Controller
 {
     public function __construct()
     {
@@ -25,7 +25,7 @@ class VehiculoController extends Controller
             $devices = auth()->user()->devices;
         }
 
-        return view('vehiculos.index', ['devices' => $devices]);
+        return view('devices.index', ['devices' => $devices]);
     }
 
     /**
@@ -57,9 +57,9 @@ class VehiculoController extends Controller
      */
     public function show($id)
     {
-        $device = Device::where('id', $id)->first();
+        $device = auth()->user()->devices()->where('id', $id)->first();
 
-        return view('vehiculos.show', ['device' => $device]);
+        return view('devices.show', ['device' => $device]);
     }
 
     /**

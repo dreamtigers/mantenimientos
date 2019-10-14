@@ -15,8 +15,7 @@
                 <th>Serial</th>
                 <th>Arreglo</th>
                 <th>Placa</th>
-                <th>Año de Fabricación</th>
-                <th>Filtro de Aceite Motor</th>
+                <th>Usuarios</th>
             </tr>
         </thead>
         <tbody>
@@ -30,8 +29,7 @@
                 <td>{{ $device->detail->serial }}</td>
                 <td>{{ $device->detail->arreglo }}</td>
                 <td>{{ $device->detail->placa }}</td>
-                <td>{{ $device->detail->anoFabricacion }}</td>
-                <td>{{ $device->detail->filtroAceiteMotor }}</td>
+                <td>{{ $device->users }}</td>
             </tr>
         </tbody>
     </table>

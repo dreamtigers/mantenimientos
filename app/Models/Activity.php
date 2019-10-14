@@ -20,6 +20,6 @@ class Activity extends Model
     // Documentation. We will make use of that pivot table.
     public function records()
     {
-        return $this->belongsToMany('App\Models\Record');
+        return $this->belongsToMany('App\Models\Record')->withPivot('observation');
     }
 }

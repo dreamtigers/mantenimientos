@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="title">Registros</h1>
+<h1 class="title">Vehículos</h1>
 <table class="table is-bordered is-striped is-narrow is-fullwidth">
     <thead>
         <tr>
@@ -12,7 +12,7 @@
     <tbody>
         @foreach ($devices as $device)
             <tr>
-                <td>{{ $device->id }}</td>
+                <td><a href="{{ route('vehiculos.show', ['device' => $device]) }}">{{ $device->id }}</a></td>
                 <td>{{ $device->detail }}</td>
             </tr>
         @endforeach

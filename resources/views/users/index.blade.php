@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="title">Registros</h1>
+<h1 class="title">Usuarios</h1>
 <table class="table is-bordered is-striped is-narrow is-fullwidth">
     <thead>
         <tr>
