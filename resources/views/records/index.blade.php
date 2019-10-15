@@ -19,7 +19,7 @@
                 <td>{{ $record->performed_at }}</td>
                 <td>{{ $record->device->name }}</td>
                 <td>{{ $record->maintenance->name }}</td>
-                <td><a href="{{ route('registros.show', ['record' => $record]) }}">Detalle</a></td>
+                <td><a href="{{ route('registros.show', $record) }}">Detalle</a></td>
             </tr>
         @endforeach
     </tbody>

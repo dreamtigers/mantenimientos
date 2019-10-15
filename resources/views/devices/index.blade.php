@@ -12,7 +12,7 @@
     <tbody>
         @foreach ($devices as $device)
             <tr>
-                <td><a href="{{ route('vehiculos.show', ['device' => $device]) }}">{{ $device->id }}</a></td>
+                <td><a href="{{ route('vehiculos.show', $device) }}">{{ $device->id }}</a></td>
                 <td>{{ $device->detail }}</td>
             </tr>
         @endforeach
