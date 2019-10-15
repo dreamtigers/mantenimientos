@@ -37,7 +37,17 @@ class RecordsTableSeeder extends Seeder
                 'position_id' => '3',
                 'total_hours' => '7600000',
                 'total_distance' => '5005',
-            )
+            ),
+
+            array(
+                'performed_at' => '2019-09-13 16:20:00',
+                'device_id' => '5',
+                'maintenance_id' => '3',
+                'position_id' => '4',
+                'total_hours' => '36850431',
+                'total_distance' => '10247',
+            ),
+
         ]);
     }
 }

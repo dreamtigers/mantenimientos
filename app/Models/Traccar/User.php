@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\Models\Record;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -35,6 +37,13 @@ class User extends Authenticatable
     public function devices()
     {
         return $this->belongsToMany('App\Models\Traccar\Device', 'tc_user_device', 'userid', 'deviceid');
+    }
+
+    public function records()
+    {
+        return Record::whereHas('device.users', function($query) {
+            return $query->where('id', $this->id);
+        })->get();
     }
 
     /*

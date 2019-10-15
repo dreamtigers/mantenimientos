@@ -20,6 +20,13 @@ class Device extends Model
         return $this->hasOne('App\Models\Detail'); // fk: device_id
     }
 
+    /* Get the users that own this device
+     * @return array of App\Models\Traccar\User */
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\Traccar\User', 'tc_user_device', 'deviceid', 'userid');
+    }
+
     // Each device has lots of records, but a record can only belong to one
     // device.
     public function records()
