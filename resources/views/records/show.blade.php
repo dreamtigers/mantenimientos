@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="title">Detalles de la Rutina Realizada</h1>
+<h1 class="title">Detalles del Registro</h1>
 <div class="box">
     <table class="table is-bordered is-striped is-narrow is-fullwidth">
         <thead>

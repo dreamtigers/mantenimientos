@@ -17,7 +17,7 @@ class Record extends Model
     // We will make use of that pivot table.
     public function activities()
     {
-        return $this->belongsToMany('App\Models\Activity')->withPivot('observation');
+        return $this->belongsToMany('App\Models\Activity', 'mt_activity_record')->withPivot('observation');
     }
 
     // Each record belongs only to one device.
