@@ -13,7 +13,7 @@ services:
       - mysql
     environment:
       DB_HOST: mysql
-      DB_DATABASE: mant_db
+      DB_DATABASE: dbpistongps
       DB_USERNAME: mant
       DB_PASSWORD: password
   mysql:
@@ -23,7 +23,7 @@ services:
     volumes:
       - ./.docker/mysql:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_DATABASE: mant_db
+      MYSQL_DATABASE: dbpistongps
       MYSQL_USER: mant
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password

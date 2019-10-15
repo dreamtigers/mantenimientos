@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpistongps`
+-- Database:
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tc_maintenances`
 --
 
-CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_maintenances` (
+CREATE TABLE IF NOT EXISTS `tc_maintenances` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(4000) NOT NULL,
   `type` varchar(128) NOT NULL,

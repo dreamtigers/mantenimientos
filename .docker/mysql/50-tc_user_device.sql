@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpistongps`
+-- Database:
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tc_user_device`
 --
 
-CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_user_device` (
+CREATE TABLE IF NOT EXISTS `tc_user_device` (
   `userid` int(11) NOT NULL,
   `deviceid` int(11) NOT NULL,
   KEY `fk_user_device_deviceid` (`deviceid`),
@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_user_device` (
 --
 -- Constraints for table `tc_user_device`
 --
-ALTER TABLE `dbpistongps`.`tc_user_device`
-  ADD CONSTRAINT `fk_user_device_deviceid` FOREIGN KEY (`deviceid`) REFERENCES `dbpistongps`.`tc_devices` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `fk_user_device_userid` FOREIGN KEY (`userid`) REFERENCES `dbpistongps`.`tc_users` (`id`) ON DELETE CASCADE;
+ALTER TABLE `tc_user_device`
+  ADD CONSTRAINT `fk_user_device_deviceid` FOREIGN KEY (`deviceid`) REFERENCES `tc_devices` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_user_device_userid` FOREIGN KEY (`userid`) REFERENCES `tc_users` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

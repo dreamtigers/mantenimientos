@@ -11,7 +11,7 @@ class Tc_usersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('traccar')->table('tc_users')->insert([
+        DB::table('tc_users')->insert([
             array(
                 'name' => 'admin',
                 'email' => 'admin@admin.com',

@@ -11,7 +11,7 @@ class Activity_recordTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('activity_record')->insert([
+        DB::table('mt_activity_record')->insert([
             array(
                 'record_id' => '1',
                 'activity_id' => '11',

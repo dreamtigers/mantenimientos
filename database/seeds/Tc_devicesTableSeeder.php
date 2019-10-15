@@ -11,7 +11,7 @@ class Tc_devicesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('traccar')->table('tc_devices')->insert([
+        DB::table('tc_devices')->insert([
             array(
                 'id' => '5',
                 'name' => 'Caja Magica',

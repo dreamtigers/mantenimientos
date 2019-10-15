@@ -11,7 +11,7 @@ class ActivitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('activities')->insert([
+        DB::table('mt_activities')->insert([
             array(
                 'id' => '1',
                 'description' => 'Revisión del nivel de aceite de eje trasero y delantero (TDM)',

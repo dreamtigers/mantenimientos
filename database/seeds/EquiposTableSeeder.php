@@ -11,7 +11,7 @@ class EquiposTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('equipos')->insert([
+        DB::table('mt_equipos')->insert([
             array(
                 'equipo' => 'Caja Magica',
                 'user_id' => '1',

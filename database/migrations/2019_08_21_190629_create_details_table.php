@@ -13,15 +13,12 @@ class CreateDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('details', function (Blueprint $table) {
-            // Thanks to https://stackoverflow.com/a/39646745
-            // For the idea
-            $db = DB::connection('traccar')->getDatabaseName();
+        Schema::create('mt_details', function (Blueprint $table) {
 
             $table->bigIncrements('id');
 
             $table->integer('device_id');
-            $table->foreign('device_id')->references('id')->on($db . '.tc_devices');
+            $table->foreign('device_id')->references('id')->on('tc_devices');
 
             $table->string('marca');
             $table->string('serial');
@@ -60,6 +57,6 @@ class CreateDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('details');
+        Schema::dropIfExists('mt_details');
     }
 }

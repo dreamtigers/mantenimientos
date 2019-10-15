@@ -8,6 +8,8 @@ class Record extends Model
 {
     // The connection name for the model.
     protected $connection = 'mysql';
+    // The table associated with the model.
+    protected $table = 'mt_records';
 
     // A record has lots of activities and activities have lots of records,
     // through the intermediate table 'activity_record'. Laravel infers their

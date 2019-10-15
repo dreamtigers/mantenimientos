@@ -13,14 +13,13 @@ class CreateEquiposTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipos', function (Blueprint $table) {
-            $db = DB::connection('traccar')->getDatabaseName();
+        Schema::create('mt_equipos', function (Blueprint $table) {
 
             $table->bigIncrements('id');
 
 
             $table->integer('user_id');
-            $table->foreign('user_id')->references('id')->on($db . '.tc_users');
+            $table->foreign('user_id')->references('id')->on('tc_users');
 
             $table->text('equipo');
             $table->integer('hrsMotor');
@@ -44,6 +43,6 @@ class CreateEquiposTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipos');
+        Schema::dropIfExists('mt_equipos');
     }
 }

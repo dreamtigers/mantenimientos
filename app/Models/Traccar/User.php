@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable;
 
     // The connection name for the model.
-    protected $connection = 'traccar';
+    protected $connection = 'mysql';
     // The table associated with the model.
     protected $table = 'tc_users';
     // Indicates if the model should be timestamped.

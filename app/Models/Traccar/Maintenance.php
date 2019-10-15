@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Maintenance extends Model
 {
     // The connection name for the model.
-    protected $connection = 'traccar';
+    protected $connection = 'mysql';
     // The table associated with the model.
     protected $table = 'tc_maintenances';
     // Indicates if the model should be timestamped.

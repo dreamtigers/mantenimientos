@@ -11,7 +11,7 @@ class RecordsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('records')->insert([
+        DB::table('mt_records')->insert([
             array(
                 'performed_at' => '2019-09-13 16:20:00',
                 'device_id' => '12',

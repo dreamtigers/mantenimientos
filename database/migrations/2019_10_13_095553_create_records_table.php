@@ -13,17 +13,16 @@ class CreateRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('records', function (Blueprint $table) {
-            $db = DB::connection('traccar')->getDatabaseName();
+        Schema::create('mt_records', function (Blueprint $table) {
 
             $table->bigIncrements('id');
 
             $table->date('performed_at');
 
             $table->integer('device_id');
-            $table->foreign('device_id')->references('id')->on($db . '.tc_devices');
+            $table->foreign('device_id')->references('id')->on('tc_devices');
             $table->integer('maintenance_id');
-            $table->foreign('maintenance_id')->references('id')->on($db . '.tc_maintenances');
+            $table->foreign('maintenance_id')->references('id')->on('tc_maintenances');
             $table->integer('position_id');
             // I'm not sure if we should link to the positions or not Traccar.
             // For example, does not link through a fk the device to the
@@ -44,6 +43,6 @@ class CreateRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        Schema::dropIfExists('mt_records');
     }
 }

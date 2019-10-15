@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpistongps`
+-- Database:
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tc_users`
 --
 
-CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_users` (
+CREATE TABLE IF NOT EXISTS `tc_users` (
   `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_users` (
 --
 -- Indexes for table `tc_users`
 --
-ALTER TABLE `dbpistongps`.`tc_users`
+ALTER TABLE `tc_users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
@@ -71,7 +71,7 @@ ALTER TABLE `dbpistongps`.`tc_users`
 --
 -- AUTO_INCREMENT for table `tc_users`
 --
-ALTER TABLE `dbpistongps`.`tc_users`
+ALTER TABLE `tc_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

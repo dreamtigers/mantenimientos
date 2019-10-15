@@ -11,7 +11,7 @@ class DetailsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('details')->insert([
+        DB::table('mt_details')->insert([
             array(
                 'device_id' => '5',
                 'marca' => 'LastDone',

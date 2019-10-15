@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpistongps`
+-- Database:
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `tc_groups`
 --
 
-CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_groups` (
+CREATE TABLE IF NOT EXISTS `tc_groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(128) NOT NULL,
   `groupid` int(11) DEFAULT NULL,
@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `dbpistongps`.`tc_groups` (
 --
 -- Constraints for table `tc_groups`
 --
-ALTER TABLE `dbpistongps`.`tc_groups`
-  ADD CONSTRAINT `fk_groups_groupid` FOREIGN KEY (`groupid`) REFERENCES `dbpistongps`.`tc_groups` (`id`) ON DELETE SET NULL;
+ALTER TABLE `tc_groups`
+  ADD CONSTRAINT `fk_groups_groupid` FOREIGN KEY (`groupid`) REFERENCES `tc_groups` (`id`) ON DELETE SET NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

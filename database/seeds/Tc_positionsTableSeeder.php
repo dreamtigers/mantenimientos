@@ -11,7 +11,7 @@ class Tc_positionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('traccar')->table('tc_positions')->insert([
+        DB::table('tc_positions')->insert([
             array(
                 'id' => '1',
                 'protocol' => 'gps103',
