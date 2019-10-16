@@ -10,6 +10,9 @@
                 <a href="{{ url('registros') }}">Registros</a>
             </li>
             <li>
+                <a href="{{ url('rutinas') }}">Rutinas</a>
+            </li>
+            <li>
                 <a href="{{ url('actividades') }}">Actividades</a>
             </li>
         </ul>
