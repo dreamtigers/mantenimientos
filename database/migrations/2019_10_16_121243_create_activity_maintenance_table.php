@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateActivityRecord extends Migration
+class CreateActivityMaintenanceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateActivityRecord extends Migration
      */
     public function up()
     {
-        Schema::create('mt_activity_record', function (Blueprint $table) {
+        Schema::create('mt_activity_maintenance', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('record_id');
-            $table->foreign('record_id')->references('id')->on('mt_records');
+            $table->integer('maintenance_id');
+            $table->foreign('maintenance_id')->references('id')->on('tc_maintenances');
+
             $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('mt_activities');
-
-            $table->string('observation');
 
             $table->timestamps();
         });
@@ -34,6 +33,6 @@ class CreateActivityRecord extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mt_activity_record');
+        Schema::dropIfExists('mt_activity_maintenance');
     }
 }

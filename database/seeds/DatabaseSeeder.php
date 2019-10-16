@@ -12,17 +12,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Traccar seeds
-        $this->call(Tc_usersTableSeeder::class);
-        $this->call(Tc_maintenancesTableSeeder::class);
-        $this->call(Tc_devicesTableSeeder::class);
-        $this->call(Tc_positionsTableSeeder::class);
-        $this->call(Tc_user_deviceTableSeeder::class);
+        $this->call(TcUsersTableSeeder::class);
+        $this->call(TcMaintenancesTableSeeder::class);
+        $this->call(TcDevicesTableSeeder::class);
+        $this->call(TcPositionsTableSeeder::class);
+        $this->call(TcUserDeviceTableSeeder::class);
 
-        // Mantenimientos seeds
+        // Maintenances seeds
         $this->call(ActivitiesTableSeeder::class);
         $this->call(DetailsTableSeeder::class);
         $this->call(RecordsTableSeeder::class);
-        $this->call(Activity_recordTableSeeder::class);
+        $this->call(ActivityRecordTableSeeder::class);
+        $this->call(ActivityMaintenanceTableSeeder::class);
 
         $this->call(EquiposTableSeeder::class);
     }

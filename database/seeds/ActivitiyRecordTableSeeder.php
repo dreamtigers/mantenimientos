@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Activity_recordTableSeeder extends Seeder
+class ActivityRecordTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

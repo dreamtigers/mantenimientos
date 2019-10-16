@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Tc_positionsTableSeeder extends Seeder
+class TcPositionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

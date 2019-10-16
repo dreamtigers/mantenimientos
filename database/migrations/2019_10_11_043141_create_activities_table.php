@@ -18,9 +18,6 @@ class CreateActivitiesTable extends Migration
             $table->bigIncrements('id');
 
             $table->text('description');
-
-            $table->integer('maintenance_id');
-            $table->foreign('maintenance_id')->references('id')->on('tc_maintenances');
         });
     }
 

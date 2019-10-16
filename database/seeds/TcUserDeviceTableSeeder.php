@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Tc_user_deviceTableSeeder extends Seeder
+class TcUserDeviceTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
