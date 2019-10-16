@@ -11,9 +11,9 @@ class Activity extends Model
     // The table associated with the model.
     protected $table = 'mt_activities';
 
-    public function maintenance()
+    public function maintenances()
     {
-        return $this->belongsTo('App\Models\Traccar\Maintenance');
+        return $this->belongsToMany('App\Models\Traccar\Maintenance', 'mt_activity_maintenance');
     }
 
     // An activity belongs in a lot of records and each record has lots of

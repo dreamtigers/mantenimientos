@@ -18,7 +18,7 @@ class Maintenance extends Model
      * Balancear los cauchos */
     public function activities()
     {
-        return $this->hasMany('App\Models\Activity');
+        return $this->belongsToMany('App\Models\Activity', 'mt_activity_maintenance');
     }
 
     // Each maintenance has lots of records, but a record can only have one

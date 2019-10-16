@@ -7,8 +7,7 @@
         <tr>
             <th>id</th>
             <th>Descripción</th>
-            <th>Tipo</th>
-            <th>Rutina</th>
+            <th>Rutinas</th>
         </tr>
     </thead>
     <tbody>
@@ -16,8 +15,13 @@
             <tr>
                 <td>{{ $activity->id }}</td>
                 <td>{{ $activity->description }}</td>
-                <td>{{ $activity->maintenance->type }}</td>
-                <td>{{ $activity->maintenance->period }}</td>
+                <td>
+                    <ul>
+                        @foreach($activity->maintenances->pluck('name') as $name)
+                            <li>{{ $name }}</li>
+                        @endforeach
+                    </ul>
+                </td>
             </tr>
         @endforeach
     </tbody>
