@@ -17,7 +17,7 @@ class CreateRecordsTable extends Migration
 
             $table->bigIncrements('id');
 
-            $table->date('performed_at');
+            $table->timestamp('performed_at');
 
             $table->integer('device_id');
             $table->foreign('device_id')->references('id')->on('tc_devices');
