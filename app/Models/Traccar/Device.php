@@ -17,15 +17,12 @@ class Device extends Model
 
     public function detail()
     {
-        return $this->hasOne('App\Models\Detail'); // fk: device_id
+        return $this->hasOne('App\Models\Detail')->withDefault();
     }
 
     public function positions()
     {
-        if ($this->positionid != null) {
-            return $this->hasMany('App\Models\Traccar\Position', 'deviceid');
-        }
-        return null;
+        return $this->hasMany('App\Models\Traccar\Position', 'deviceid');
     }
 
     // Each device has lots of records, but a record can only belong to one
