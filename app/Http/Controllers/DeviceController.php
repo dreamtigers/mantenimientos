@@ -57,7 +57,11 @@ class DeviceController extends Controller
      */
     public function show($id)
     {
-        $device = auth()->user()->devices()->where('id', $id)->first();
+        if (auth()->user()->isAdmin()) {
+            $device = Device::find($id);
+        } else {
+            $device = auth()->user()->devices()->where('id', $id)->first();
+        }
 
         return view('devices.show', ['device' => $device]);
     }

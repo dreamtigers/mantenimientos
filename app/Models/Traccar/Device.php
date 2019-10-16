@@ -20,11 +20,12 @@ class Device extends Model
         return $this->hasOne('App\Models\Detail'); // fk: device_id
     }
 
-    /* Get the users that own this device
-     * @return array of App\Models\Traccar\User */
-    public function users()
+    public function positions()
     {
-        return $this->belongsToMany('App\Models\Traccar\User', 'tc_user_device', 'deviceid', 'userid');
+        if ($this->positionid != null) {
+            return $this->hasMany('App\Models\Traccar\Position', 'deviceid');
+        }
+        return null;
     }
 
     // Each device has lots of records, but a record can only belong to one
@@ -32,5 +33,12 @@ class Device extends Model
     public function records()
     {
         return $this->hasMany('App\Models\Record');
+    }
+
+    /* Get the users that own this device
+     * @return array of App\Models\Traccar\User */
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\Traccar\User', 'tc_user_device', 'deviceid', 'userid');
     }
 }
