@@ -15,10 +15,7 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
-Route::resource('vehiculos', 'DeviceController')->only([
-    'index', 'show'
-]);
-
+Route::resource('vehiculos', 'DeviceController')->only(['index', 'create', 'store', 'show']);
 Route::resource('actividades', 'ActivityController')->only(['index']);
 Route::resource('usuarios', 'UserController')->only(['index']);
 Route::resource('rutinas', 'MaintenanceController')->only(['index']);

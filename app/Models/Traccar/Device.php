@@ -10,6 +10,12 @@ class Device extends Model
     protected $connection = 'mysql';
     // The table associated with the model.
     protected $table = 'tc_devices';
+
+    protected $fillable = [
+        'name', 'lastupdate', 'positionid', 'groupid',
+        'attributes', 'phone', 'model', 'contact', 'category',
+    ];
+
     // Indicates if the model should be timestamped.
     public $timestamps = false;
 
