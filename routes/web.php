@@ -19,4 +19,4 @@ Route::resource('vehiculos', 'DeviceController')->only(['index', 'create', 'stor
 Route::resource('actividades', 'ActivityController')->only(['index']);
 Route::resource('usuarios', 'UserController')->only(['index']);
 Route::resource('rutinas', 'MaintenanceController')->only(['index']);
-Route::resource('registros', 'RecordController')->only(['index', 'show']);
+Route::resource('registros', 'RecordController')->only(['index', 'create', 'store', 'show']);

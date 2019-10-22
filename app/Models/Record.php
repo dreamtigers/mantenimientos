@@ -11,6 +11,10 @@ class Record extends Model
     // The table associated with the model.
     protected $table = 'mt_records';
 
+    protected $fillable = [
+        'device_id', 'performed_at', 'maintenance_id',
+    ];
+
     // A record has lots of activities and activities have lots of records,
     // through the intermediate table 'activity_record'. Laravel infers their
     // relation thanks to the name of the table. See Eloquent Documentation.

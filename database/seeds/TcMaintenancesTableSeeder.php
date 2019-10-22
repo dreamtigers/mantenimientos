@@ -13,7 +13,6 @@ class TcMaintenancesTableSeeder extends Seeder
     {
         DB::table('tc_maintenances')->insert([
             array(
-                'id' => '1',
                 'name' => 'Rutina 1 Horas',
                 'type' => 'hours',
                 'start' => '0',
@@ -22,7 +21,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '2',
                 'name' => 'Rutina 2 Horas',
                 'type' => 'hours',
                 'start' => '0',
@@ -31,7 +29,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '3',
                 'name' => 'Rutina 3 Horas',
                 'type' => 'hours',
                 'start' => '0',
@@ -40,7 +37,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '4',
                 'name' => 'Rutina 4 Horas',
                 'type' => 'hours',
                 'start' => '0',
@@ -49,7 +45,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '5',
                 'name' => 'Rutina 1 Distancia',
                 'type' => 'distance',
                 'start' => '0',
@@ -58,7 +53,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '6',
                 'name' => 'Rutina 2 Distancia',
                 'type' => 'distance',
                 'start' => '0',
@@ -67,7 +61,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '7',
                 'name' => 'Rutina 3 Distancia',
                 'type' => 'distance',
                 'start' => '0',
@@ -76,7 +69,6 @@ class TcMaintenancesTableSeeder extends Seeder
             ),
 
             array(
-                'id' => '8',
                 'name' => 'Rutina 4 Distancia',
                 'type' => 'distance',
                 'start' => '0',

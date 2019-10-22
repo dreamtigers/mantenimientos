@@ -21,7 +21,7 @@ class CreateActivityRecordTable extends Migration
             $table->unsignedBigInteger('activity_id');
             $table->foreign('activity_id')->references('id')->on('mt_activities');
 
-            $table->string('observation');
+            $table->text('observation');
 
             $table->timestamps();
         });
