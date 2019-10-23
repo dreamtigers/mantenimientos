@@ -2,6 +2,8 @@
 
 namespace App\Models\Traccar;
 
+use App\Models\Traccar\Position;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Device extends Model
@@ -43,5 +45,17 @@ class Device extends Model
     public function users()
     {
         return $this->belongsToMany('App\Models\Traccar\User', 'tc_user_device', 'deviceid', 'userid');
+    }
+
+    public function lastPosition()
+    {
+        if ($this->positions->last()) {
+            return $this->positions->last();
+        }
+
+        $position = new Position();
+        $this->positions()->save($position);
+
+        return $position;
     }
 }

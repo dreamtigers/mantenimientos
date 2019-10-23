@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Record;
+use App\Models\Traccar\Device;
 use App\Models\Traccar\Maintenance;
 
 use Illuminate\Http\Request;
@@ -54,16 +55,18 @@ class RecordController extends Controller
     public function store(Request $request)
     {
         // TODO Add validation
+        // TODO I should validate that the device_id belongs to a user's device
 
         $record = new Record;
-        // TODO I should validate that the device_id belongs to a user's device
-        $record->device_id = $request->device_id;
-        $record->maintenance_id = $request->maintenance_id;
-        // TODO Get position id from model
-        $record->position_id = 1;
-        // TODO Get hours and distance (if they exist) from position model
-        $record->total_hours = 0;
-        $record->total_distance = 0;
+        $device = Device::find($request->device_id);
+        $maintenance = Maintenance::find($request->maintenance_id);
+        $record->device()->associate($device);
+        $record->maintenance()->associate($maintenance);
+
+        $record->position_id = $record->device->lastPosition()->id;
+        $record->total_hours = $record->device->lastPosition()->total_hours();
+        $record->total_distance = $record->device->lastPosition()->total_distance();
+
         $record->save();
 
         // Contains an array of comments, but we don't want every comment, we just want
