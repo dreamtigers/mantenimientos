@@ -17,7 +17,7 @@
                 <tr>
                     <td><a href="{{ route('vehiculos.show', $device) }}">{{ $device->name }}</a></td>
                     <td>{{ $device->lastupdate }}</td>
-                    <td>{{ $device->positions->last() }}</td>
+                    <td>{{ $device->lastPosition() }}</td>
                 </tr>
             @endforeach
         </tbody>

@@ -40,7 +40,7 @@ class RecordController extends Controller
     public function create()
     {
         $params = [
-            "maintenances" => Maintenance::all(),
+            "maintenances" => Maintenance::with('activities')->get(),
         ];
 
         return view('records.create')->with($params);

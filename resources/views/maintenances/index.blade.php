@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="title">Registros</h1>
+<h1 class="title">Rutinas</h1>
         @foreach ($maintenances as $maintenance)
             <div class="card">
                 <div class="card-header">

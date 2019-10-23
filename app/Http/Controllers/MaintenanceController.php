@@ -14,7 +14,7 @@ class MaintenanceController extends Controller
      */
     public function index()
     {
-        return view('maintenances.index', ['maintenances' => Maintenance::all()]);
+        return view('maintenances.index', ['maintenances' => Maintenance::with('activities')->get()]);
     }
 
     /**
