@@ -64,8 +64,8 @@ class RecordController extends Controller
         $record->maintenance()->associate($maintenance);
 
         $record->position_id = $record->device->lastPosition()->id;
-        $record->total_hours = $record->device->lastPosition()->total_hours();
-        $record->total_distance = $record->device->lastPosition()->total_distance();
+        $record->total_hours = $record->device->lastPosition()->hours;
+        $record->total_distance = $record->device->lastPosition()->total_distance;
 
         $record->save();
 

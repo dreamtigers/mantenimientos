@@ -25,7 +25,7 @@ class Position extends Model
         'course' => 0,
     ];
 
-    function total_hours()
+    public function getHoursAttribute()
     {
         $attributes = json_decode($this->attributes['attributes']);
         $total_hours = $attributes->hours;
@@ -33,7 +33,7 @@ class Position extends Model
         return $total_hours;
     }
 
-    function total_distance()
+    public function getTotalDistanceAttribute()
     {
         $attributes = json_decode($this->attributes['attributes']);
         $total_distance = $attributes->totalDistance;
